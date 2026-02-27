@@ -171,9 +171,12 @@ gunman/
 - [x] Classify all client functions -- **1,072 SDK (83%) | 133 Rewolf (10%) | 82 unknown (6%)**
 
 ### Phase 2: Recompilation
-- [ ] Set up build system (CMake)
-- [ ] Recompile matched SDK functions
-- [ ] Recompile custom Rewolf code
+- [x] Set up build system (CMake + MSVC 2022, Win32 target)
+- [x] Server DLL SDK base compiles and links -- **gunman.dll builds!**
+- [ ] Client DLL SDK base compiles, linking in progress (VGUI + weapon stubs needed)
+- [ ] Reconstruct Rewolf weapon code (~45 KB, 11 weapon systems)
+- [ ] Reconstruct Rewolf monster code (~103 KB, 57 entity types)
+- [ ] Reconstruct Rewolf vehicle/tank code
 - [ ] Build against modern Windows SDK
 - [ ] Testing with Xash3D FWGS
 
