@@ -1,0 +1,2570 @@
+# Deep Classification: gunman.dll (server)
+# SDK: 276 funcs (119,323 bytes)
+# Rewolf: 98 funcs (32,573 bytes)
+# No strings: 1915 funcs
+# Ambiguous: 251 funcs
+
+
+======================================================================
+  REWOLF (89 functions)
+======================================================================
+  1001d650 |    199 | 0.97 | FUN_1001d650
+  1001d720 |    238 | 0.97 | FUN_1001d720
+  10024780 |     41 | 1.00 | FUN_10024780
+  100410c0 |   3398 | 1.00 | FUN_100410c0
+  1005e5d0 |    353 | 1.00 | FUN_1005e5d0
+  100673e0 |    213 | 1.00 | FUN_100673e0
+  10067740 |     97 | 1.00 | FUN_10067740
+  10067870 |     50 | 0.55 | FUN_10067870
+  10068010 |    122 | 1.00 | FUN_10068010
+  1006a320 |    324 | 1.00 | FUN_1006a320
+  1006ce40 |   2679 | 1.00 | MantaThink
+  1006d8e0 |    236 | 1.00 | FUN_1006d8e0
+  1006db10 |   1870 | 1.00 | MantaBombTouch
+  1006e5a0 |     26 | 1.00 | FUN_1006e5a0
+  1006eee0 |    269 | 1.00 | FUN_1006eee0
+  10070200 |    246 | 1.00 | FUN_10070200
+  10070470 |    247 | 1.00 | FormFlock
+  10071e10 |    196 | 1.00 | FUN_10071e10
+  10071ef0 |     26 | 1.00 | FUN_10071ef0
+  10074c30 |     58 | 0.80 | FUN_10074c30
+  10074f10 |    141 | 1.00 | FUN_10074f10
+  10075910 |     58 | 0.80 | FUN_10075910
+  10075b10 |     42 | 1.00 | NestTouch
+  10075b40 |    197 | 1.00 | NestUse
+  10075ea0 |    242 | 1.00 | FUN_10075ea0
+  10076520 |    295 | 1.00 | FUN_10076520
+  10077430 |     58 | 0.80 | FUN_10077430
+  10077dc0 |    137 | 1.00 | FUN_10077dc0
+  100785b0 |     26 | 1.00 | FUN_100785b0
+  10078fd0 |     26 | 1.00 | FUN_10078fd0
+  1007b2c0 |    104 | 1.00 | FUN_1007b2c0
+  1007c040 |    128 | 1.00 | FUN_1007c040
+  100813e0 |     41 | 1.00 | FUN_100813e0
+  10081a70 |    108 | 1.00 | FUN_10081a70
+  10081ae0 |    312 | 1.00 | FUN_10081ae0
+  10082380 |    177 | 1.00 | FUN_10082380
+  10082ba0 |    419 | 1.00 | FUN_10082ba0
+  10082d90 |    312 | 0.80 | FUN_10082d90
+  10084960 |     41 | 1.00 | FUN_10084960
+  10085310 |     41 | 1.00 | FUN_10085310
+  10085a00 |   2089 | 1.00 | FUN_10085a00
+  10088c90 |   1110 | 1.00 | FUN_10088c90
+  10089600 |    703 | 1.00 | FUN_10089600
+  100899e0 |    250 | 1.00 | FUN_100899e0
+  10089ae0 |    250 | 1.00 | FUN_10089ae0
+  100901f0 |    114 | 1.00 | FUN_100901f0
+  10094c70 |    183 | 1.00 | FUN_10094c70
+  1009f940 |    153 | 1.00 | FUN_1009f940
+  100a1030 |    125 | 0.45 | FUN_100a1030
+  100a1160 |    952 | 0.70 | FUN_100a1160
+  100a2a60 |    184 | 0.80 | FUN_100a2a60
+  100a30e0 |    199 | 1.00 | FUN_100a30e0
+  100a31b0 |    302 | 1.00 | FUN_100a31b0
+  100a36b0 |    262 | 0.63 | FUN_100a36b0
+  100a4690 |    136 | 0.44 | FUN_100a4690
+  100a47e0 |   1042 | 0.59 | FUN_100a47e0
+  100a86b0 |     48 | 1.00 | FUN_100a86b0
+  100a86e0 |     48 | 1.00 | FUN_100a86e0
+  100abd20 |    474 | 1.00 | WaitToExplode
+  100ac040 |    232 | 1.00 | FUN_100ac040
+  100ae300 |     85 | 0.70 | FUN_100ae300
+  100af7d0 |     33 | 1.00 | FUN_100af7d0
+  100b0410 |    271 | 0.80 | FUN_100b0410
+  100b5760 |    260 | 0.80 | FUN_100b5760
+  100b5af0 |    399 | 1.00 | ShotTouch
+  100b6610 |     33 | 0.97 | FUN_100b6610
+  100b66b0 |    850 | 1.00 | FUN_100b66b0
+  100b7920 |     47 | 1.00 | FUN_100b7920
+  100b8050 |    108 | 1.00 | FUN_100b8050
+  100b82f0 |    133 | 1.00 | FUN_100b82f0
+  100b8380 |     73 | 1.00 | FUN_100b8380
+  100bf560 |    327 | 0.44 | FUN_100bf560
+  100c06f0 |     54 | 1.00 | FUN_100c06f0
+  100c1a20 |    204 | 1.00 | FUN_100c1a20
+  100c1cd0 |    170 | 1.00 | FUN_100c1cd0
+  100c2010 |    372 | 1.00 | FUN_100c2010
+  100c3920 |    170 | 1.00 | FUN_100c3920
+  100c3ab0 |     55 | 0.97 | FUN_100c3ab0
+  100c3e90 |     47 | 0.80 | FUN_100c3e90
+  100c9530 |    157 | 0.63 | FUN_100c9530
+  100cace0 |     68 | 0.80 | FUN_100cace0
+  100ccb10 |    123 | 1.00 | FUN_100ccb10
+  100ccd30 |    114 | 1.00 | FUN_100ccd30
+  100d1190 |    504 | 0.86 | FUN_100d1190
+  100d28b0 |    115 | 0.85 | FUN_100d28b0
+  100d2aa0 |    720 | 0.70 | KataTouch
+  100d33d0 |     91 | 0.97 | FUN_100d33d0
+  100d46c0 |    181 | 1.00 | FUN_100d46c0
+  100d53d0 |    319 | 1.00 | FUN_100d53d0
+
+======================================================================
+  REWOLF_MIXED (9 functions)
+======================================================================
+  1001d600 |     80 | 0.70 | FUN_1001d600
+  1001e860 |   1580 | 0.38 | FUN_1001e860
+  10023c30 |    134 | 0.48 | Recharge
+  10023cc0 |    191 | 0.48 | Off
+  10081c20 |    135 | 0.62 | FUN_10081c20
+  100b1b20 |     81 | 0.48 | FUN_100b1b20
+  100b8010 |     48 | 0.60 | FUN_100b8010
+  100d1520 |     80 | 0.29 | FUN_100d1520
+  100d3ed0 |   1512 | 0.46 | RocketTouch
+
+======================================================================
+  SDK (261 functions)
+======================================================================
+  100010c0 |    227 | 1.00 | FUN_100010c0  -> dlls\airtank.cpp
+  10001250 |    194 | 1.00 | TankTouch  -> dlls\airtank.cpp
+  10003170 |     63 | 1.00 | FUN_10003170  -> dlls\bmodels.cpp
+  100036c0 |    369 | 1.00 | FUN_100036c0  -> dlls\bmodels.cpp
+  10005020 |    297 | 1.00 | Register  -> dlls\buttons.cpp
+  100051b0 |    625 | 1.00 | FUN_100051b0  -> dlls\buttons.cpp
+  10005a30 |    136 | 1.00 | FUN_10005a30  -> dlls\buttons.cpp
+  10005b20 |    449 | 1.00 | FUN_10005b20  -> dlls\buttons.cpp
+  10005e40 |    281 | 1.00 | ButtonTouch  -> dlls\osprey.cpp
+  10006160 |    321 | 1.00 | ButtonBackHome  -> dlls\util.h
+  10006970 |    187 | 1.00 | FUN_10006970  -> dlls\buttons.cpp
+  10006bb0 |    111 | 1.00 | FUN_10006bb0  -> dlls\util.h
+  10006fe0 |    436 | 1.00 | FUN_10006fe0  -> dlls\buttons.cpp
+  10007890 |    172 | 1.00 | FUN_10007890  -> dlls\cbase.cpp
+  10008340 |     60 | 1.00 | FUN_10008340  -> dlls\cbase.cpp
+  10008380 |    238 | 1.00 | FUN_10008380  -> dlls\cbase.cpp
+  10008d10 |    760 | 0.95 | FUN_10008d10  -> dlls\client.cpp
+  10009010 |   1346 | 0.70 | FUN_10009010  -> dlls\client.cpp
+  100098a0 |   1133 | 1.00 | FUN_100098a0  -> dlls\client.cpp
+  1000a7c0 |    166 | 1.00 | FUN_1000a7c0  -> dlls\client.cpp
+  1000b960 |   1162 | 0.77 | FUN_1000b960  -> dlls\combat.cpp
+  1000bf50 |   1225 | 1.00 | FUN_1000bf50  -> dlls\combat.cpp
+  1000c820 |    297 | 0.70 | FUN_1000c820  -> dlls\combat.cpp
+  1000c950 |    261 | 1.00 | FUN_1000c950  -> dlls\satchel.cpp
+  1000ca60 |   1453 | 0.87 | FUN_1000ca60  -> dlls\effects.cpp
+  1000d4d0 |    473 | 1.00 | StickyGibTouch  -> dlls\func_break.cpp
+  10010b80 |   1167 | 1.00 | FUN_10010b80  -> dlls\doors.cpp
+  100110b0 |    206 | 1.00 | DoorTouch  -> dlls\osprey.cpp
+  10011280 |    622 | 1.00 | DoorGoUp  -> game_shared\bot\nav.h
+  10011620 |    223 | 1.00 | DoorGoDown  -> game_shared\bot\nav.h
+  100120c0 |    314 | 1.00 | FUN_100120c0  -> dlls\doors.cpp
+  10012710 |     22 | 1.00 | FUN_10012710  -> dlls\effects.cpp
+  100138e0 |    224 | 1.00 | FUN_100138e0  -> dlls\effects.cpp
+  10015400 |    156 | 1.00 | FUN_10015400  -> dlls\effects.cpp
+  10015850 |    355 | 1.00 | FUN_10015850  -> dlls\effects.cpp
+  100171b0 |     22 | 1.00 | FUN_100171b0  -> dlls\effects.cpp
+  10017560 |    144 | 1.00 | CanThink  -> dlls\effects.cpp
+  10017a80 |    113 | 1.00 | FUN_10017a80  -> dlls\explode.cpp
+  10017f00 |    150 | 1.00 | FUN_10017f00  -> dlls\explode.cpp
+  10018ae0 |    792 | 1.00 | FUN_10018ae0  -> dlls\func_break.cpp
+  10018f90 |    109 | 1.00 | FUN_10018f90  -> dlls\func_break.cpp
+  100190e0 |    359 | 1.00 | FUN_100190e0  -> dlls\func_break.cpp
+  100198d0 |   1417 | 1.00 | Die  -> dlls\func_break.cpp
+  1001a090 |     54 | 1.00 | FUN_1001a090  -> dlls\func_break.cpp
+  1001a400 |    471 | 1.00 | FUN_1001a400  -> dlls\func_break.cpp
+  1001aa40 |   1798 | 1.00 | FUN_1001aa40  -> dlls\func_tank.cpp
+  1001c920 |    118 | 1.00 | FUN_1001c920  -> dlls\func_tank.cpp
+  1001c9a0 |    230 | 1.00 | FUN_1001c9a0  -> dlls\util.h
+  1001cdb0 |    117 | 1.00 | FUN_1001cdb0  -> dlls\explode.cpp
+  1001cff0 |    173 | 0.87 | FUN_1001cff0  -> dlls\util.h
+  1001d250 |    118 | 1.00 | FUN_1001d250  -> dlls\func_tank.cpp
+  1001ee90 |    179 | 0.70 | FUN_1001ee90  -> dlls\game.cpp
+  1001eff0 |    555 | 1.00 | FUN_1001eff0  -> dlls\genericmonster.cpp
+  1001f660 |    773 | 1.00 | FUN_1001f660  -> dlls\ggrenade.cpp
+  100202d0 |    205 | 1.00 | FUN_100202d0  -> dlls\ggrenade.cpp
+  100204f0 |    175 | 1.00 | FUN_100204f0  -> dlls\ggrenade.cpp
+  100206a0 |    468 | 1.00 | FUN_100206a0  -> dlls\handgrenade.cpp
+  10020cc0 |   1409 | 1.00 | FUN_10020cc0  -> dlls\game.cpp
+  10021250 |    634 | 1.00 | FUN_10021250  -> dlls\game.cpp
+  100228d0 |    170 | 0.70 | FUN_100228d0  -> dlls\h_cycler.cpp
+  10023560 |     41 | 1.00 | FUN_10023560  -> dlls\healthkit.cpp
+  10024360 |     41 | 1.00 | FUN_10024360  -> dlls\items.cpp
+  100249b0 |    274 | 1.00 | FUN_100249b0  -> dlls\lights.cpp
+  100251f0 |    111 | 1.00 | FUN_100251f0  -> dlls\cbase.h
+  10025350 |    125 | 1.00 | FUN_10025350  -> dlls\maprules.cpp
+  10025560 |    938 | 1.00 | FUN_10025560  -> dlls\maprules.cpp
+  100269b0 |     77 | 0.45 | FUN_100269b0  -> dlls\egon.cpp
+  100279d0 |     48 | 1.00 | FUN_100279d0  -> dlls\monsters.cpp
+  10027a00 |    102 | 1.00 | FUN_10027a00  -> dlls\monsters.cpp
+  10027a70 |     57 | 1.00 | FUN_10027a70  -> dlls\combat.cpp
+  10029a10 |    312 | 1.00 | FUN_10029a10  -> dlls\util.h
+  1002b140 |    625 | 0.70 | FUN_1002b140  -> dlls\util.h
+  1002bf10 |   1264 | 1.00 | FUN_1002bf10  -> dlls\world.cpp
+  1002e3d0 |    666 | 1.00 | FieldUse  -> dlls\mortar.cpp
+  1002e700 |     25 | 1.00 | FUN_1002e700  -> dlls\mortar.cpp
+  1002e8c0 |    196 | 0.33 | FUN_1002e8c0  -> dlls\multiplay_gamerules.cpp
+  1002e9e0 |    407 | 1.00 | FUN_1002e9e0  -> dlls\game.cpp
+  1002f2f0 |    659 | 1.00 | FUN_1002f2f0  -> dlls\multiplay_gamerules.cpp
+  1002f6a0 |    138 | 1.00 | FUN_1002f6a0  -> dlls\game.cpp
+  1002fb70 |    712 | 1.00 | FUN_1002fb70  -> dlls\multiplay_gamerules.cpp
+  10030800 |    502 | 0.95 | FUN_10030800  -> game_shared\bot\nav.h
+  10031b30 |   1091 | 0.33 | FUN_10031b30  -> dlls\func_break.cpp
+  100322e0 |    255 | 1.00 | FUN_100322e0  -> dlls\nodes.cpp
+  10032430 |    180 | 1.00 | FUN_10032430  -> dlls\nodes.cpp
+  100324f0 |    505 | 1.00 | FUN_100324f0  -> dlls\nodes.cpp
+  10032970 |   3668 | 0.25 | FUN_10032970  -> dlls\nodes.cpp
+  10033bd0 |   1046 | 0.87 | FUN_10033bd0  -> dlls\nodes.cpp
+  10033ff0 |    579 | 1.00 | FUN_10033ff0  -> dlls\nodes.cpp
+  10034240 |    218 | 1.00 | FUN_10034240  -> dlls\client.cpp
+  10034320 |    364 | 0.70 | FUN_10034320  -> dlls\nodes.cpp
+  10036090 |    111 | 1.00 | FUN_10036090  -> dlls\pathcorner.cpp
+  100361a0 |    218 | 0.87 | FUN_100361a0  -> dlls\util.h
+  10036a00 |    105 | 1.00 | FUN_10036a00  -> dlls\vehicle.cpp
+  10036b60 |    620 | 1.00 | FUN_10036b60  -> dlls\plats.cpp
+  10036dd0 |    577 | 1.00 | FUN_10036dd0  -> dlls\plats.cpp
+  10037d80 |    114 | 1.00 | FUN_10037d80  -> dlls\vehicle.cpp
+  10038cf0 |    128 | 1.00 | FUN_10038cf0  -> dlls\plats.cpp
+  10038d70 |    307 | 1.00 | FUN_10038d70  -> dlls\plats.cpp
+  100399d0 |    541 | 0.70 | NearestPath  -> dlls\vehicle.cpp
+  10039c20 |    105 | 1.00 | FUN_10039c20  -> dlls\plats.cpp
+  10039e40 |    252 | 1.00 | FUN_10039e40  -> dlls\plats.cpp
+  1003a2e0 |     26 | 1.00 | FUN_1003a2e0  -> dlls\buttons.cpp
+  1003a450 |    670 | 1.00 | Find  -> dlls\util.h
+  1003aba0 |    179 | 1.00 | FUN_1003aba0  -> dlls\buttons.cpp
+  1003cc10 |    923 | 1.00 | FUN_1003cc10  -> dlls\player.cpp
+  1003d000 |   1159 | 1.00 | FUN_1003d000  -> dlls\player.cpp
+  1003d4c0 |    746 | 1.00 | PlayerDeathThink  -> dlls\game.cpp
+  1003da00 |    960 | 1.00 | FUN_1003da00  -> dlls\client.cpp
+  1003e050 |   1592 | 1.00 | FUN_1003e050  -> dlls\client.cpp
+  1003fa40 |    767 | 1.00 | FUN_1003fa40  -> cl_dll\hud_spectator.cpp
+  1003fd40 |    887 | 1.00 | FUN_1003fd40  -> dlls\client.cpp
+  10040670 |    200 | 1.00 | FUN_10040670  -> dlls\client.cpp
+  10040c10 |    155 | 1.00 | FUN_10040c10  -> dlls\player.h
+  10040cb0 |    135 | 1.00 | FUN_10040cb0  -> dlls\player.h
+  10042b40 |   1016 | 1.00 | FUN_10042b40  -> dlls\game.cpp
+  10042f40 |   1648 | 1.00 | FUN_10042f40  -> dlls\game.cpp
+  10043c10 |    211 | 0.87 | FUN_10043c10  -> dlls\nodes.cpp
+  10045470 |    660 | 1.00 | FUN_10045470  -> dlls\sound.cpp
+  10045770 |   1734 | 1.00 | FUN_10045770  -> dlls\client.cpp
+  10049160 |    846 | 1.00 | FUN_10049160  -> pm_shared\pm_shared.c
+  10049730 |    428 | 1.00 | FUN_10049730  -> dlls\client.cpp
+  100498e0 |    222 | 1.00 | FUN_100498e0  -> dlls\client.cpp
+  1004b030 |   4640 | 1.00 | FUN_1004b030  -> dlls\osprey.cpp
+  1004cca0 |    473 | 1.00 | FUN_1004cca0  -> dlls\util.h
+  1004d6a0 |    232 | 1.00 | FUN_1004d6a0  -> dlls\scripted.cpp
+  1004d790 |    166 | 1.00 | FUN_1004d790  -> dlls\util.h
+  1004d840 |    315 | 1.00 | FUN_1004d840  -> dlls\util.h
+  1004e340 |    178 | 1.00 | FUN_1004e340  -> dlls\osprey.cpp
+  1004e400 |    309 | 1.00 | FUN_1004e400  -> dlls\util.h
+  1004e540 |    334 | 0.70 | FUN_1004e540  -> dlls\osprey.cpp
+  100506c0 |    775 | 0.60 | FUN_100506c0  -> dlls\sound.cpp
+  10050b10 |    110 | 1.00 | FUN_10050b10  -> dlls\sound.cpp
+  10050b80 |    108 | 1.00 | FUN_10050b80  -> dlls\sound.cpp
+  10050bf0 |    108 | 1.00 | FUN_10050bf0  -> dlls\sound.cpp
+  10050d00 |    471 | 1.00 | FUN_10050d00  -> dlls\sound.cpp
+  10050f30 |   1289 | 1.00 | FUN_10050f30  -> dlls\sound.cpp
+  10051640 |    373 | 1.00 | SpeakerThink  -> dlls\sound.cpp
+  10051880 |    110 | 1.00 | FUN_10051880  -> dlls\sound.cpp
+  10051bf0 |    185 | 1.00 | FUN_10051bf0  -> dlls\soundent.cpp
+  10051df0 |    226 | 0.70 | FUN_10051df0  -> cl_dll\hud_spectator.cpp
+  10052460 |    763 | 1.00 | FUN_10052460  -> dlls\islave.cpp
+  100527e0 |    208 | 0.70 | FUN_100527e0  -> dlls\agrunt.cpp
+  10052f20 |    117 | 1.00 | FUN_10052f20  -> dlls\cbase.h
+  100530f0 |    190 | 1.00 | FUN_100530f0  -> dlls\subs.cpp
+  100531f0 |    164 | 1.00 | FUN_100531f0  -> dlls\util.h
+  100532f0 |    514 | 0.95 | FUN_100532f0  -> dlls\util.h
+  100536d0 |    356 | 1.00 | FUN_100536d0  -> dlls\subs.cpp
+  100545a0 |    225 | 1.00 | FUN_100545a0  -> dlls\scientist.cpp
+  100548d0 |    530 | 1.00 | FUN_100548d0  -> dlls\talkmonster.cpp
+  10055b10 |    198 | 1.00 | FUN_10055b10  -> dlls\talkmonster.cpp
+  10055f30 |    196 | 1.00 | FUN_10055f30  -> dlls\client.cpp
+  100561b0 |    252 | 1.00 | FUN_100561b0  -> dlls\client.cpp
+  100564b0 |    212 | 1.00 | FUN_100564b0  -> dlls\teamplay_gamerules.cpp
+  100565d0 |     86 | 1.00 | FUN_100565d0  -> dlls\game.cpp
+  10056bc0 |    116 | 1.00 | FUN_10056bc0  -> dlls\triggers.cpp
+  10057130 |    156 | 1.00 | FUN_10057130  -> dlls\maprules.cpp
+  10057720 |    211 | 1.00 | FUN_10057720  -> dlls\util.h
+  10057860 |    170 | 1.00 | FUN_10057860  -> dlls\bmodels.cpp
+  10057910 |    288 | 1.00 | FUN_10057910  -> dlls\triggers.cpp
+  10057db0 |    116 | 1.00 | FUN_10057db0  -> dlls\sound.cpp
+  10058650 |    147 | 1.00 | MultiTouch  -> dlls\houndeye.cpp
+  100586f0 |    484 | 1.00 | FUN_100586f0  -> dlls\triggers.cpp
+  100588f0 |    305 | 0.40 | CounterUse  -> dlls\osprey.cpp
+  10058fd0 |    158 | 1.00 | FUN_10058fd0  -> dlls\util.h
+  10059290 |    158 | 0.70 | TouchChangeLevel  -> dlls\osprey.cpp
+  10059460 |    250 | 0.70 | FUN_10059460  -> dlls\util.h
+  100599a0 |    101 | 1.00 | FUN_100599a0  -> dlls\bmodels.cpp
+  10059d10 |    400 | 1.00 | TeleportTouch  -> dlls\util.h
+  1005a1a0 |    120 | 1.00 | KillUse  -> dlls\util.h
+  1005b5b0 |    177 | 0.70 | UseEject  -> dlls\util.h
+  1005d760 |     88 | 0.38 | FUN_1005d760  -> dlls\turret.cpp
+  1005d7c0 |    286 | 1.00 | FUN_1005d7c0  -> dlls\turret.cpp
+  1005e8f0 |     24 | 1.00 | FUN_1005e8f0  -> dlls\util.cpp
+  1005e910 |     24 | 1.00 | FUN_1005e910  -> dlls\util.h
+  1005f800 |    114 | 1.00 | FUN_1005f800  -> dlls\util.h
+  1005f880 |     85 | 1.00 | FUN_1005f880  -> dlls\util.cpp
+  10062000 |    883 | 0.88 | FUN_10062000  -> dlls\weapons.cpp
+  10062590 |    143 | 1.00 | FallThink  -> dlls\weapons.cpp
+  10062f40 |    175 | 1.00 | FUN_10062f40  -> dlls\glock.cpp
+  10062ff0 |     90 | 1.00 | FUN_10062ff0  -> dlls\glock.cpp
+  10063250 |     63 | 1.00 | FUN_10063250  -> dlls\mp5.cpp
+  10063580 |    105 | 1.00 | Materialize  -> dlls\items.cpp
+  100638f0 |     79 | 1.00 | FUN_100638f0  -> dlls\weapons.cpp
+  10064530 |    105 | 1.00 | FUN_10064530  -> dlls\world.cpp
+  100645a0 |    150 | 1.00 | FUN_100645a0  -> dlls\world.cpp
+  10064cb0 |    104 | 1.00 | FUN_10064cb0  -> dlls\world.cpp
+  1006b560 |   2260 | 1.00 | FUN_1006b560  -> dlls\apache.cpp
+  1006be80 |    997 | 1.00 | FUN_1006be80  -> cl_dll\ev_hldm.cpp
+  10070140 |    188 | 1.00 | FallHack  -> dlls\func_break.cpp
+  10076650 |     79 | 1.00 | FUN_10076650  -> dlls\combat.cpp
+  10079420 |     67 | 1.00 | FUN_10079420  -> dlls\osprey.cpp
+  10079ca0 |     53 | 0.45 | FUN_10079ca0  -> dlls\apache.cpp
+  1007c7c0 |   2376 | 0.80 | FUN_1007c7c0  -> dlls\egon.cpp
+  1007dff0 |    160 | 1.00 | FUN_1007dff0  -> dlls\egon.cpp
+  1007e4d0 |   1990 | 1.00 | FUN_1007e4d0  -> dlls\islave.cpp
+  1007ff90 |    165 | 0.25 | FUN_1007ff90  -> dlls\rpg.cpp
+  10080040 |    623 | 0.31 | LightningTouch  -> dlls\func_break.cpp
+  10081930 |    105 | 1.00 | FUN_10081930  -> dlls\rpg.cpp
+  100819a0 |    106 | 1.00 | FUN_100819a0  -> dlls\rpg.cpp
+  10086230 |    146 | 1.00 | FUN_10086230  -> dlls\handgrenade.cpp
+  10086430 |    180 | 1.00 | FUN_10086430  -> dlls\crowbar.cpp
+  10087620 |    982 | 1.00 | FUN_10087620  -> dlls\func_break.cpp
+  10088720 |    130 | 1.00 | FUN_10088720  -> dlls\satchel.cpp
+  1008a940 |    289 | 1.00 | BounceSoundTouch  -> dlls\ggrenade.cpp
+  1008b1b0 |   1715 | 1.00 | FollowThink  -> dlls\rpg.cpp
+  1008d180 |    162 | 1.00 | FUN_1008d180  -> dlls\satchel.cpp
+  1008d4a0 |    240 | 0.36 | FUN_1008d4a0  -> dlls\crowbar.cpp
+  1008d930 |   1959 | 0.33 | FUN_1008d930  -> dlls\islave.cpp
+  1008e550 |     58 | 1.00 | FUN_1008e550  -> dlls\crowbar.cpp
+  1008f0e0 |     73 | 0.45 | FUN_1008f0e0  -> dlls\nihilanth.cpp
+  1008f750 |     77 | 0.45 | FUN_1008f750  -> dlls\rpg.cpp
+  1008fd10 |     54 | 0.53 | FUN_1008fd10  -> dlls\rpg.cpp
+  10090640 |    162 | 1.00 | FUN_10090640  -> dlls\satchel.cpp
+  10090700 |    156 | 1.00 | FUN_10090700  -> dlls\satchel.cpp
+  10090c70 |    395 | 0.70 | FUN_10090c70  -> dlls\satchel.cpp
+  10091b90 |     65 | 1.00 | FUN_10091b90  -> dlls\crowbar.cpp
+  10092e70 |    688 | 0.53 | StickyChemicalTouch  -> dlls\func_break.cpp
+  10094160 |    798 | 1.00 | FUN_10094160  -> dlls\ggrenade.cpp
+  10094680 |    504 | 1.00 | StickyAcidTouch  -> dlls\func_break.cpp
+  10095b70 |     58 | 1.00 | FUN_10095b70  -> dlls\crowbar.cpp
+  10095ee0 |     99 | 1.00 | FUN_10095ee0  -> dlls\glock.cpp
+  10096070 |    138 | 1.00 | FUN_10096070  -> dlls\shotgun.cpp
+  10096100 |    122 | 1.00 | FUN_10096100  -> dlls\shotgun.cpp
+  10096c70 |     58 | 1.00 | FUN_10096c70  -> dlls\crowbar.cpp
+  10096d70 |     58 | 1.00 | FUN_10096d70  -> dlls\crowbar.cpp
+  10098a80 |    276 | 0.54 | FUN_10098a80  -> dlls\mp5.cpp
+  10098ee0 |    908 | 0.30 | BuildVehicleThink  -> dlls\osprey.cpp
+  1009e950 |    983 | 0.87 | FUN_1009e950  -> dlls\satchel.cpp
+  100a0210 |    579 | 0.49 | FUN_100a0210  -> dlls\rpg.cpp
+  100a0460 |   1476 | 0.70 | ShellTouch  -> dlls\rpg.cpp
+  100a3c70 |     91 | 0.37 | FUN_100a3c70  -> dlls\rpg.cpp
+  100a4430 |    498 | 1.00 | RocketShootThink  -> dlls\util.h
+  100a5cb0 |    185 | 1.00 | FUN_100a5cb0  -> dlls\util.h
+  100a8710 |     81 | 1.00 | FUN_100a8710  -> dlls\hgrunt.cpp
+  100a8f60 |    355 | 1.00 | FUN_100a8f60  -> dlls\hgrunt.cpp
+  100a9cb0 |    961 | 1.00 | FUN_100a9cb0  -> dlls\func_break.cpp
+  100ab400 |   1041 | 0.70 | FUN_100ab400  -> dlls\osprey.cpp
+  100adfe0 |     74 | 1.00 | FUN_100adfe0  -> dlls\shotgun.cpp
+  100b4100 |   2476 | 0.31 | FUN_100b4100  -> dlls\osprey.cpp
+  100b55c0 |      5 | 1.00 | thunk_FUN_1000bf50  -> dlls\combat.cpp
+  100b5d30 |     91 | 0.37 | FUN_100b5d30  -> dlls\rpg.cpp
+  100b8400 |    970 | 1.00 | FUN_100b8400  -> dlls\func_break.cpp
+  100b8a20 |    134 | 1.00 | FUN_100b8a20  -> dlls\satchel.cpp
+  100b99c0 |     67 | 1.00 | FUN_100b99c0  -> dlls\satchel.cpp
+  100b9a10 |     55 | 1.00 | FUN_100b9a10  -> dlls\satchel.cpp
+  100b9e80 |     91 | 0.37 | FUN_100b9e80  -> dlls\rpg.cpp
+  100c3200 |     94 | 0.40 | FUN_100c3200  -> dlls\bullsquid.cpp
+  100c64f0 |     85 | 0.33 | FUN_100c64f0  -> cl_dll\entity.cpp
+  100c92f0 |    476 | 0.45 | DieTouch  -> dlls\satchel.cpp
+  100c96d0 |    584 | 1.00 | TouchShot  -> dlls\func_break.cpp
+  100d17a0 |    209 | 1.00 | FUN_100d17a0  -> dlls\util.h
+  100d1880 |    478 | 1.00 | DieThink  -> dlls\util.h
+  100d1bf0 |    274 | 0.33 | FUN_100d1bf0  -> dlls\glock.cpp
+  100d1fc0 |    263 | 0.53 | FUN_100d1fc0  -> dlls\triggers.cpp
+  100d6b80 |    164 | 0.33 | FUN_100d6b80  -> dlls\scientist.cpp
+  100d7530 |    856 | 1.00 | FUN_100d7530  -> dlls\scientist.cpp
+  100d78a0 |    100 | 1.00 | FUN_100d78a0  -> dlls\scientist.cpp
+  100d8800 |    220 | 0.87 | FUN_100d8800  -> dlls\satchel.cpp
+  100d89e0 |    193 | 1.00 | FUN_100d89e0  -> dlls\scientist.cpp
+  100d8c10 |    404 | 1.00 | FUN_100d8c10  -> dlls\scientist.cpp
+  100d8db0 |     28 | 1.00 | FUN_100d8db0  -> dlls\scientist.cpp
+
+======================================================================
+  SDK_MIXED (15 functions)
+======================================================================
+  1003b520 |    713 | 0.69 | FUN_1003b520  -> dlls\player.cpp
+  1006a470 |    149 | 0.38 | FUN_1006a470  -> dlls\apache.cpp
+  1007c0c0 |    235 | 0.47 | FUN_1007c0c0  -> dlls\egon.cpp
+  100862d0 |    241 | 0.21 | FUN_100862d0  -> dlls\handgrenade.cpp
+  100898c0 |    281 | 0.23 | FUN_100898c0  -> dlls\ggrenade.cpp
+  10090270 |    341 | 0.14 | FUN_10090270  -> dlls\python.cpp
+  10091cf0 |    115 | 0.32 | FUN_10091cf0  -> dlls\crowbar.cpp
+  10091f70 |    195 | 0.15 | FUN_10091f70  -> dlls\handgrenade.cpp
+  10094d30 |    192 | 0.45 | FUN_10094d30  -> dlls\mp5.cpp
+  10095cc0 |    115 | 0.32 | FUN_10095cc0  -> dlls\crowbar.cpp
+  100a00f0 |    126 | 0.37 | FUN_100a00f0  -> dlls\func_break.cpp
+  100aa1d0 |    276 | 0.31 | FUN_100aa1d0  -> dlls\func_break.cpp
+  100ae420 |    812 | 0.40 | FUN_100ae420  -> dlls\scientist.cpp
+  100afeb0 |    802 | 0.40 | FUN_100afeb0  -> dlls\scientist.cpp
+  100d66a0 |    130 | 0.40 | FUN_100d66a0  -> dlls\apache.cpp
+
+======================================================================
+  AMBIGUOUS (251 functions)
+======================================================================
+  100019d0 |     48 | 0.50 | FUN_100019d0
+  10001a00 |     48 | 0.50 | FUN_10001a00
+  100023e0 |    212 | 0.50 | FUN_100023e0
+  100048b0 |    123 | 0.50 | RopeTouch
+  10008ab0 |    159 | 0.50 | FUN_10008ab0
+  1000fff0 |    544 | 0.50 | FUN_1000fff0
+  10018e60 |     48 | 0.50 | FUN_10018e60
+  10018e90 |     48 | 0.50 | FUN_10018e90
+  1001a610 |     48 | 0.50 | FUN_1001a610
+  1001a640 |     48 | 0.50 | FUN_1001a640
+  1001a9b0 |    133 | 0.50 | FUN_1001a9b0
+  10022370 |     48 | 0.50 | FUN_10022370
+  100223a0 |     48 | 0.50 | FUN_100223a0
+  10022550 |    262 | 0.50 | FUN_10022550
+  10023e40 |    136 | 0.50 | FUN_10023e40
+  10023f50 |    110 | 0.50 | FUN_10023f50
+  10024570 |     41 | 0.50 | FUN_10024570
+  100247d0 |    208 | 0.50 | FUN_100247d0
+  10024950 |     48 | 0.50 | FUN_10024950
+  10024980 |     48 | 0.50 | FUN_10024980
+  10025160 |     48 | 0.50 | FUN_10025160
+  10025190 |     48 | 0.50 | FUN_10025190
+  100264f0 |    140 | 0.50 | FUN_100264f0
+  10026a00 |    950 | 0.50 | FUN_10026a00
+  10029b50 |    358 | 0.50 | FUN_10029b50
+  1002c860 |    705 | 0.50 | FUN_1002c860
+  1002cb30 |    303 | 0.50 | FUN_1002cb30
+  1002cc60 |    371 | 0.50 | FUN_1002cc60
+  1002d620 |    237 | 0.50 | CorpseFallThink
+  1002dd50 |     74 | 0.50 | FUN_1002dd50
+  1002ed80 |    401 | 0.50 | FUN_1002ed80
+  10030280 |    262 | 0.50 | FUN_10030280
+  10030ae0 |    214 | 0.50 | FUN_10030ae0
+  10030c50 |    861 | 0.50 | FUN_10030c50
+  100319c0 |    358 | 0.50 | FUN_100319c0
+  10031f80 |    760 | 0.50 | FUN_10031f80
+  100323e0 |     73 | 0.50 | DropDelay
+  10036920 |    209 | 0.50 | FUN_10036920
+  10036b00 |     48 | 0.50 | FUN_10036b00
+  10036b30 |     48 | 0.50 | FUN_10036b30
+  10037960 |     48 | 0.50 | FUN_10037960
+  10037990 |     48 | 0.50 | FUN_10037990
+  100384c0 |    267 | 0.50 | FUN_100384c0
+  10039510 |    287 | 0.50 | DeadEnd
+  10039c90 |    427 | 0.50 | FUN_10039c90
+  1003b9c0 |    236 | 0.50 | FUN_1003b9c0
+  1003ef60 |    502 | 0.50 | FUN_1003ef60
+  100405b0 |    103 | 0.50 | FUN_100405b0
+  100423d0 |     94 | 0.50 | FUN_100423d0
+  10042430 |     94 | 0.50 | FUN_10042430
+  10044390 |     34 | 0.50 | LoadThink
+  10046420 |    235 | 0.50 | FUN_10046420
+  10049de0 |   1060 | 0.50 | FUN_10049de0
+  1004a560 |    240 | 0.50 | FUN_1004a560
+  1004c3f0 |    710 | 0.50 | FUN_1004c3f0
+  100504b0 |    143 | 0.50 | FUN_100504b0
+  10050a80 |    129 | 0.50 | FUN_10050a80
+  10051f60 |     48 | 0.50 | FUN_10051f60
+  10051f90 |     48 | 0.50 | FUN_10051f90
+  100528b0 |    804 | 0.50 | FUN_100528b0
+  10053030 |     77 | 0.50 | SUB_Remove
+  10053090 |     48 | 0.50 | FUN_10053090
+  100530c0 |     48 | 0.50 | FUN_100530c0
+  10053670 |     48 | 0.50 | FUN_10053670
+  100536a0 |     48 | 0.50 | FUN_100536a0
+  10053d30 |     48 | 0.50 | FUN_10053d30
+  10053d60 |     48 | 0.50 | FUN_10053d60
+  10054bd0 |    426 | 0.50 | FUN_10054bd0
+  10057cb0 |    117 | 0.50 | FUN_10057cb0
+  10059080 |    513 | 0.50 | FUN_10059080
+  1005a110 |    120 | 0.50 | FUN_1005a110
+  1005a2b0 |    167 | 0.50 | SaveTouch
+  1005a4a0 |    118 | 0.50 | FUN_1005a4a0
+  1005a680 |    112 | 0.50 | FUN_1005a680
+  1005b690 |     48 | 0.50 | FUN_1005b690
+  1005b6c0 |     48 | 0.50 | FUN_1005b6c0
+  1005d9b0 |    368 | 0.50 | FUN_1005d9b0
+  1005db90 |    556 | 0.50 | SentryDeath
+  1005f8f0 |    201 | 0.50 | FUN_1005f8f0
+  1005f9c0 |     69 | 0.50 | FUN_1005f9c0
+  1005fa60 |    267 | 0.50 | FUN_1005fa60
+  10060720 |    115 | 0.50 | FUN_10060720
+  10060f30 |     74 | 0.50 | FUN_10060f30
+  100610b0 |    623 | 0.50 | FUN_100610b0
+  100614d0 |    775 | 0.50 | FUN_100614d0
+  10061f10 |    233 | 0.50 | FUN_10061f10
+  10062380 |     48 | 0.50 | FUN_10062380
+  100623b0 |     48 | 0.50 | FUN_100623b0
+  100623e0 |     48 | 0.50 | FUN_100623e0
+  10062410 |     48 | 0.50 | FUN_10062410
+  10063350 |    110 | 0.50 | FUN_10063350
+  10063bd0 |    211 | 0.50 | FUN_10063bd0
+  100643f0 |     66 | 0.50 | FUN_100643f0
+  100651a0 |    533 | 0.50 | FUN_100651a0
+  10065750 |    320 | 0.50 | FUN_10065750
+  10065a50 |    270 | 0.50 | FUN_10065a50
+  10065e60 |    253 | 0.50 | FUN_10065e60
+  10065f60 |    206 | 0.50 | PreWindThink
+  10066370 |    207 | 0.50 | FUN_10066370
+  10066a00 |    111 | 0.50 | FUN_10066a00
+  10066a70 |     89 | 0.50 | FUN_10066a70
+  10066fc0 |    109 | 0.50 | FUN_10066fc0
+  10067a40 |    750 | 0.50 | FUN_10067a40
+  10068090 |     53 | 0.50 | FUN_10068090
+  10068190 |    752 | 0.50 | FUN_10068190
+  10068840 |     36 | 0.50 | FUN_10068840
+  10068bf0 |    268 | 0.50 | DyingThink
+  10069530 |   1903 | 0.50 | FUN_10069530
+  10069d90 |     41 | 0.50 | FUN_10069d90
+  10069ff0 |     41 | 0.50 | FUN_10069ff0
+  10072410 |    311 | 0.50 | FUN_10072410
+  100766a0 |    405 | 0.50 | JumpTouch
+  10077490 |    239 | 0.50 | FUN_10077490
+  10077580 |    166 | 0.50 | FUN_10077580
+  10078530 |    114 | 0.50 | FUN_10078530
+  100788b0 |     78 | 0.50 | FUN_100788b0
+  10079ef0 |    158 | 0.50 | FUN_10079ef0
+  10079f90 |    336 | 0.50 | FUN_10079f90
+  1007adc0 |    266 | 0.50 | FUN_1007adc0
+  1007af00 |    380 | 0.50 | FUN_1007af00
+  1007b080 |    361 | 0.50 | AiWallPlugThink
+  1007f350 |     80 | 0.50 | FUN_1007f350
+  1007fd50 |    572 | 0.50 | FUN_1007fd50
+  10080740 |    589 | 0.50 | FUN_10080740
+  10080990 |     56 | 0.50 | FUN_10080990
+  10080a60 |   1857 | 0.50 | TrackTargetBug
+  10084810 |     41 | 0.50 | FUN_10084810
+  10085100 |    514 | 0.50 | FUN_10085100
+  10085340 |     47 | 0.50 | FUN_10085340
+  10085420 |    979 | 0.50 | FUN_10085420
+  100888b0 |    979 | 0.50 | FUN_100888b0
+  1008be20 |    875 | 0.50 | ExplodeThink
+  1008d430 |    112 | 0.50 | FUN_1008d430
+  1008e650 |    190 | 0.50 | FUN_1008e650
+  1008ece0 |    403 | 0.50 | FUN_1008ece0
+  1008eee0 |    500 | 0.50 | FastShotTouch
+  1008f2a0 |    385 | 0.50 | FUN_1008f2a0
+  10090940 |    370 | 0.50 | FUN_10090940
+  10090ac0 |    418 | 0.50 | FUN_10090ac0
+  10090e00 |   1261 | 0.50 | FUN_10090e00
+  10091a70 |     41 | 0.50 | FUN_10091a70
+  10091f30 |     51 | 0.50 | FUN_10091f30
+  100922c0 |   2056 | 0.50 | Splatter
+  10092c20 |    582 | 0.50 | FUN_10092c20
+  10093120 |   1625 | 0.50 | BouncyChemicalTouch
+  10093b50 |    574 | 0.50 | FUN_10093b50
+  10093d90 |    421 | 0.50 | FUN_10093d90
+  10095e90 |     41 | 0.50 | FUN_10095e90
+  10096e80 |     41 | 0.50 | FUN_10096e80
+  10097160 |    101 | 0.50 | FUN_10097160
+  10098730 |     41 | 0.50 | FUN_10098730
+  100993b0 |   1045 | 0.50 | WithPlayerThink
+  100997d0 |   1391 | 0.50 | FUN_100997d0
+  10099d40 |    855 | 0.50 | FUN_10099d40
+  1009e520 |    806 | 0.50 | UseVehicle
+  1009f000 |    400 | 0.50 | FUN_1009f000
+  1009f7e0 |    128 | 0.50 | TankBSPUse
+  1009f9e0 |    265 | 0.50 | TouchShell
+  1009fb50 |    154 | 0.50 | FUN_1009fb50
+  1009fd00 |    154 | 0.50 | FUN_1009fd00
+  1009fda0 |    293 | 0.50 | TouchTank
+  100a1520 |    229 | 0.50 | TankIgniteThink
+  100a2570 |   1081 | 0.50 | ShootClusterGrenades
+  100a37f0 |    114 | 0.50 | FUN_100a37f0
+  100a3cd0 |    252 | 0.50 | FUN_100a3cd0
+  100a43a0 |    105 | 0.50 | FUN_100a43a0
+  100a6600 |    575 | 0.50 | FUN_100a6600
+  100a7650 |    625 | 0.50 | FUN_100a7650
+  100a78d0 |    551 | 0.50 | FUN_100a78d0
+  100a7b80 |    366 | 0.50 | FUN_100a7b80
+  100a7dd0 |    304 | 0.50 | FUN_100a7dd0
+  100a8600 |    163 | 0.50 | FUN_100a8600
+  100a9290 |    653 | 0.50 | FUN_100a9290
+  100a9520 |    877 | 0.50 | FUN_100a9520
+  100a9890 |    289 | 0.50 | FUN_100a9890
+  100abff0 |     75 | 0.50 | FUN_100abff0
+  100acd10 |     56 | 0.50 | FUN_100acd10
+  100b16f0 |    583 | 0.50 | FUN_100b16f0
+  100b1e50 |    311 | 0.50 | FUN_100b1e50
+  100b1f90 |    178 | 0.50 | FUN_100b1f90
+  100b30f0 |    188 | 0.50 | FUN_100b30f0
+  100b4d70 |    610 | 0.50 | FUN_100b4d70
+  100b5060 |    136 | 0.50 | FUN_100b5060
+  100b5270 |    412 | 0.50 | FUN_100b5270
+  100b5430 |     48 | 0.50 | FUN_100b5430
+  100b5460 |     48 | 0.50 | FUN_100b5460
+  100b5540 |     64 | 0.50 | FUN_100b5540
+  100b5eb0 |    248 | 0.50 | RocketExplodeTouch
+  100b9ee0 |   1081 | 0.50 | FUN_100b9ee0
+  100bb160 |     91 | 0.50 | FUN_100bb160
+  100bc400 |     48 | 0.50 | FUN_100bc400
+  100bc430 |     48 | 0.50 | FUN_100bc430
+  100be790 |    210 | 0.50 | FUN_100be790
+  100bec80 |    446 | 0.50 | FUN_100bec80
+  100bee40 |    100 | 0.50 | FUN_100bee40
+  100bf080 |    125 | 0.50 | FUN_100bf080
+  100c23a0 |    170 | 0.50 | FUN_100c23a0
+  100c2770 |    250 | 0.50 | FUN_100c2770
+  100c45e0 |    155 | 0.50 | FUN_100c45e0
+  100c4680 |    672 | 0.50 | LaunchedTouch
+  100c5a90 |    479 | 0.50 | FUN_100c5a90
+  100c5c70 |     85 | 0.50 | FUN_100c5c70
+  100c6550 |    108 | 0.50 | FUN_100c6550
+  100c65c0 |    431 | 0.50 | FUN_100c65c0
+  100c6e80 |    289 | 0.50 | UseQueen
+  100c8b20 |   1881 | 0.50 | TrackTarget
+  100cae90 |     48 | 0.50 | FUN_100cae90
+  100caec0 |     48 | 0.50 | FUN_100caec0
+  100cb160 |    218 | 0.50 | FUN_100cb160
+  100cbb50 |     83 | 0.50 | FUN_100cbb50
+  100cbe70 |     51 | 0.50 | FUN_100cbe70
+  100cbf00 |    230 | 0.50 | FUN_100cbf00
+  100cbff0 |    214 | 0.50 | FUN_100cbff0
+  100cc120 |     51 | 0.50 | FUN_100cc120
+  100cc1b0 |    223 | 0.50 | FUN_100cc1b0
+  100cc290 |    214 | 0.50 | FUN_100cc290
+  100cc530 |    156 | 0.50 | FUN_100cc530
+  100ccf10 |     51 | 0.50 | FUN_100ccf10
+  100cd000 |     54 | 0.50 | FUN_100cd000
+  100cd870 |     90 | 0.50 | FUN_100cd870
+  100cdf60 |    154 | 0.50 | FUN_100cdf60
+  100ce430 |     41 | 0.50 | FUN_100ce430
+  100ce480 |     36 | 0.50 | FUN_100ce480
+  100ce650 |    116 | 0.50 | FUN_100ce650
+  100ce8e0 |    238 | 0.50 | FUN_100ce8e0
+  100cea00 |    333 | 0.50 | FUN_100cea00
+  100cefc0 |    808 | 0.50 | FUN_100cefc0
+  100cf2f0 |    155 | 0.50 | FUN_100cf2f0
+  100cf7c0 |    416 | 0.50 | FUN_100cf7c0
+  100d03d0 |    381 | 0.50 | FUN_100d03d0
+  100d0cc0 |    497 | 0.50 | FUN_100d0cc0
+  100d0ee0 |    113 | 0.50 | FUN_100d0ee0
+  100d1130 |     48 | 0.50 | FUN_100d1130
+  100d1160 |     48 | 0.50 | FUN_100d1160
+  100d1570 |    185 | 0.50 | FUN_100d1570
+  100d1630 |    364 | 0.50 | HologramThink
+  100d1a60 |    234 | 0.50 | RespawnHologram
+  100d1b50 |    157 | 0.50 | UseToggle
+  100d1d50 |    161 | 0.50 | FUN_100d1d50
+  100d1e00 |    202 | 0.50 | FUN_100d1e00
+  100d1f80 |     54 | 0.50 | FUN_100d1f80
+  100d23b0 |     73 | 0.50 | FUN_100d23b0
+  100d2400 |    275 | 0.50 | FUN_100d2400
+  100d2570 |    141 | 0.50 | FUN_100d2570
+  100d2930 |    358 | 0.50 | FUN_100d2930
+  100d3430 |   1174 | 0.50 | FUN_100d3430
+  100d4540 |    188 | 0.50 | FUN_100d4540
+  100d6870 |     48 | 0.50 | FUN_100d6870
+  100d68a0 |     48 | 0.50 | FUN_100d68a0
+  100df5b5 |    582 | 0.50 | FUN_100df5b5
+  100e59f2 |    124 | 0.50 | FUN_100e59f2
+
+======================================================================
+  NO_STRINGS (1915 functions)
+======================================================================
+  10001000 |     79 | 0.00 | item_airtank
+  10001230 |     21 | 0.00 | TankThink
+  10001320 |     42 | 0.00 | FUN_10001320
+  10001350 |     25 | 0.00 | FUN_10001350
+  10001370 |     25 | 0.00 | FUN_10001370
+  100014c0 |     48 | 0.00 | FUN_100014c0
+  100015d0 |     32 | 0.00 | FUN_100015d0
+  10001610 |     15 | 0.00 | SUB_CallUseToggle
+  10001790 |      3 | 0.00 | FUN_10001790
+  100017c0 |      8 | 0.00 | CallMonsterThink
+  100017e0 |     19 | 0.00 | FUN_100017e0
+  10001a30 |    297 | 0.00 | FUN_10001a30
+  10001b60 |     41 | 0.00 | FUN_10001b60
+  10001b90 |     41 | 0.00 | FUN_10001b90
+  10001bc0 |     33 | 0.00 | FUN_10001bc0
+  10001bf0 |     33 | 0.00 | FUN_10001bf0
+  10001c20 |     33 | 0.00 | FUN_10001c20
+  10001c50 |    101 | 0.00 | FUN_10001c50
+  10001cc0 |     34 | 0.00 | FUN_10001cc0
+  10001cf0 |    268 | 0.00 | FUN_10001cf0
+  10001e00 |     46 | 0.00 | FUN_10001e00
+  10001e30 |     92 | 0.00 | FUN_10001e30
+  10001e90 |     46 | 0.00 | FUN_10001e90
+  10001ec0 |     37 | 0.00 | FUN_10001ec0
+  10001ef0 |     37 | 0.00 | FUN_10001ef0
+  10001f90 |     42 | 0.00 | FUN_10001f90
+  10001fc0 |     37 | 0.00 | FUN_10001fc0
+  10001ff0 |     46 | 0.00 | FUN_10001ff0
+  10002020 |    401 | 0.00 | FUN_10002020
+  100021c0 |     82 | 0.00 | FUN_100021c0
+  10002220 |    115 | 0.00 | FUN_10002220
+  100022a0 |     79 | 0.00 | FUN_100022a0
+  100022f0 |     47 | 0.00 | FUN_100022f0
+  10002320 |     91 | 0.00 | FUN_10002320
+  10002380 |     28 | 0.00 | FUN_10002380
+  100023a0 |     30 | 0.00 | FUN_100023a0
+  100023c0 |     27 | 0.00 | FUN_100023c0
+  100024c0 |    184 | 0.00 | FUN_100024c0
+  10002580 |     53 | 0.00 | FUN_10002580
+  100025c0 |    329 | 0.00 | FUN_100025c0
+  10002710 |    366 | 0.00 | FUN_10002710
+  10002880 |    319 | 0.00 | FUN_10002880
+  10002ad0 |     93 | 0.00 | FUN_10002ad0
+  10002b30 |     81 | 0.00 | FUN_10002b30
+  10002b90 |    103 | 0.00 | FUN_10002b90
+  10002c00 |     76 | 0.00 | func_wall
+  10002c60 |    121 | 0.00 | FUN_10002c60
+  10002ce0 |     59 | 0.00 | FUN_10002ce0
+  10002d20 |     76 | 0.00 | func_wall_toggle
+  10002d70 |     29 | 0.00 | FUN_10002d70
+  10002d90 |     48 | 0.00 | FUN_10002d90
+  10002dc0 |     48 | 0.00 | FUN_10002dc0
+  10002df0 |     19 | 0.00 | FUN_10002df0
+  10002e10 |     54 | 0.00 | FUN_10002e10
+  10002e50 |     76 | 0.00 | func_conveyor
+  10002ea0 |    121 | 0.00 | FUN_10002ea0
+  10002f20 |    116 | 0.00 | FUN_10002f20
+  10002fd0 |     79 | 0.00 | func_illusionary
+  10003030 |    122 | 0.00 | FUN_10003030
+  10003110 |     76 | 0.00 | func_monsterclip
+  10003210 |     76 | 0.00 | func_rotating
+  100039b0 |    255 | 0.00 | FUN_100039b0
+  10003ab0 |    443 | 0.00 | SpinUp
+  10003c70 |    460 | 0.00 | SpinDown
+  10003e40 |     22 | 0.00 | Rotate
+  10003e60 |    373 | 0.00 | RotatingUse
+  10004000 |     76 | 0.00 | func_pendulum
+  10004380 |    260 | 0.00 | PendulumUse
+  100044f0 |     74 | 0.00 | Stop
+  10004580 |    461 | 0.00 | Swing
+  100049e0 |     76 | 0.00 | env_global
+  10004b40 |     88 | 0.00 | FUN_10004b40
+  10004ba0 |    128 | 0.00 | FUN_10004ba0
+  10004c80 |     79 | 0.00 | multisource
+  100056a0 |    208 | 0.00 | FUN_100056a0
+  10005770 |     79 | 0.00 | func_button
+  10005d00 |     66 | 0.00 | ButtonSpark
+  10005d50 |    137 | 0.00 | ButtonUse
+  10005de0 |     84 | 0.00 | FUN_10005de0
+  10005f60 |    222 | 0.00 | FUN_10005f60
+  10006040 |    148 | 0.00 | TriggerAndWait
+  100060e0 |    122 | 0.00 | ButtonReturn
+  100062b0 |     79 | 0.00 | func_rot_button
+  10006570 |     79 | 0.00 | momentary_rot_button
+  100068d0 |     58 | 0.00 | FUN_100068d0
+  10006910 |     84 | 0.00 | FUN_10006910
+  10006a30 |    375 | 0.00 | FUN_10006a30
+  10006ca0 |     84 | 0.00 | Return
+  10006d00 |    212 | 0.00 | FUN_10006d00
+  10006e40 |     76 | 0.00 | env_spark
+  10006e90 |     76 | 0.00 | env_debris
+  10006ee0 |    130 | 0.00 | FUN_10006ee0
+  100071a0 |     56 | 0.00 | SparkThink
+  100071e0 |     59 | 0.00 | SparkStart
+  10007220 |     17 | 0.00 | SparkStop
+  10007240 |     76 | 0.00 | button_target
+  10007290 |    101 | 0.00 | FUN_10007290
+  10007300 |    115 | 0.00 | FUN_10007300
+  100073e0 |     44 | 0.00 | GetEntityAPI
+  10007410 |     52 | 0.00 | GetEntityAPI2
+  10007450 |    431 | 0.00 | FUN_10007450
+  10007600 |     62 | 0.00 | FUN_10007600
+  10007640 |     89 | 0.00 | FUN_10007640
+  10007790 |     44 | 0.00 | FUN_10007790
+  10007d50 |     28 | 0.00 | FUN_10007d50
+  10007d90 |     16 | 0.00 | FUN_10007d90
+  10007da0 |     48 | 0.00 | FUN_10007da0
+  10007dd0 |     12 | 0.00 | FUN_10007dd0
+  10007de0 |     16 | 0.00 | FUN_10007de0
+  10007df0 |    109 | 0.00 | FUN_10007df0
+  10007e60 |    934 | 0.00 | FUN_10007e60
+  10008210 |     51 | 0.00 | FUN_10008210
+  10008250 |     51 | 0.00 | FUN_10008250
+  10008290 |     33 | 0.00 | FUN_10008290
+  100082c0 |     36 | 0.00 | FUN_100082c0
+  10008470 |    456 | 0.00 | FUN_10008470
+  10008650 |    137 | 0.00 | FUN_10008650
+  100086e0 |     90 | 0.00 | FUN_100086e0
+  10008740 |     15 | 0.00 | FUN_10008740
+  10008840 |     44 | 0.00 | FUN_10008840
+  10008870 |     46 | 0.00 | FUN_10008870
+  100088a0 |    157 | 0.00 | FUN_100088a0
+  10009730 |    154 | 0.00 | FUN_10009730
+  10009ef0 |   1063 | 0.00 | FUN_10009ef0
+  1000a330 |    413 | 0.00 | FUN_1000a330
+  1000a4d0 |    112 | 0.00 | FUN_1000a4d0
+  1000a6a0 |     61 | 0.00 | FUN_1000a6a0
+  1000ae10 |     79 | 0.00 | FUN_1000ae10
+  1000ae60 |      9 | 0.00 | FUN_1000ae60
+  1000ae80 |    281 | 0.00 | FUN_1000ae80
+  1000afa0 |    251 | 0.00 | FUN_1000afa0
+  1000bdf0 |      3 | 0.00 | FUN_1000bdf0
+  1000c440 |    703 | 0.00 | FUN_1000c440
+  1000c700 |    108 | 0.00 | FUN_1000c700
+  1000c790 |     26 | 0.00 | FUN_1000c790
+  1000c7f0 |     48 | 0.00 | FUN_1000c7f0
+  1000d010 |    111 | 0.00 | SUB_StartFadeOut
+  1000d080 |    104 | 0.00 | SUB_FadeOut
+  1000d0f0 |    164 | 0.00 | WaitTillLand
+  1000d1a0 |    270 | 0.00 | GibSmokeThink
+  1000d2b0 |     91 | 0.00 | FUN_1000d2b0
+  1000d310 |    443 | 0.00 | BounceGibTouch
+  1000d6b0 |    280 | 0.00 | FUN_1000d6b0
+  1000d7d0 |     71 | 0.00 | FUN_1000d7d0
+  1000d820 |   1594 | 0.00 | FUN_1000d820
+  1000de60 |    529 | 0.00 | FUN_1000de60
+  1000e080 |    119 | 0.00 | FUN_1000e080
+  1000e100 |     52 | 0.00 | FUN_1000e100
+  1000e140 |    693 | 0.00 | FUN_1000e140
+  1000e400 |     51 | 0.00 | FUN_1000e400
+  1000e440 |    134 | 0.00 | FUN_1000e440
+  1000e4d0 |     67 | 0.00 | FUN_1000e4d0
+  1000e520 |     65 | 0.00 | FUN_1000e520
+  1000e570 |    452 | 0.00 | FUN_1000e570
+  1000e740 |    961 | 0.00 | FUN_1000e740
+  1000ee80 |    244 | 0.00 | FUN_1000ee80
+  1000ef80 |    230 | 0.00 | FUN_1000ef80
+  1000f090 |   2220 | 0.00 | FUN_1000f090
+  1000f960 |    504 | 0.00 | FUN_1000f960
+  1000fb60 |    378 | 0.00 | FUN_1000fb60
+  1000ff20 |      9 | 0.00 | FUN_1000ff20
+  1000ff40 |     20 | 0.00 | FUN_1000ff40
+  1000ff60 |    143 | 0.00 | FUN_1000ff60
+  10010350 |    534 | 0.00 | FUN_10010350
+  100108c0 |     79 | 0.00 | func_door
+  10010920 |     79 | 0.00 | func_water
+  100111c0 |    184 | 0.00 | FUN_100111c0
+  100114f0 |    291 | 0.00 | DoorHitTop
+  10011700 |    248 | 0.00 | DoorHitBottom
+  10011b30 |     79 | 0.00 | func_door_rotating
+  10011e50 |     79 | 0.00 | momentary_door
+  10011f10 |    420 | 0.00 | FUN_10011f10
+  100124f0 |     76 | 0.00 | info_target
+  10012540 |     76 | 0.00 | env_bubbles
+  10012730 |     92 | 0.00 | FUN_10012730
+  100128b0 |    176 | 0.00 | FizzThink
+  10012960 |     76 | 0.00 | beam
+  10012a60 |     67 | 0.00 | FUN_10012a60
+  10012ab0 |     66 | 0.00 | FUN_10012ab0
+  10012b00 |     66 | 0.00 | FUN_10012b00
+  10012b50 |     49 | 0.00 | FUN_10012b50
+  10012b90 |     67 | 0.00 | FUN_10012b90
+  10012be0 |    116 | 0.00 | FUN_10012be0
+  10012c60 |    190 | 0.00 | FUN_10012c60
+  10012d20 |    114 | 0.00 | FUN_10012d20
+  10012e20 |    115 | 0.00 | FUN_10012e20
+  10012ea0 |    101 | 0.00 | FUN_10012ea0
+  10012f10 |    410 | 0.00 | FUN_10012f10
+  100130b0 |     92 | 0.00 | TriggerTouch
+  10013110 |     82 | 0.00 | FUN_10013110
+  10013170 |     62 | 0.00 | FUN_10013170
+  100131b0 |     76 | 0.00 | env_lightning
+  10013200 |     76 | 0.00 | env_beam
+  100132b0 |    275 | 0.00 | FUN_100132b0
+  10013880 |     89 | 0.00 | StrikeUse
+  10013d70 |    270 | 0.00 | FUN_10013d70
+  10013e80 |     78 | 0.00 | DamageThink
+  10013ed0 |    296 | 0.00 | FUN_10013ed0
+  10014000 |   1086 | 0.00 | FUN_10014000
+  10014440 |    479 | 0.00 | FUN_10014440
+  10014830 |     76 | 0.00 | env_laser
+  100148e0 |    347 | 0.00 | FUN_100148e0
+  10014a40 |     76 | 0.00 | FUN_10014a40
+  10014d80 |     17 | 0.00 | FUN_10014d80
+  10014da0 |     44 | 0.00 | FUN_10014da0
+  10014dd0 |     69 | 0.00 | FUN_10014dd0
+  10014e20 |     54 | 0.00 | FUN_10014e20
+  10014e60 |     86 | 0.00 | FUN_10014e60
+  10014ec0 |    134 | 0.00 | StrikeThink
+  10014f50 |     76 | 0.00 | env_glow
+  10015150 |     48 | 0.00 | FUN_10015150
+  10015180 |     76 | 0.00 | env_sprite
+  10015330 |    130 | 0.00 | FUN_10015330
+  100153c0 |     62 | 0.00 | FUN_100153c0
+  100154a0 |     69 | 0.00 | AnimateThink
+  100154f0 |     63 | 0.00 | AnimateUntilDead
+  10015530 |     63 | 0.00 | FUN_10015530
+  10015570 |    127 | 0.00 | ExpandThink
+  100155f0 |     97 | 0.00 | FUN_100155f0
+  10015660 |     27 | 0.00 | FUN_10015660
+  10015680 |    119 | 0.00 | FUN_10015680
+  10015700 |     69 | 0.00 | FUN_10015700
+  100157b0 |     76 | 0.00 | gibshooter
+  100159e0 |    113 | 0.00 | FUN_100159e0
+  10015b60 |    970 | 0.00 | ShootThink
+  10015f30 |     76 | 0.00 | env_shooter
+  100160f0 |    296 | 0.00 | FUN_100160f0
+  10016220 |     79 | 0.00 | test_effect
+  10016290 |    695 | 0.00 | TestThink
+  10016580 |     76 | 0.00 | env_blood
+  10016700 |     83 | 0.00 | FUN_10016700
+  10016760 |    262 | 0.00 | FUN_10016760
+  10016a00 |     76 | 0.00 | env_shake
+  10016c50 |     76 | 0.00 | env_fade
+  10016da0 |    194 | 0.00 | FUN_10016da0
+  10016e70 |     76 | 0.00 | env_message
+  10016ec0 |    131 | 0.00 | FUN_10016ec0
+  100170b0 |    249 | 0.00 | FUN_100170b0
+  100171d0 |     76 | 0.00 | env_funnel
+  100172b0 |     36 | 0.00 | FUN_100172b0
+  10017300 |     76 | 0.00 | env_beverage
+  10017350 |    165 | 0.00 | FUN_10017350
+  10017400 |     75 | 0.00 | FUN_10017400
+  10017460 |     76 | 0.00 | item_sodacan
+  100175f0 |    144 | 0.00 | CanTouch
+  10017680 |     76 | 0.00 | spark_shower
+  10017860 |    130 | 0.00 | FUN_10017860
+  10017a30 |     79 | 0.00 | env_explosion
+  10018160 |     83 | 0.00 | FUN_10018160
+  10018e00 |     76 | 0.00 | func_breakable
+  10018ec0 |    208 | 0.00 | FUN_10018ec0
+  10019030 |     65 | 0.00 | FUN_10019030
+  10019080 |     84 | 0.00 | FUN_10019080
+  10019270 |    187 | 0.00 | FUN_10019270
+  10019410 |    269 | 0.00 | BreakTouch
+  10019520 |     80 | 0.00 | FUN_10019520
+  10019660 |    612 | 0.00 | FUN_10019660
+  10019e80 |     12 | 0.00 | FUN_10019e80
+  10019f20 |     76 | 0.00 | func_pushable
+  10019f80 |    270 | 0.00 | FUN_10019f80
+  1001a300 |    134 | 0.00 | FUN_1001a300
+  1001b1b0 |    185 | 0.00 | FUN_1001b1b0
+  1001b270 |    110 | 0.00 | FUN_1001b270
+  1001b2e0 |    605 | 0.00 | FUN_1001b2e0
+  1001b540 |    230 | 0.00 | FUN_1001b540
+  1001b630 |      7 | 0.00 | FUN_1001b630
+  1001b640 |     71 | 0.00 | FUN_1001b640
+  1001b690 |     99 | 0.00 | FUN_1001b690
+  1001b710 |   2167 | 0.00 | FUN_1001b710
+  1001bf90 |    175 | 0.00 | FUN_1001bf90
+  1001c040 |    598 | 0.00 | FUN_1001c040
+  1001c2a0 |    537 | 0.00 | FUN_1001c2a0
+  1001c4c0 |     85 | 0.00 | FUN_1001c4c0
+  1001c520 |     99 | 0.00 | FUN_1001c520
+  1001c590 |    111 | 0.00 | func_tank
+  1001c810 |    111 | 0.00 | func_tanklaser
+  1001c8e0 |     49 | 0.00 | FUN_1001c8e0
+  1001ca90 |     47 | 0.00 | FUN_1001ca90
+  1001cc10 |    111 | 0.00 | func_tankrocket
+  1001cc80 |     25 | 0.00 | FUN_1001cc80
+  1001cca0 |    151 | 0.00 | FUN_1001cca0
+  1001cd40 |    111 | 0.00 | func_tankmortar
+  1001cf00 |     76 | 0.00 | func_tankcontrols
+  1001d0a0 |    146 | 0.00 | FUN_1001d0a0
+  1001d140 |    111 | 0.00 | func_tanklaserrust
+  1001d210 |     49 | 0.00 | FUN_1001d210
+  1001d2d0 |    803 | 0.00 | FUN_1001d2d0
+  1001e6e0 |    257 | 0.00 | FUN_1001e6e0
+  1001e7f0 |    104 | 0.00 | FUN_1001e7f0
+  1001ef50 |     79 | 0.00 | monster_generic
+  1001f240 |     79 | 0.00 | flashlight_beam
+  1001f2a0 |     79 | 0.00 | monster_flashlight
+  1001f2f0 |     21 | 0.00 | FUN_1001f2f0
+  1001f400 |     44 | 0.00 | SetAdditive
+  1001f430 |     44 | 0.00 | SetNormal
+  1001f5a0 |     79 | 0.00 | grenade
+  1001f5f0 |    103 | 0.00 | FUN_1001f5f0
+  1001fab0 |      8 | 0.00 | FUN_1001fab0
+  1001fac0 |     27 | 0.00 | DetonateUse
+  1001fae0 |     62 | 0.00 | PreDetonate
+  1001fb20 |    167 | 0.00 | Detonate
+  1001fbd0 |    578 | 0.00 | ExplodeTouch
+  1001fe20 |    293 | 0.00 | DangerSoundThink
+  1001ff50 |    739 | 0.00 | BounceTouch
+  10020240 |    140 | 0.00 | SlideTouch
+  10020b40 |    371 | 0.00 | FUN_10020b40
+  10021530 |     79 | 0.00 | func_recharge
+  10021710 |    144 | 0.00 | FUN_10021710
+  10021b00 |     79 | 0.00 | monster_cine_scientist
+  10021b60 |     79 | 0.00 | monster_cine_panther
+  10021bc0 |     79 | 0.00 | monster_cine_barney
+  10021c20 |     79 | 0.00 | monster_cine2_scientist
+  10021c80 |     79 | 0.00 | monster_cine2_hvyweapons
+  10021ce0 |     79 | 0.00 | monster_cine2_slave
+  10021d40 |     79 | 0.00 | monster_cine3_scientist
+  10021da0 |     79 | 0.00 | monster_cine3_barney
+  10021e00 |    253 | 0.00 | FUN_10021e00
+  10021f30 |      8 | 0.00 | FUN_10021f30
+  10021fd0 |     76 | 0.00 | cine_blood
+  10022020 |    767 | 0.00 | BloodGush
+  10022320 |     27 | 0.00 | BloodStart
+  100223d0 |     79 | 0.00 | cycler
+  100224c0 |    114 | 0.00 | gunman_cycler
+  10022540 |      9 | 0.00 | FUN_10022540
+  100227d0 |     79 | 0.00 | cycler_prdroid
+  10022980 |    206 | 0.00 | FUN_10022980
+  10022b20 |    175 | 0.00 | FUN_10022b20
+  10022bd0 |     76 | 0.00 | cycler_sprite
+  10022d60 |     92 | 0.00 | FUN_10022d60
+  10022e30 |     63 | 0.00 | FUN_10022e30
+  10022e70 |     79 | 0.00 | cycler_weapon
+  10023070 |     72 | 0.00 | FUN_10023070
+  100230c0 |     27 | 0.00 | FUN_100230c0
+  100230e0 |     43 | 0.00 | FUN_100230e0
+  10023220 |     79 | 0.00 | cycler_wreckage
+  10023270 |    170 | 0.00 | FUN_10023270
+  100234c0 |      8 | 0.00 | FUN_100234c0
+  100234d0 |     32 | 0.00 | GiveFnptrsToDll
+  100234f0 |     88 | 0.00 | item_healthkit
+  10023710 |     79 | 0.00 | func_healthcharger
+  100238f0 |    144 | 0.00 | FUN_100238f0
+  10023d80 |     76 | 0.00 | world_items
+  10023dd0 |    110 | 0.00 | FUN_10023dd0
+  10023f30 |     16 | 0.00 | FUN_10023f30
+  10023fc0 |    245 | 0.00 | FUN_10023fc0
+  10024170 |    150 | 0.00 | ItemTouch
+  10024300 |     88 | 0.00 | item_battery
+  10024510 |     88 | 0.00 | item_armor
+  10024720 |     88 | 0.00 | item_gastank
+  100248a0 |     88 | 0.00 | item_gascan
+  10024900 |     76 | 0.00 | light
+  10024ad0 |    115 | 0.00 | FUN_10024ad0
+  10024b50 |    162 | 0.00 | FUN_10024b50
+  10024c00 |     76 | 0.00 | light_spot
+  10024c50 |     77 | 0.00 | light_environment
+  10024d00 |     39 | 0.00 | FUN_10024d00
+  100251c0 |     34 | 0.00 | FUN_100251c0
+  10025260 |     38 | 0.00 | FUN_10025260
+  10025290 |     30 | 0.00 | FUN_10025290
+  100252f0 |     76 | 0.00 | game_score
+  100253d0 |     99 | 0.00 | FUN_100253d0
+  10025440 |     76 | 0.00 | game_end
+  100254b0 |     76 | 0.00 | game_text
+  10025990 |     76 | 0.00 | game_team_master
+  10025bb0 |     75 | 0.00 | FUN_10025bb0
+  10025c00 |     76 | 0.00 | game_team_set
+  10025ca0 |     76 | 0.00 | game_zone_player
+  10026030 |     76 | 0.00 | game_player_hurt
+  10026080 |    141 | 0.00 | FUN_10026080
+  10026110 |     76 | 0.00 | game_counter
+  10026190 |    195 | 0.00 | FUN_10026190
+  10026270 |     76 | 0.00 | game_counter_set
+  10026300 |     79 | 0.00 | game_player_equip
+  10026420 |    100 | 0.00 | FUN_10026420
+  100264a0 |     76 | 0.00 | game_player_team
+  10026610 |     80 | 0.00 | monstermaker
+  100266c0 |     19 | 0.00 | FUN_100266c0
+  100268b0 |    249 | 0.00 | FUN_100268b0
+  10026dc0 |     70 | 0.00 | CyclicUse
+  10026e80 |     82 | 0.00 | MakerThink
+  10026ee0 |   2743 | 0.00 | MakerWarpThink
+  10027ab0 |     20 | 0.00 | FUN_10027ab0
+  10027ad0 |     29 | 0.00 | FUN_10027ad0
+  10027af0 |     29 | 0.00 | FUN_10027af0
+  10027b50 |    320 | 0.00 | FUN_10027b50
+  10028380 |     13 | 0.00 | MonsterUse
+  10028390 |     54 | 0.00 | FUN_10028390
+  100283d0 |     44 | 0.00 | FUN_100283d0
+  10028400 |     15 | 0.00 | FUN_10028400
+  10028410 |     37 | 0.00 | FUN_10028410
+  10028440 |    292 | 0.00 | FUN_10028440
+  100285f0 |     70 | 0.00 | FUN_100285f0
+  10028640 |     38 | 0.00 | FUN_10028640
+  100288b0 |     25 | 0.00 | FUN_100288b0
+  100288d0 |   1145 | 0.00 | FUN_100288d0
+  10029080 |   1025 | 0.00 | FUN_10029080
+  10029490 |    115 | 0.00 | FUN_10029490
+  10029510 |    137 | 0.00 | FUN_10029510
+  100295a0 |     65 | 0.00 | FUN_100295a0
+  100295f0 |    377 | 0.00 | FUN_100295f0
+  10029770 |    133 | 0.00 | FUN_10029770
+  10029cc0 |     71 | 0.00 | FUN_10029cc0
+  10029d10 |    360 | 0.00 | FUN_10029d10
+  10029e80 |    132 | 0.00 | FUN_10029e80
+  1002af50 |    465 | 0.00 | FUN_1002af50
+  1002b130 |      8 | 0.00 | MonsterInitThink
+  1002b3c0 |    105 | 0.00 | FUN_1002b3c0
+  1002b440 |     25 | 0.00 | FUN_1002b440
+  1002b460 |     40 | 0.00 | FUN_1002b460
+  1002bb30 |    272 | 0.00 | FUN_1002bb30
+  1002bc40 |     82 | 0.00 | FUN_1002bc40
+  1002be10 |     74 | 0.00 | FUN_1002be10
+  1002be60 |    163 | 0.00 | FUN_1002be60
+  1002c5b0 |    300 | 0.00 | FUN_1002c5b0
+  1002c6e0 |    381 | 0.00 | FUN_1002c6e0
+  1002cea0 |    856 | 0.00 | FUN_1002cea0
+  1002d200 |    723 | 0.00 | FUN_1002d200
+  1002d4e0 |     29 | 0.00 | FUN_1002d4e0
+  1002d5d0 |     31 | 0.00 | FUN_1002d5d0
+  1002d710 |    181 | 0.00 | FUN_1002d710
+  1002d7d0 |    824 | 0.00 | FUN_1002d7d0
+  1002db10 |    327 | 0.00 | FUN_1002db10
+  1002dc60 |    186 | 0.00 | FUN_1002dc60
+  1002dda0 |    301 | 0.00 | FUN_1002dda0
+  1002ded0 |    439 | 0.00 | FUN_1002ded0
+  1002e0b0 |     79 | 0.00 | func_mortar_field
+  1002e330 |    101 | 0.00 | FUN_1002e330
+  1002e670 |     79 | 0.00 | monster_mortar
+  1002e720 |    401 | 0.00 | MortarExplode
+  1002e990 |     76 | 0.00 | FUN_1002e990
+  1002efc0 |      8 | 0.00 | FUN_1002efc0
+  1002f130 |    442 | 0.00 | FUN_1002f130
+  1002f5f0 |     87 | 0.00 | FUN_1002f5f0
+  1002f870 |     75 | 0.00 | FUN_1002f870
+  1002f9f0 |     64 | 0.00 | FUN_1002f9f0
+  1002fa30 |    240 | 0.00 | FUN_1002fa30
+  1002fb20 |     67 | 0.00 | FUN_1002fb20
+  1002fe40 |     58 | 0.00 | FUN_1002fe40
+  1002fe80 |    293 | 0.00 | FUN_1002fe80
+  10030480 |     76 | 0.00 | info_node
+  100304d0 |     76 | 0.00 | info_node_air
+  10030520 |    139 | 0.00 | FUN_10030520
+  100305b0 |     55 | 0.00 | FUN_100305b0
+  10030a00 |    168 | 0.00 | FUN_10030a00
+  10030ab0 |     43 | 0.00 | FUN_10030ab0
+  10030bc0 |    137 | 0.00 | FUN_10030bc0
+  10030fc0 |    886 | 0.00 | FUN_10030fc0
+  10031340 |     65 | 0.00 | FUN_10031340
+  10031390 |     30 | 0.00 | FUN_10031390
+  100313b0 |   1547 | 0.00 | FUN_100313b0
+  10032280 |     79 | 0.00 | testhull
+  100326f0 |    583 | 0.00 | ShowBadNode
+  10032950 |     26 | 0.00 | CallBuildNodeGraph
+  100337e0 |    301 | 0.00 | PathFind
+  10033a80 |      9 | 0.00 | FUN_10033a80
+  10033a90 |     54 | 0.00 | FUN_10033a90
+  10033ad0 |     47 | 0.00 | FUN_10033ad0
+  10033b00 |    119 | 0.00 | FUN_10033b00
+  10033b80 |     75 | 0.00 | FUN_10033b80
+  10034490 |    171 | 0.00 | FUN_10034490
+  10034540 |    243 | 0.00 | FUN_10034540
+  10034640 |    244 | 0.00 | FUN_10034640
+  10034740 |    520 | 0.00 | FUN_10034740
+  10034950 |    159 | 0.00 | FUN_10034950
+  100349f0 |   1167 | 0.00 | FUN_100349f0
+  10034e80 |   1509 | 0.00 | FUN_10034e80
+  10035800 |     79 | 0.00 | node_viewer
+  10035850 |     79 | 0.00 | node_viewer_human
+  100358a0 |     79 | 0.00 | node_viewer_fly
+  100358f0 |     79 | 0.00 | node_viewer_large
+  10035be0 |    143 | 0.00 | FUN_10035be0
+  10035c70 |     97 | 0.00 | FUN_10035c70
+  10035ce0 |    435 | 0.00 | DrawThink
+  10035ea0 |     76 | 0.00 | path_corner
+  10035f60 |    110 | 0.00 | FUN_10035f60
+  10036040 |     76 | 0.00 | path_track
+  10036100 |    156 | 0.00 | FUN_10036100
+  10036310 |     33 | 0.00 | FUN_10036310
+  10036340 |    290 | 0.00 | FUN_10036340
+  10036470 |     30 | 0.00 | FUN_10036470
+  10036490 |     30 | 0.00 | FUN_10036490
+  100364b0 |    100 | 0.00 | FUN_100364b0
+  10036520 |   1009 | 0.00 | FUN_10036520
+  10036a70 |     10 | 0.00 | FUN_10036a70
+  10036a80 |     61 | 0.00 | FUN_10036a80
+  10036ac0 |     60 | 0.00 | FUN_10036ac0
+  10037070 |      8 | 0.00 | CallGoDown
+  10037080 |      8 | 0.00 | CallHitTop
+  10037090 |      8 | 0.00 | CallHitBottom
+  100370a0 |     79 | 0.00 | func_plat
+  10037110 |    339 | 0.00 | FUN_10037110
+  10037270 |     36 | 0.00 | FUN_10037270
+  100372a0 |     79 | 0.00 | FUN_100372a0
+  100372f0 |    164 | 0.00 | FUN_100372f0
+  100373b0 |    340 | 0.00 | FUN_100373b0
+  100375b0 |     97 | 0.00 | PlatUse
+  10037620 |    117 | 0.00 | FUN_10037620
+  100376a0 |    129 | 0.00 | FUN_100376a0
+  10037730 |    117 | 0.00 | FUN_10037730
+  100377b0 |    171 | 0.00 | FUN_100377b0
+  10037910 |     79 | 0.00 | func_platrot
+  100379c0 |    283 | 0.00 | FUN_100379c0
+  10037ae0 |     17 | 0.00 | FUN_10037ae0
+  10037b00 |     43 | 0.00 | FUN_10037b00
+  10037b30 |     70 | 0.00 | FUN_10037b30
+  10037b80 |     43 | 0.00 | FUN_10037b80
+  10037bb0 |     70 | 0.00 | FUN_10037bb0
+  10037c00 |    199 | 0.00 | FUN_10037c00
+  10037cd0 |     79 | 0.00 | func_train
+  100385e0 |    175 | 0.00 | FUN_100385e0
+  100386f0 |     76 | 0.00 | func_tracktrain
+  10038950 |     53 | 0.00 | FUN_10038950
+  10038b60 |    400 | 0.00 | FUN_10038b60
+  10039480 |     44 | 0.00 | FUN_10039480
+  100394b0 |     69 | 0.00 | FUN_100394b0
+  10039630 |    202 | 0.00 | FUN_10039630
+  10039bf0 |     38 | 0.00 | FUN_10039bf0
+  10039f60 |     76 | 0.00 | func_traincontrols
+  1003a0b0 |    122 | 0.00 | FUN_1003a0b0
+  1003a130 |     91 | 0.00 | func_trackchange
+  1003a200 |    210 | 0.00 | FUN_1003a200
+  1003a6f0 |    183 | 0.00 | FUN_1003a6f0
+  1003a7b0 |    542 | 0.00 | FUN_1003a7b0
+  1003a9d0 |    172 | 0.00 | GoDown
+  1003aa80 |    172 | 0.00 | GoUp
+  1003ac60 |    114 | 0.00 | FUN_1003ac60
+  1003ace0 |    114 | 0.00 | FUN_1003ace0
+  1003ad60 |     91 | 0.00 | func_trackautochange
+  1003adc0 |    179 | 0.00 | FUN_1003adc0
+  1003afb0 |     79 | 0.00 | func_guntarget
+  1003b0b0 |    205 | 0.00 | FUN_1003b0b0
+  1003b250 |    166 | 0.00 | Next
+  1003b300 |    180 | 0.00 | Wait
+  1003b400 |    131 | 0.00 | FUN_1003b400
+  1003b490 |    126 | 0.00 | FUN_1003b490
+  1003b510 |      9 | 0.00 | FUN_1003b510
+  1003b7f0 |     79 | 0.00 | player
+  1003b840 |     76 | 0.00 | player_armor
+  1003b890 |    282 | 0.00 | FUN_1003b890
+  1003bcc0 |     87 | 0.00 | FUN_1003bcc0
+  1003be20 |    220 | 0.00 | FUN_1003be20
+  1003c080 |    181 | 0.00 | FUN_1003c080
+  1003c6b0 |    560 | 0.00 | FUN_1003c6b0
+  1003c8e0 |    267 | 0.00 | FUN_1003c8e0
+  1003d4a0 |     18 | 0.00 | FUN_1003d4a0
+  1003d7c0 |    387 | 0.00 | FUN_1003d7c0
+  1003d950 |    172 | 0.00 | FUN_1003d950
+  1003df10 |    192 | 0.00 | FUN_1003df10
+  1003dfd0 |    124 | 0.00 | FUN_1003dfd0
+  1003e740 |     67 | 0.00 | FUN_1003e740
+  1003e7c0 |   1047 | 0.00 | FUN_1003e7c0
+  1003f180 |    165 | 0.00 | FUN_1003f180
+  1003f230 |    304 | 0.00 | FUN_1003f230
+  1003f360 |    374 | 0.00 | FUN_1003f360
+  1003f4e0 |    415 | 0.00 | FUN_1003f4e0
+  1003f9a0 |     35 | 0.00 | FUN_1003f9a0
+  1003f9d0 |    111 | 0.00 | FUN_1003f9d0
+  10040190 |      1 | 0.00 | FUN_10040190
+  10040410 |    281 | 0.00 | FUN_10040410
+  10040530 |    125 | 0.00 | FUN_10040530
+  10040620 |     31 | 0.00 | FUN_10040620
+  10040890 |    156 | 0.00 | FUN_10040890
+  10040a20 |    147 | 0.00 | FUN_10040a20
+  10040ac0 |    307 | 0.00 | FUN_10040ac0
+  10040c00 |     13 | 0.00 | FUN_10040c00
+  10040d40 |     58 | 0.00 | FUN_10040d40
+  10042230 |     39 | 0.00 | FUN_10042230
+  10042260 |    115 | 0.00 | FUN_10042260
+  100422e0 |     24 | 0.00 | FUN_100422e0
+  10042300 |     66 | 0.00 | FUN_10042300
+  10042350 |    126 | 0.00 | FUN_10042350
+  10042ae0 |     44 | 0.00 | FUN_10042ae0
+  10042b10 |     41 | 0.00 | FUN_10042b10
+  100435b0 |    136 | 0.00 | FUN_100435b0
+  10043640 |     35 | 0.00 | FUN_10043640
+  10043670 |      7 | 0.00 | FUN_10043670
+  100439b0 |    132 | 0.00 | FUN_100439b0
+  10043a40 |    159 | 0.00 | FUN_10043a40
+  10043ae0 |     80 | 0.00 | FUN_10043ae0
+  10043b30 |    114 | 0.00 | FUN_10043b30
+  10043bb0 |     79 | 0.00 | monster_hevsuit_dead
+  10043cf0 |     76 | 0.00 | player_togglehud
+  10043d40 |    118 | 0.00 | FUN_10043d40
+  10043dc0 |     76 | 0.00 | player_weaponstrip
+  10043e10 |     95 | 0.00 | FUN_10043e10
+  10043e70 |     76 | 0.00 | player_giveitems
+  10043ec0 |    490 | 0.00 | FUN_10043ec0
+  100440b0 |     76 | 0.00 | player_loadsaved
+  100442d0 |     87 | 0.00 | FUN_100442d0
+  10044330 |     88 | 0.00 | MessageThink
+  100443c0 |    100 | 0.00 | FUN_100443c0
+  10044560 |     76 | 0.00 | info_intermission
+  10044b70 |    247 | 0.00 | FUN_10044b70
+  10044f90 |     45 | 0.00 | FUN_10044f90
+  10044fc0 |     49 | 0.00 | FUN_10044fc0
+  100450a0 |     59 | 0.00 | FUN_100450a0
+  100450e0 |     34 | 0.00 | FUN_100450e0
+  10045110 |     78 | 0.00 | FUN_10045110
+  10045180 |     37 | 0.00 | FUN_10045180
+  10045340 |    179 | 0.00 | FUN_10045340
+  10045400 |    101 | 0.00 | FUN_10045400
+  10045710 |     94 | 0.00 | FUN_10045710
+  10045ef0 |     67 | 0.00 | FUN_10045ef0
+  10045f70 |    250 | 0.00 | FUN_10045f70
+  10046070 |    740 | 0.00 | FUN_10046070
+  10046380 |    160 | 0.00 | FUN_10046380
+  10046510 |    159 | 0.00 | FUN_10046510
+  100465b0 |    121 | 0.00 | FUN_100465b0
+  10046630 |     93 | 0.00 | FUN_10046630
+  10046690 |   1248 | 0.00 | FUN_10046690
+  10046b70 |    157 | 0.00 | FUN_10046b70
+  10046c10 |   1301 | 0.00 | FUN_10046c10
+  10047130 |    406 | 0.00 | FUN_10047130
+  100472d0 |    188 | 0.00 | FUN_100472d0
+  10047390 |    769 | 0.00 | FUN_10047390
+  100476a0 |    318 | 0.00 | FUN_100476a0
+  100477e0 |     19 | 0.00 | FUN_100477e0
+  10047800 |    445 | 0.00 | FUN_10047800
+  100479c0 |    294 | 0.00 | FUN_100479c0
+  10047af0 |     77 | 0.00 | FUN_10047af0
+  10047b40 |     23 | 0.00 | FUN_10047b40
+  10047b60 |    887 | 0.00 | FUN_10047b60
+  10047ee0 |    200 | 0.00 | FUN_10047ee0
+  10047fb0 |    862 | 0.00 | FUN_10047fb0
+  10048310 |     31 | 0.00 | FUN_10048310
+  10048330 |    156 | 0.00 | FUN_10048330
+  100483d0 |    913 | 0.00 | FUN_100483d0
+  10048770 |    874 | 0.00 | FUN_10048770
+  10048ae0 |    197 | 0.00 | FUN_10048ae0
+  10048bb0 |    179 | 0.00 | FUN_10048bb0
+  10048c70 |     95 | 0.00 | FUN_10048c70
+  10048cd0 |    203 | 0.00 | FUN_10048cd0
+  10048da0 |    779 | 0.00 | FUN_10048da0
+  100490b0 |    174 | 0.00 | FUN_100490b0
+  100494c0 |    610 | 0.00 | FUN_100494c0
+  100499d0 |    151 | 0.00 | FUN_100499d0
+  10049a70 |     75 | 0.00 | FUN_10049a70
+  10049ac0 |    547 | 0.00 | FUN_10049ac0
+  10049cf0 |    237 | 0.00 | FUN_10049cf0
+  1004a230 |    539 | 0.00 | FUN_1004a230
+  1004a520 |     21 | 0.00 | FUN_1004a520
+  1004a540 |     27 | 0.00 | FUN_1004a540
+  1004a650 |     47 | 0.00 | FUN_1004a650
+  1004a680 |     23 | 0.00 | FUN_1004a680
+  1004a6a0 |     33 | 0.00 | FUN_1004a6a0
+  1004a6d0 |    467 | 0.00 | FUN_1004a6d0
+  1004a8b0 |   1621 | 0.00 | FUN_1004a8b0
+  1004afc0 |     97 | 0.00 | FUN_1004afc0
+  1004c3d0 |     30 | 0.00 | FUN_1004c3d0
+  1004ca60 |     80 | 0.00 | scripted_sequence
+  1004cab0 |     91 | 0.00 | aiscripted_sequence
+  1004cba0 |     19 | 0.00 | FUN_1004cba0
+  1004cc00 |     90 | 0.00 | FUN_1004cc00
+  1004d330 |    153 | 0.00 | CineThink
+  1004d3d0 |    165 | 0.00 | FUN_1004d3d0
+  1004d480 |    168 | 0.00 | FUN_1004d480
+  1004d530 |     83 | 0.00 | FUN_1004d530
+  1004d600 |     46 | 0.00 | FUN_1004d600
+  1004d630 |     25 | 0.00 | FUN_1004d630
+  1004d650 |     47 | 0.00 | FUN_1004d650
+  1004dae0 |    809 | 0.00 | FUN_1004dae0
+  1004de70 |     79 | 0.00 | scripted_sentence
+  1004e280 |    119 | 0.00 | FindThink
+  1004e690 |     79 | 0.00 | monster_furniture
+  1004e710 |    202 | 0.00 | FUN_1004e710
+  1004e800 |     18 | 0.00 | FUN_1004e800
+  1004ebd0 |     89 | 0.00 | FUN_1004ebd0
+  1004ec30 |     79 | 0.00 | ambient_generic
+  1004ecf0 |    269 | 0.00 | FUN_1004ecf0
+  1004ee00 |    186 | 0.00 | FUN_1004ee00
+  1004eec0 |    875 | 0.00 | RampThink
+  1004f230 |    422 | 0.00 | FUN_1004f230
+  1004fbf0 |     76 | 0.00 | env_sound
+  1004fd50 |    420 | 0.00 | FUN_1004fd50
+  10050110 |    102 | 0.00 | FUN_10050110
+  10050180 |    271 | 0.00 | FUN_10050180
+  10050290 |    304 | 0.00 | FUN_10050290
+  100503c0 |    114 | 0.00 | FUN_100503c0
+  10050440 |    104 | 0.00 | FUN_10050440
+  10050540 |    134 | 0.00 | FUN_10050540
+  100509d0 |    176 | 0.00 | FUN_100509d0
+  10050c60 |    145 | 0.00 | FUN_10050c60
+  10050ee0 |     68 | 0.00 | FUN_10050ee0
+  10051480 |     76 | 0.00 | speaker
+  10051540 |    191 | 0.00 | FUN_10051540
+  10051600 |     53 | 0.00 | FUN_10051600
+  100518f0 |     79 | 0.00 | soundent
+  10051940 |     50 | 0.00 | FUN_10051940
+  10051980 |     44 | 0.00 | FUN_10051980
+  100519b0 |     12 | 0.00 | FUN_100519b0
+  100519c0 |     12 | 0.00 | FUN_100519c0
+  100519d0 |     46 | 0.00 | FUN_100519d0
+  10051ac0 |     83 | 0.00 | FUN_10051ac0
+  10051b20 |     55 | 0.00 | FUN_10051b20
+  10051b60 |    131 | 0.00 | FUN_10051b60
+  10051cb0 |     77 | 0.00 | FUN_10051cb0
+  10051d00 |     17 | 0.00 | FUN_10051d00
+  10051d40 |     72 | 0.00 | FUN_10051d40
+  10051d90 |     16 | 0.00 | FUN_10051d90
+  10051db0 |     41 | 0.00 | FUN_10051db0
+  10051ee0 |     67 | 0.00 | FUN_10051ee0
+  10051fc0 |    152 | 0.00 | FUN_10051fc0
+  10052060 |     79 | 0.00 | FUN_10052060
+  100520c0 |     69 | 0.00 | FUN_100520c0
+  10052110 |     50 | 0.00 | FUN_10052110
+  10052150 |    179 | 0.00 | FUN_10052150
+  10052210 |     81 | 0.00 | FUN_10052210
+  10052270 |     53 | 0.00 | FUN_10052270
+  100522b0 |     53 | 0.00 | FUN_100522b0
+  100522f0 |    257 | 0.00 | FUN_100522f0
+  10052400 |     88 | 0.00 | FUN_10052400
+  10052760 |    117 | 0.00 | FUN_10052760
+  10052be0 |     77 | 0.00 | FUN_10052be0
+  10052c30 |     53 | 0.00 | FUN_10052c30
+  10052c70 |    140 | 0.00 | FUN_10052c70
+  10052d00 |    143 | 0.00 | FUN_10052d00
+  10052d90 |     26 | 0.00 | FUN_10052d90
+  10052de0 |     76 | 0.00 | info_null
+  10052e30 |     76 | 0.00 | info_player_deathmatch
+  10052e80 |     76 | 0.00 | info_player_start
+  10052ed0 |     76 | 0.00 | info_landmark
+  10052fc0 |    103 | 0.00 | FUN_10052fc0
+  10053080 |      1 | 0.00 | SUB_DoNothing
+  100531b0 |     55 | 0.00 | FUN_100531b0
+  100532a0 |     76 | 0.00 | DelayedUse
+  10053500 |    258 | 0.00 | FUN_10053500
+  10053610 |     84 | 0.00 | DelayThink
+  10053840 |    243 | 0.00 | FUN_10053840
+  10053940 |     81 | 0.00 | LinearMoveDone
+  100539a0 |     55 | 0.00 | FUN_100539a0
+  100539e0 |    243 | 0.00 | FUN_100539e0
+  10053ae0 |     85 | 0.00 | AngularMoveDone
+  10053b70 |    174 | 0.00 | FUN_10053b70
+  10053c20 |     55 | 0.00 | FUN_10053c20
+  10053d90 |     38 | 0.00 | FUN_10053d90
+  10053dc0 |     66 | 0.00 | FUN_10053dc0
+  10053e10 |    823 | 0.00 | FUN_10053e10
+  100541b0 |    826 | 0.00 | FUN_100541b0
+  10054520 |    120 | 0.00 | FUN_10054520
+  10054690 |     92 | 0.00 | FUN_10054690
+  100546f0 |     74 | 0.00 | FUN_100546f0
+  10054740 |    122 | 0.00 | FUN_10054740
+  100547c0 |    113 | 0.00 | FUN_100547c0
+  10054840 |    111 | 0.00 | FUN_10054840
+  100548b0 |     21 | 0.00 | FUN_100548b0
+  10054af0 |     26 | 0.00 | FUN_10054af0
+  10054b90 |     61 | 0.00 | FUN_10054b90
+  10054da0 |     93 | 0.00 | FUN_10054da0
+  10054e00 |    206 | 0.00 | FUN_10054e00
+  10054ed0 |    161 | 0.00 | FUN_10054ed0
+  10054f80 |    784 | 0.00 | FUN_10054f80
+  100553b0 |     60 | 0.00 | FUN_100553b0
+  100553f0 |     43 | 0.00 | FUN_100553f0
+  10055420 |    113 | 0.00 | FUN_10055420
+  100554a0 |    603 | 0.00 | FUN_100554a0
+  10055750 |     29 | 0.00 | FUN_10055750
+  10055790 |    158 | 0.00 | FUN_10055790
+  10055830 |     54 | 0.00 | FUN_10055830
+  10055870 |    197 | 0.00 | FUN_10055870
+  10055940 |    159 | 0.00 | FUN_10055940
+  100559e0 |    112 | 0.00 | FUN_100559e0
+  10055be0 |     61 | 0.00 | FUN_10055be0
+  10055c20 |    220 | 0.00 | FUN_10055c20
+  10056590 |     43 | 0.00 | FUN_10056590
+  10056630 |    122 | 0.00 | FUN_10056630
+  10056780 |     76 | 0.00 | FUN_10056780
+  10056830 |    169 | 0.00 | FUN_10056830
+  100568e0 |    409 | 0.00 | FUN_100568e0
+  10056a80 |     76 | 0.00 | func_friction
+  10056b40 |     76 | 0.00 | FUN_10056b40
+  10056b90 |     35 | 0.00 | ChangeFriction
+  10056c40 |     76 | 0.00 | trigger_auto
+  10056e20 |     51 | 0.00 | FUN_10056e20
+  10056e60 |     76 | 0.00 | trigger_multipleauto
+  10057040 |     42 | 0.00 | FUN_10057040
+  10057070 |     76 | 0.00 | trigger_relay
+  100571e0 |     40 | 0.00 | FUN_100571e0
+  10057210 |     79 | 0.00 | multi_manager
+  100574b0 |    224 | 0.00 | ManagerThink
+  10057590 |    177 | 0.00 | FUN_10057590
+  10057650 |    109 | 0.00 | ManagerUse
+  100576c0 |     76 | 0.00 | env_render
+  10057800 |     79 | 0.00 | trigger
+  10057a30 |     79 | 0.00 | trigger_hurt
+  10057a80 |     79 | 0.00 | trigger_monsterjump
+  10057ad0 |     98 | 0.00 | FUN_10057ad0
+  10057b40 |     41 | 0.00 | FUN_10057b40
+  10057c20 |     79 | 0.00 | trigger_cdaudio
+  10057c70 |     30 | 0.00 | FUN_10057c70
+  10057d30 |     41 | 0.00 | FUN_10057d30
+  10057d60 |     76 | 0.00 | target_cdaudio
+  10057e80 |    117 | 0.00 | FUN_10057e80
+  10057f00 |     34 | 0.00 | FUN_10057f00
+  10057f30 |    136 | 0.00 | FUN_10057f30
+  10057fc0 |    835 | 0.00 | RadiationThink
+  10058370 |    503 | 0.00 | HurtTouch
+  10058570 |     79 | 0.00 | trigger_multiple
+  100585c0 |     42 | 0.00 | FUN_100585c0
+  100585f0 |     79 | 0.00 | trigger_once
+  100588e0 |      8 | 0.00 | MultiWaitOver
+  10058a30 |     79 | 0.00 | trigger_counter
+  10058ab0 |     76 | 0.00 | trigger_transition
+  10058b00 |     83 | 0.00 | FUN_10058b00
+  10058b60 |     76 | 0.00 | fireanddie
+  10058c00 |     24 | 0.00 | FUN_10058c00
+  10058c20 |     79 | 0.00 | trigger_changelevel
+  10058eb0 |    212 | 0.00 | FUN_10058eb0
+  10058f90 |     59 | 0.00 | ExecuteChangeLevel
+  10059070 |     13 | 0.00 | UseChangeLevel
+  10059330 |    259 | 0.00 | FUN_10059330
+  10059440 |     19 | 0.00 | FUN_10059440
+  10059560 |    623 | 0.00 | FUN_10059560
+  10059940 |     79 | 0.00 | func_ladder
+  10059a10 |     65 | 0.00 | FUN_10059a10
+  10059a60 |     79 | 0.00 | trigger_push
+  10059ac0 |    147 | 0.00 | FUN_10059ac0
+  10059ea0 |     79 | 0.00 | trigger_teleport
+  10059ef0 |     17 | 0.00 | FUN_10059ef0
+  10059f10 |     76 | 0.00 | info_teleport_destination
+  10059f60 |     76 | 0.00 | trigger_gunmanteleport
+  10059fc0 |    139 | 0.00 | TeleportUse
+  1005a050 |     77 | 0.00 | trigger_kill
+  1005a100 |     16 | 0.00 | FUN_1005a100
+  1005a220 |     79 | 0.00 | trigger_autosave
+  1005a270 |     55 | 0.00 | FUN_1005a270
+  1005a360 |     79 | 0.00 | trigger_endsection
+  1005a3b0 |     76 | 0.00 | EndSectionUse
+  1005a400 |     74 | 0.00 | FUN_1005a400
+  1005a450 |     76 | 0.00 | EndSectionTouch
+  1005a520 |     79 | 0.00 | trigger_gravity
+  1005a570 |     17 | 0.00 | FUN_1005a570
+  1005a590 |     45 | 0.00 | GravityTouch
+  1005a5c0 |     76 | 0.00 | trigger_changetarget
+  1005a750 |     77 | 0.00 | trigger_camera
+  1005a800 |     17 | 0.00 | FUN_1005a800
+  1005af70 |    722 | 0.00 | FollowTarget
+  1005b250 |    749 | 0.00 | FUN_1005b250
+  1005b540 |     79 | 0.00 | trigger_tankeject
+  1005b670 |     11 | 0.00 | SpinDownCall
+  1005b680 |     11 | 0.00 | SpinUpCall
+  1005b750 |    132 | 0.00 | monster_turret
+  1005b800 |    132 | 0.00 | monster_miniturret
+  1005bb20 |    193 | 0.00 | FUN_1005bb20
+  1005bbf0 |      1 | 0.00 | FUN_1005bbf0
+  1005bf20 |    291 | 0.00 | Initialize
+  1005c050 |    149 | 0.00 | TurretUse
+  1005c200 |   1627 | 0.00 | ActiveThink
+  1005c9a0 |    236 | 0.00 | Deploy
+  1005ca90 |    318 | 0.00 | Retire
+  1005cbd0 |    223 | 0.00 | FUN_1005cbd0
+  1005ccb0 |     85 | 0.00 | FUN_1005ccb0
+  1005cd10 |    121 | 0.00 | FUN_1005cd10
+  1005cd90 |    348 | 0.00 | SearchThink
+  1005cef0 |    146 | 0.00 | AutoSearchThink
+  1005cf90 |    735 | 0.00 | TurretDeath
+  1005d320 |    249 | 0.00 | FUN_1005d320
+  1005d6d0 |    132 | 0.00 | monster_sentry
+  1005db50 |     59 | 0.00 | SentryTouch
+  1005ddc0 |    139 | 0.00 | monster_sentry_mini
+  1005dfe0 |    234 | 0.00 | FUN_1005dfe0
+  1005e140 |      8 | 0.00 | FUN_1005e140
+  1005e3e0 |     31 | 0.00 | FUN_1005e3e0
+  1005e400 |     24 | 0.00 | FUN_1005e400
+  1005e4a0 |    120 | 0.00 | FUN_1005e4a0
+  1005e520 |     63 | 0.00 | FUN_1005e520
+  1005e560 |     47 | 0.00 | FUN_1005e560
+  1005e590 |     57 | 0.00 | FUN_1005e590
+  1005e740 |    264 | 0.00 | FUN_1005e740
+  1005e850 |     71 | 0.00 | FUN_1005e850
+  1005e8a0 |     71 | 0.00 | FUN_1005e8a0
+  1005e930 |    153 | 0.00 | FUN_1005e930
+  1005e9d0 |     53 | 0.00 | FUN_1005e9d0
+  1005ea10 |     13 | 0.00 | FUN_1005ea10
+  1005ea20 |     44 | 0.00 | FUN_1005ea20
+  1005ea50 |    141 | 0.00 | FUN_1005ea50
+  1005eae0 |    150 | 0.00 | FUN_1005eae0
+  1005eb80 |    342 | 0.00 | FUN_1005eb80
+  1005ece0 |     33 | 0.00 | FUN_1005ece0
+  1005ed30 |    101 | 0.00 | FUN_1005ed30
+  1005eda0 |    152 | 0.00 | FUN_1005eda0
+  1005ee40 |    100 | 0.00 | FUN_1005ee40
+  1005eeb0 |     57 | 0.00 | FUN_1005eeb0
+  1005eef0 |    471 | 0.00 | FUN_1005eef0
+  1005f0d0 |     39 | 0.00 | FUN_1005f0d0
+  1005f100 |     72 | 0.00 | FUN_1005f100
+  1005f150 |    121 | 0.00 | FUN_1005f150
+  1005f1d0 |    131 | 0.00 | FUN_1005f1d0
+  1005f260 |     90 | 0.00 | FUN_1005f260
+  1005f2c0 |     65 | 0.00 | FUN_1005f2c0
+  1005f390 |     71 | 0.00 | FUN_1005f390
+  1005f3e0 |     65 | 0.00 | FUN_1005f3e0
+  1005f430 |     59 | 0.00 | FUN_1005f430
+  1005f470 |     43 | 0.00 | FUN_1005f470
+  1005f4a0 |     48 | 0.00 | FUN_1005f4a0
+  1005f4d0 |     35 | 0.00 | FUN_1005f4d0
+  1005f500 |    207 | 0.00 | FUN_1005f500
+  1005f5d0 |     31 | 0.00 | FUN_1005f5d0
+  1005f5f0 |     13 | 0.00 | FUN_1005f5f0
+  1005f600 |     26 | 0.00 | FUN_1005f600
+  1005f620 |     65 | 0.00 | FUN_1005f620
+  1005f670 |     61 | 0.00 | FUN_1005f670
+  1005f6b0 |    147 | 0.00 | FUN_1005f6b0
+  1005f750 |     48 | 0.00 | FUN_1005f750
+  1005f7a0 |     29 | 0.00 | FUN_1005f7a0
+  1005f8e0 |     15 | 0.00 | FUN_1005f8e0
+  1005fa10 |     80 | 0.00 | FUN_1005fa10
+  1005fc50 |    666 | 0.00 | FUN_1005fc50
+  1005fef0 |    161 | 0.00 | FUN_1005fef0
+  1005ffa0 |    135 | 0.00 | FUN_1005ffa0
+  10060030 |     66 | 0.00 | FUN_10060030
+  10060080 |     88 | 0.00 | FUN_10060080
+  100600e0 |     62 | 0.00 | FUN_100600e0
+  10060120 |    152 | 0.00 | FUN_10060120
+  100601c0 |    157 | 0.00 | FUN_100601c0
+  10060260 |    334 | 0.00 | FUN_10060260
+  100603b0 |    190 | 0.00 | FUN_100603b0
+  10060470 |    275 | 0.00 | FUN_10060470
+  10060590 |    288 | 0.00 | FUN_10060590
+  100606b0 |     52 | 0.00 | FUN_100606b0
+  100606f0 |     34 | 0.00 | FUN_100606f0
+  100607a0 |     42 | 0.00 | FUN_100607a0
+  100607d0 |    157 | 0.00 | FUN_100607d0
+  10060870 |     59 | 0.00 | FUN_10060870
+  100608b0 |     27 | 0.00 | FUN_100608b0
+  100608d0 |     42 | 0.00 | FUN_100608d0
+  10060900 |    107 | 0.00 | FUN_10060900
+  10060980 |     11 | 0.00 | FUN_10060980
+  10060990 |      1 | 0.00 | FUN_10060990
+  100609a0 |     26 | 0.00 | FUN_100609a0
+  100609c0 |     29 | 0.00 | FUN_100609c0
+  100609e0 |     29 | 0.00 | FUN_100609e0
+  10060a00 |     49 | 0.00 | FUN_10060a00
+  10060a40 |     52 | 0.00 | FUN_10060a40
+  10060a80 |     66 | 0.00 | FUN_10060a80
+  10060ad0 |     37 | 0.00 | FUN_10060ad0
+  10060b00 |     31 | 0.00 | FUN_10060b00
+  10060b20 |    223 | 0.00 | FUN_10060b20
+  10060c00 |     23 | 0.00 | FUN_10060c00
+  10060c40 |     30 | 0.00 | FUN_10060c40
+  10060c60 |     30 | 0.00 | FUN_10060c60
+  10060c80 |     91 | 0.00 | FUN_10060c80
+  10060d10 |    137 | 0.00 | FUN_10060d10
+  10060dc0 |     43 | 0.00 | FUN_10060dc0
+  10060e70 |    188 | 0.00 | FUN_10060e70
+  10060f80 |    226 | 0.00 | FUN_10060f80
+  10061090 |     25 | 0.00 | FUN_10061090
+  100613b0 |     38 | 0.00 | FUN_100613b0
+  100613e0 |     37 | 0.00 | FUN_100613e0
+  10061410 |     76 | 0.00 | FUN_10061410
+  10061460 |    100 | 0.00 | FUN_10061460
+  10061820 |     25 | 0.00 | FUN_10061820
+  10061840 |    299 | 0.00 | FUN_10061840
+  10061970 |     55 | 0.00 | FUN_10061970
+  100619b0 |     28 | 0.00 | FUN_100619b0
+  100619d0 |     27 | 0.00 | FUN_100619d0
+  10061a30 |     11 | 0.00 | FUN_10061a30
+  10061a40 |    115 | 0.00 | FUN_10061a40
+  10061ac0 |     15 | 0.00 | FUN_10061ac0
+  10061b60 |    251 | 0.00 | FUN_10061b60
+  10061c60 |     18 | 0.00 | FUN_10061c60
+  10061c80 |     40 | 0.00 | FUN_10061c80
+  10061cb0 |     92 | 0.00 | FUN_10061cb0
+  10061d10 |     34 | 0.00 | FUN_10061d10
+  10061d40 |     32 | 0.00 | FUN_10061d40
+  10061d60 |    180 | 0.00 | FUN_10061d60
+  10061e20 |    140 | 0.00 | FUN_10061e20
+  10061eb0 |     82 | 0.00 | FUN_10061eb0
+  10062440 |    173 | 0.00 | FUN_10062440
+  100624f0 |    156 | 0.00 | FUN_100624f0
+  100626c0 |     15 | 0.00 | RemoveGlow
+  100626d0 |     61 | 0.00 | AttemptToMaterialize
+  10062710 |     30 | 0.00 | FUN_10062710
+  100628d0 |     24 | 0.00 | FUN_100628d0
+  100628f0 |    761 | 0.00 | FUN_100628f0
+  10062bf0 |     28 | 0.00 | DestroyItem
+  10062c10 |     15 | 0.00 | FUN_10062c10
+  10062d50 |    141 | 0.00 | FUN_10062d50
+  10062de0 |    242 | 0.00 | FUN_10062de0
+  10062ee0 |     82 | 0.00 | FUN_10062ee0
+  10063050 |     65 | 0.00 | FUN_10063050
+  10063110 |    174 | 0.00 | FUN_10063110
+  100631c0 |    143 | 0.00 | FUN_100631c0
+  100632c0 |     35 | 0.00 | FUN_100632c0
+  100633c0 |    151 | 0.00 | FUN_100633c0
+  10063460 |    165 | 0.00 | GlowThink
+  100635f0 |    213 | 0.00 | DefaultTouch
+  100636d0 |    119 | 0.00 | FUN_100636d0
+  100637c0 |     79 | 0.00 | weaponbox
+  10063880 |     98 | 0.00 | FUN_10063880
+  10063940 |     74 | 0.00 | Kill
+  10063aa0 |    194 | 0.00 | FUN_10063aa0
+  10063b70 |     92 | 0.00 | FUN_10063b70
+  10063cb0 |    129 | 0.00 | FUN_10063cb0
+  10063e50 |     76 | 0.00 | infodecal
+  10063f10 |    330 | 0.00 | TriggerDecal
+  10064060 |    237 | 0.00 | StaticDecal
+  100641e0 |     76 | 0.00 | bodyque
+  10064240 |    285 | 0.00 | FUN_10064240
+  10064360 |     12 | 0.00 | FUN_10064360
+  10064370 |     14 | 0.00 | FUN_10064370
+  10064380 |    104 | 0.00 | FUN_10064380
+  10064440 |    145 | 0.00 | FUN_10064440
+  100644e0 |     24 | 0.00 | FUN_100644e0
+  10064500 |     13 | 0.00 | FUN_10064500
+  10064510 |     25 | 0.00 | FUN_10064510
+  10064640 |     71 | 0.00 | FUN_10064640
+  10064690 |     38 | 0.00 | FUN_10064690
+  10064750 |     76 | 0.00 | worldspawn
+  100650f0 |     76 | 0.00 | func_wind
+  100653c0 |    194 | 0.00 | FUN_100653c0
+  10065570 |     76 | 0.00 | lava
+  10065620 |     76 | 0.00 | lava_god
+  10065670 |    186 | 0.00 | FUN_10065670
+  100659b0 |      8 | 0.00 | FUN_100659b0
+  100659c0 |      8 | 0.00 | FUN_100659c0
+  100659d0 |      4 | 0.00 | FUN_100659d0
+  100659e0 |     98 | 0.00 | FUN_100659e0
+  10065bd0 |    177 | 0.00 | FUN_10065bd0
+  10065c90 |     76 | 0.00 | leaf
+  10065cf0 |     76 | 0.00 | leaf_god
+  10065da0 |    166 | 0.00 | FUN_10065da0
+  10066030 |    650 | 0.00 | PostWindThink
+  100662c0 |    171 | 0.00 | FUN_100662c0
+  10066440 |     17 | 0.00 | KillTouch
+  10066460 |    309 | 0.00 | LeafThink
+  100665a0 |     77 | 0.00 | random_speaker
+  10066650 |     28 | 0.00 | FUN_10066650
+  10066830 |    111 | 0.00 | FUN_10066830
+  100668a0 |    102 | 0.00 | Play
+  10066910 |     77 | 0.00 | targ_speaker
+  100669c0 |     23 | 0.00 | FUN_100669c0
+  10066b20 |     77 | 0.00 | random_trigger
+  10066bd0 |     34 | 0.00 | FUN_10066bd0
+  10066d70 |     68 | 0.00 | FUN_10066d70
+  10066dc0 |     17 | 0.00 | Rand_TriggerUse
+  10066de0 |    108 | 0.00 | Rand_TriggerThink
+  10066e50 |     76 | 0.00 | player_speaker
+  10067030 |     95 | 0.00 | PlaySound
+  10067090 |     76 | 0.00 | boulder
+  10067260 |    318 | 0.00 | DistibuteThinks
+  100673b0 |     46 | 0.00 | UseBoulder
+  100674c0 |    138 | 0.00 | FUN_100674c0
+  10067550 |    482 | 0.00 | FUN_10067550
+  100677b0 |     77 | 0.00 | sphere_explosion
+  10067860 |      9 | 0.00 | FUN_10067860
+  10067970 |    204 | 0.00 | FUN_10067970
+  10067d30 |    467 | 0.00 | ExplodeEvent
+  10067f10 |     77 | 0.00 | entity_spritegod
+  10067f60 |     77 | 0.00 | test_entity2
+  100684e0 |    605 | 0.00 | SpewEvent
+  10068740 |     79 | 0.00 | entity_volcanospew
+  10068870 |    199 | 0.00 | SprayLava
+  100689a0 |    295 | 0.00 | FUN_100689a0
+  10068ad0 |     36 | 0.00 | NullThink
+  10068b00 |     46 | 0.00 | StartupUse
+  10069ce0 |    132 | 0.00 | decore_eagle
+  10069f60 |    132 | 0.00 | decore_pteradon
+  1006a050 |     79 | 0.00 | grenade_mantabomb
+  1006a0b0 |    132 | 0.00 | monster_apache
+  1006a230 |    132 | 0.00 | monster_human_chopper
+  1006a650 |    591 | 0.00 | FallingThink
+  1006be40 |     30 | 0.00 | FUN_1006be40
+  1006be60 |     29 | 0.00 | FUN_1006be60
+  1006c270 |    203 | 0.00 | FUN_1006c270
+  1006c3d0 |    133 | 0.00 | monster_manta
+  1006d8c0 |     26 | 0.00 | DropBomb
+  1006da30 |    218 | 0.00 | FUN_1006da30
+  1006e260 |     79 | 0.00 | monster_cricket
+  1006e9b0 |     53 | 0.00 | FUN_1006e9b0
+  1006ee30 |     79 | 0.00 | monster_dragonfly
+  1006f170 |    153 | 0.00 | FUN_1006f170
+  1006f2c0 |   1083 | 0.00 | FUN_1006f2c0
+  1006fb70 |     80 | 0.00 | decore_butterflyflock
+  1006fce0 |     29 | 0.00 | FUN_1006fce0
+  1006fd00 |     36 | 0.00 | FUN_1006fd00
+  1006fd40 |    520 | 0.00 | FUN_1006fd40
+  1006ff50 |     79 | 0.00 | monster_butterfly
+  10070000 |     74 | 0.00 | FUN_10070000
+  10070300 |    163 | 0.00 | FUN_10070300
+  100703b0 |     93 | 0.00 | IdleThink
+  10070410 |     90 | 0.00 | Start
+  10070570 |    677 | 0.00 | FUN_10070570
+  10070820 |    324 | 0.00 | FUN_10070820
+  10070970 |   1107 | 0.00 | FUN_10070970
+  10070dd0 |   1287 | 0.00 | FlockLeaderThink
+  100712e0 |   1319 | 0.00 | FlockFollowerThink
+  10071810 |     15 | 0.00 | FUN_10071810
+  10071820 |     31 | 0.00 | FUN_10071820
+  10071840 |    146 | 0.00 | FUN_10071840
+  100718e0 |     24 | 0.00 | FUN_100718e0
+  10071900 |     30 | 0.00 | FUN_10071900
+  10071920 |     79 | 0.00 | monster_gator
+  10071ff0 |    106 | 0.00 | FUN_10071ff0
+  10072060 |    226 | 0.00 | FUN_10072060
+  10072200 |     79 | 0.00 | monster_hatchetfish
+  100725e0 |    291 | 0.00 | FUN_100725e0
+  10072710 |    185 | 0.00 | FUN_10072710
+  100727d0 |     45 | 0.00 | FUN_100727d0
+  10072b80 |     54 | 0.00 | FUN_10072b80
+  10072bc0 |   1056 | 0.00 | FUN_10072bc0
+  10072fe0 |    289 | 0.00 | DeadThink
+  10073110 |    610 | 0.00 | FUN_10073110
+  10073380 |   1708 | 0.00 | SwimThink
+  10073b50 |     79 | 0.00 | monster_microraptor
+  100748e0 |    401 | 0.00 | FUN_100748e0
+  10074a90 |    339 | 0.00 | FUN_10074a90
+  10074d70 |     79 | 0.00 | monster_ourano
+  10075470 |    240 | 0.00 | FUN_10075470
+  10075560 |    283 | 0.00 | FUN_10075560
+  100756a0 |    337 | 0.00 | FUN_100756a0
+  10075c10 |     79 | 0.00 | decore_nest
+  10075fa0 |     79 | 0.00 | monster_raptor
+  100760b0 |     79 | 0.00 | monster_rheptor
+  10076400 |     66 | 0.00 | FUN_10076400
+  10077830 |     79 | 0.00 | monster_renesaur
+  10077ef0 |     79 | 0.00 | monster_scorpion
+  100786e0 |     24 | 0.00 | FUN_100786e0
+  10078700 |    426 | 0.00 | FUN_10078700
+  100789c0 |     79 | 0.00 | monster_largescorpion
+  10078f50 |     82 | 0.00 | FUN_10078f50
+  10079260 |     79 | 0.00 | monster_aigirl
+  10079600 |    119 | 0.00 | FUN_10079600
+  10079770 |     79 | 0.00 | gib_dropship
+  100797c0 |    602 | 0.00 | FUN_100797c0
+  10079a20 |    630 | 0.00 | GibExplodeTouch
+  10079ce0 |     79 | 0.00 | decore_explodable
+  10079d90 |    352 | 0.00 | FUN_10079d90
+  1007a100 |    116 | 0.00 | ActionAnimUse
+  1007a180 |   1717 | 0.00 | ExplodeUse
+  1007a840 |   1213 | 0.00 | FUN_1007a840
+  1007ad00 |     79 | 0.00 | button_aiwallplug
+  1007b1f0 |     79 | 0.00 | weapon_aicore
+  1007bd10 |     79 | 0.00 | entity_aicoreTemp
+  1007be30 |     42 | 0.00 | DestroyTouch
+  1007be60 |     79 | 0.00 | weapon_polarisblade
+  1007bec0 |     79 | 0.00 | weapon_beamgun
+  1007bf70 |     79 | 0.00 | ball_lightning
+  1007bfc0 |     45 | 0.00 | FUN_1007bfc0
+  1007bff0 |     28 | 0.00 | FUN_1007bff0
+  1007c010 |     42 | 0.00 | FUN_1007c010
+  1007c410 |      7 | 0.00 | FUN_1007c410
+  1007c420 |      7 | 0.00 | FUN_1007c420
+  1007d110 |    855 | 0.00 | FUN_1007d110
+  1007d470 |    197 | 0.00 | FUN_1007d470
+  1007d540 |    115 | 0.00 | FUN_1007d540
+  1007d5c0 |   1212 | 0.00 | FUN_1007d5c0
+  1007da80 |    196 | 0.00 | FUN_1007da80
+  1007db50 |    267 | 0.00 | FUN_1007db50
+  1007e090 |    969 | 0.00 | FUN_1007e090
+  1007ecc0 |   1102 | 0.00 | FUN_1007ecc0
+  1007f110 |     79 | 0.00 | tracer
+  1007fae0 |      8 | 0.00 | LightningTracerDie
+  1007faf0 |    326 | 0.00 | FUN_1007faf0
+  1007fc40 |    270 | 0.00 | FUN_1007fc40
+  100802b0 |      8 | 0.00 | PopThink
+  100802c0 |    872 | 0.00 | MoveThink
+  10080660 |     79 | 0.00 | lightning_bug
+  10080a20 |     54 | 0.00 | FUN_10080a20
+  100811b0 |    265 | 0.00 | DieTouchBug
+  100812c0 |      8 | 0.00 | LightningBugDie
+  100812d0 |    150 | 0.00 | FUN_100812d0
+  10081370 |     83 | 0.00 | ammo_beamgunclip
+  100814a0 |     79 | 0.00 | cust_1BeamFrequency
+  10081530 |     79 | 0.00 | cust_2BeamCurrent
+  10081580 |     79 | 0.00 | cust_3BeamVoltage
+  10081880 |     76 | 0.00 | laser_spot
+  100818e0 |     79 | 0.00 | dml_cluster
+  10081a40 |     26 | 0.00 | Revive
+  10081cb0 |    167 | 0.00 | ClusterDetonate
+  10081f40 |    531 | 0.00 | FUN_10081f40
+  10082160 |    271 | 0.00 | ClusterSmokeThink
+  10082270 |     79 | 0.00 | weapon_mule
+  100822d0 |     79 | 0.00 | weapon_dml
+  100824c0 |    237 | 0.00 | FUN_100824c0
+  100827b0 |    139 | 0.00 | FUN_100827b0
+  100829e0 |    426 | 0.00 | FUN_100829e0
+  10082d50 |     63 | 0.00 | FUN_10082d50
+  10082ed0 |    157 | 0.00 | FUN_10082ed0
+  10082f70 |   1575 | 0.00 | FUN_10082f70
+  10083a50 |    262 | 0.00 | FUN_10083a50
+  10083b60 |    588 | 0.00 | FUN_10083b60
+  10083db0 |    732 | 0.00 | FUN_10083db0
+  10084090 |   1748 | 0.00 | FUN_10084090
+  10084770 |     55 | 0.00 | FUN_10084770
+  100847b0 |     83 | 0.00 | ammo_dmlsingle
+  10084900 |     83 | 0.00 | ammo_dmlclip
+  10084a50 |     79 | 0.00 | cust_1DMLLaunch
+  10084aa0 |     79 | 0.00 | cust_2DMLFlightpath
+  10084af0 |     79 | 0.00 | cust_3DMLDetonate
+  10084b40 |     79 | 0.00 | cust_4DMLPayload
+  10084ea0 |    133 | 0.00 | monster_tripmine
+  10084f30 |     79 | 0.00 | DmlHandGrenade
+  10084fe0 |     79 | 0.00 | weapon_dmlGrenade
+  10085370 |    169 | 0.00 | DmlGrenExplodeTouch
+  10085800 |    334 | 0.00 | DmlHandGrenTumbleThink
+  10085950 |    167 | 0.00 | DmlHandGrenDetonate
+  10086590 |    204 | 0.00 | FUN_10086590
+  10087a00 |    121 | 0.00 | FUN_10087a00
+  10087d10 |     55 | 0.00 | TripmineTouch
+  10087d50 |     30 | 0.00 | WarningThink
+  10088240 |     34 | 0.00 | FUN_10088240
+  10088270 |    672 | 0.00 | FUN_10088270
+  100890f0 |     79 | 0.00 | cust_1DMLGrenDetonate
+  10089140 |     79 | 0.00 | cust_2DMLGrenPayload
+  10089390 |    349 | 0.00 | FUN_10089390
+  100894f0 |    132 | 0.00 | dmlRocket
+  1008b870 |   1382 | 0.00 | BigThink
+  1008bde0 |     50 | 0.00 | LittleThink
+  1008c6a0 |    317 | 0.00 | Smoke
+  1008c7e0 |    348 | 0.00 | TumbleThink
+  1008c940 |    269 | 0.00 | FUN_1008c940
+  1008ca60 |    897 | 0.00 | FUN_1008ca60
+  1008cdf0 |     98 | 0.00 | PowerupThink
+  1008ce60 |     34 | 0.00 | FUN_1008ce60
+  1008ce90 |    433 | 0.00 | FUN_1008ce90
+  1008d050 |    224 | 0.00 | BeamBreakThink
+  1008d230 |    307 | 0.00 | DelayDeathThink
+  1008d370 |     79 | 0.00 | weapon_fists
+  1008d680 |    573 | 0.00 | FUN_1008d680
+  1008d8c0 |     78 | 0.00 | FUN_1008d8c0
+  1008d910 |      1 | 0.00 | Smack
+  1008d920 |      8 | 0.00 | SwingAgain
+  1008e360 |     93 | 0.00 | FUN_1008e360
+  1008e4b0 |     79 | 0.00 | cust_1fistsKnife
+  1008e500 |     79 | 0.00 | customization_knife
+  1008e600 |     79 | 0.00 | entity_null
+  1008e780 |    314 | 0.00 | LazerThink
+  1008e8c0 |     43 | 0.00 | RemoveThink
+  1008e8f0 |    207 | 0.00 | FUN_1008e8f0
+  1008e9c0 |    788 | 0.00 | FUN_1008e9c0
+  1008f130 |    367 | 0.00 | FUN_1008f130
+  1008f430 |    309 | 0.00 | ThrowSparks
+  1008f570 |    473 | 0.00 | BoltTouch
+  1008f7a0 |    204 | 0.00 | FUN_1008f7a0
+  1008f870 |     34 | 0.00 | FUN_1008f870
+  1008fa20 |     80 | 0.00 | AnimateGlow
+  1008fd50 |     80 | 0.00 | RemoveBall
+  1008fda0 |    263 | 0.00 | TumbleClusterThink
+  1008feb0 |      8 | 0.00 | BallBounceTouch
+  1008fec0 |     79 | 0.00 | gauss_charged
+  1008ff10 |     79 | 0.00 | gauss_glow
+  1008ff60 |     79 | 0.00 | gauss_ball
+  1008ffb0 |     79 | 0.00 | guass_bolt
+  10090000 |     79 | 0.00 | weapon_pistol
+  10090060 |     79 | 0.00 | weapon_gausspistol
+  100905b0 |     64 | 0.00 | FUN_100905b0
+  100907a0 |    401 | 0.00 | FUN_100907a0
+  100912f0 |    275 | 0.00 | FUN_100912f0
+  10091410 |    677 | 0.00 | FUN_10091410
+  10091a10 |     83 | 0.00 | ammo_gaussclip
+  10091b40 |     79 | 0.00 | cust_1GaussPistolFireType
+  10091c50 |     79 | 0.00 | cust_2GaussPistolSniper
+  10091ca0 |     79 | 0.00 | customization_sniper
+  10091e80 |     79 | 0.00 | chem_grenade
+  10092040 |    635 | 0.00 | SplatterTouch
+  10092ad0 |     25 | 0.00 | ChemicalSmoke
+  10092af0 |    302 | 0.00 | ChemicalSmokeThink
+  10093780 |    964 | 0.00 | TimedChemicalThink
+  10093f40 |    461 | 0.00 | ChemicalExplode
+  10094110 |     70 | 0.00 | ChemicalTrail
+  10094880 |    724 | 0.00 | FUN_10094880
+  10094b60 |     79 | 0.00 | weapon_mechagun
+  10094bc0 |     79 | 0.00 | weapon_minigun
+  10094df0 |    121 | 0.00 | FUN_10094df0
+  10095490 |    216 | 0.00 | FUN_10095490
+  10095b20 |     79 | 0.00 | cust_1MinigunSpin
+  10095c20 |     79 | 0.00 | cust_2MinigunCooled
+  10095c70 |     79 | 0.00 | customization_coolers
+  10095e30 |     83 | 0.00 | ammo_minigunClip
+  10095f50 |     83 | 0.00 | ammo_mechgunClip
+  10095fb0 |     79 | 0.00 | weapon_shotgun
+  10096180 |    121 | 0.00 | FUN_10096180
+  10096c20 |     79 | 0.00 | cust_1ShotgunSpread
+  10096d20 |     79 | 0.00 | cust_2ShotgunShells
+  10096e20 |     83 | 0.00 | ammo_buckshot
+  10096f50 |     79 | 0.00 | weapon_chemgun
+  10096fb0 |     79 | 0.00 | weapon_SPchemicalgun
+  10097250 |    257 | 0.00 | FUN_10097250
+  10097d40 |    350 | 0.00 | FUN_10097d40
+  10097ea0 |    245 | 0.00 | FUN_10097ea0
+  10097fa0 |    367 | 0.00 | FUN_10097fa0
+  10098110 |     96 | 0.00 | FUN_10098110
+  10098170 |    267 | 0.00 | FUN_10098170
+  10098280 |     79 | 0.00 | cust_1SPChemicalGunPressure
+  100982d0 |     79 | 0.00 | cust_2ChemAcid
+  10098320 |     79 | 0.00 | cust_3ChemBase
+  10098370 |     79 | 0.00 | cust_4ChemNuet
+  100986d0 |     83 | 0.00 | ammo_chemical
+  10098800 |     80 | 0.00 | vehicle_tank
+  100989d0 |    109 | 0.00 | FUN_100989d0
+  10098e40 |    157 | 0.00 | FUN_10098e40
+  10099270 |    313 | 0.00 | WithoutPlayerThink
+  1009a0d0 |   1320 | 0.00 | FUN_1009a0d0
+  1009a600 |   2784 | 0.00 | FUN_1009a600
+  1009b0e0 |     45 | 0.00 | FUN_1009b0e0
+  1009b110 |     54 | 0.00 | FUN_1009b110
+  1009b150 |   1010 | 0.00 | FUN_1009b150
+  1009bb60 |    517 | 0.00 | FUN_1009bb60
+  1009bd70 |    107 | 0.00 | FUN_1009bd70
+  1009bde0 |    107 | 0.00 | FUN_1009bde0
+  1009bef0 |     69 | 0.00 | FUN_1009bef0
+  1009bf40 |   3502 | 0.00 | FUN_1009bf40
+  1009ccf0 |     53 | 0.00 | FUN_1009ccf0
+  1009cd30 |     86 | 0.00 | FUN_1009cd30
+  1009cd90 |   2219 | 0.00 | FUN_1009cd90
+  1009d640 |    198 | 0.00 | FUN_1009d640
+  1009d710 |    988 | 0.00 | FUN_1009d710
+  1009daf0 |     51 | 0.00 | FUN_1009daf0
+  1009db30 |   1151 | 0.00 | FUN_1009db30
+  1009dfb0 |     75 | 0.00 | FUN_1009dfb0
+  1009e000 |    228 | 0.00 | FUN_1009e000
+  1009e0f0 |    274 | 0.00 | FUN_1009e0f0
+  1009e210 |    295 | 0.00 | FUN_1009e210
+  1009e340 |    198 | 0.00 | FUN_1009e340
+  1009e410 |    261 | 0.00 | FUN_1009e410
+  1009e850 |    253 | 0.00 | FUN_1009e850
+  1009ed30 |    679 | 0.00 | FUN_1009ed30
+  1009f190 |     88 | 0.00 | FUN_1009f190
+  1009f1f0 |    866 | 0.00 | FUN_1009f1f0
+  1009f5c0 |     79 | 0.00 | vehicle_tank_barrel
+  1009f620 |     79 | 0.00 | vehicle_tank_turret
+  1009f670 |     79 | 0.00 | vehicle_tank_body
+  1009f6c0 |    180 | 0.00 | FUN_1009f6c0
+  1009f860 |     22 | 0.00 | WaitThink
+  1009f880 |     73 | 0.00 | FUN_1009f880
+  1009f8e0 |     76 | 0.00 | trigger_tankshell
+  1009faf0 |     76 | 0.00 | trigger_tank
+  1009fca0 |     76 | 0.00 | trigger_tankoutofgas
+  1009ff40 |    206 | 0.00 | FUN_1009ff40
+  100a0010 |    138 | 0.00 | FUN_100a0010
+  100a00a0 |     79 | 0.00 | vehicle_tank_shell
+  100a0170 |    156 | 0.00 | FUN_100a0170
+  100a0a30 |    193 | 0.00 | OrientThink
+  100a0b00 |    234 | 0.00 | ShellSmokeThink
+  100a0bf0 |    977 | 0.00 | FUN_100a0bf0
+  100a0fd0 |     79 | 0.00 | vehicle_tank_rocket
+  100a10b0 |    176 | 0.00 | FUN_100a10b0
+  100a2420 |     79 | 0.00 | entity_clustergod
+  100a29b0 |     79 | 0.00 | env_clusterExplosion
+  100a2c20 |   1029 | 0.00 | ClusterExplode
+  100a3030 |     76 | 0.00 | monster_dart
+  100a3600 |     79 | 0.00 | monster_darttrap
+  100a3890 |    808 | 0.00 | DartShootThink
+  100a3bc0 |     79 | 0.00 | target_rocket
+  100a42d0 |     79 | 0.00 | monster_targetrocket
+  100a4410 |     20 | 0.00 | OnUse
+  100a4630 |     79 | 0.00 | monster_tank_rocket
+  100a4720 |    189 | 0.00 | FUN_100a4720
+  100a54b0 |    271 | 0.00 | RocketSmokeThink
+  100a55c0 |   1099 | 0.00 | RocketThink
+  100a5a10 |     79 | 0.00 | monster_tank
+  100a5e50 |     77 | 0.00 | meteor_god
+  100a5f00 |    106 | 0.00 | FUN_100a5f00
+  100a62f0 |    208 | 0.00 | FUN_100a62f0
+  100a63c0 |    303 | 0.00 | Think
+  100a6500 |    252 | 0.00 | FUN_100a6500
+  100a6840 |    270 | 0.00 | FUN_100a6840
+  100a6950 |     95 | 0.00 | MeteorTouch
+  100a69b0 |    763 | 0.00 | MeteorChipsThink
+  100a6cb0 |    613 | 0.00 | StreakerThink
+  100a6f20 |     70 | 0.00 | KillMeteorThink
+  100a6f70 |    698 | 0.00 | LittleSmokingMeteorThink
+  100a7230 |    698 | 0.00 | BigSmokingMeteorThink
+  100a74f0 |    352 | 0.00 | FUN_100a74f0
+  100a7b00 |    117 | 0.00 | FUN_100a7b00
+  100a7d50 |    124 | 0.00 | FUN_100a7d50
+  100a7f00 |     17 | 0.00 | Touch
+  100a7f80 |     76 | 0.00 | meteor_target
+  100a81a0 |    100 | 0.00 | FUN_100a81a0
+  100a8210 |    881 | 0.00 | Use
+  100a8590 |     98 | 0.00 | FUN_100a8590
+  100a8780 |     68 | 0.00 | FUN_100a8780
+  100a87d0 |     47 | 0.00 | FUN_100a87d0
+  100a8800 |    140 | 0.00 | FUN_100a8800
+  100a8d90 |     69 | 0.00 | FUN_100a8d90
+  100a90d0 |     41 | 0.00 | FUN_100a90d0
+  100a9110 |    210 | 0.00 | FUN_100a9110
+  100a9b00 |    425 | 0.00 | FUN_100a9b00
+  100aa080 |    336 | 0.00 | FUN_100aa080
+  100aa6d0 |    489 | 0.00 | FUN_100aa6d0
+  100aa940 |   2737 | 0.00 | FUN_100aa940
+  100ab950 |     79 | 0.00 | demoman_mine
+  100abf00 |     53 | 0.00 | FUN_100abf00
+  100abf40 |     79 | 0.00 | demoman_rocket
+  100ac9a0 |     91 | 0.00 | monster_human_demoman
+  100ad550 |    401 | 0.00 | FUN_100ad550
+  100adcb0 |     80 | 0.00 | monster_human_gunman
+  100addb0 |     82 | 0.00 | FUN_100addb0
+  100ae030 |    411 | 0.00 | FUN_100ae030
+  100ae360 |    151 | 0.00 | FUN_100ae360
+  100af3b0 |    405 | 0.00 | FUN_100af3b0
+  100af5a0 |     80 | 0.00 | monster_human_unarmed
+  100afe10 |    137 | 0.00 | FUN_100afe10
+  100b0200 |     31 | 0.00 | FollowerUse
+  100b0240 |     80 | 0.00 | monster_human_bandit
+  100b0290 |     80 | 0.00 | monster_human_grunt
+  100b0800 |    816 | 0.00 | FUN_100b0800
+  100b0b30 |   1057 | 0.00 | FUN_100b0b30
+  100b1080 |     82 | 0.00 | FUN_100b1080
+  100b19c0 |     26 | 0.00 | FUN_100b19c0
+  100b1d00 |    112 | 0.00 | monster_human_scientist
+  100b23d0 |    495 | 0.00 | FUN_100b23d0
+  100b2b20 |     42 | 0.00 | FUN_100b2b20
+  100b2b50 |     80 | 0.00 | monster_rustflier
+  100b2c00 |    125 | 0.00 | FUN_100b2c00
+  100b31b0 |    209 | 0.00 | FlyTouch
+  100b3290 |     43 | 0.00 | CrashTouch
+  100b32c0 |   2304 | 0.00 | HuntThink
+  100b3c00 |    836 | 0.00 | FUN_100b3c00
+  100b3f50 |    418 | 0.00 | CrashingThink
+  100b4ab0 |     50 | 0.00 | FUN_100b4ab0
+  100b4af0 |     48 | 0.00 | FUN_100b4af0
+  100b4b20 |    590 | 0.00 | FUN_100b4b20
+  100b4fe0 |    124 | 0.00 | FlierUse
+  100b5420 |      8 | 0.00 | FragmentTouch
+  100b5490 |    103 | 0.00 | FUN_100b5490
+  100b5500 |     14 | 0.00 | FUN_100b5500
+  100b5510 |     47 | 0.00 | FUN_100b5510
+  100b5580 |     56 | 0.00 | FUN_100b5580
+  100b5680 |     76 | 0.00 | rustbitshot
+  100b5870 |    626 | 0.00 | FUN_100b5870
+  100b5c80 |     79 | 0.00 | gunner_rocket
+  100b6480 |     76 | 0.00 | gunner_mortar
+  100b6a10 |     91 | 0.00 | monster_rustbit
+  100b6ff0 |    461 | 0.00 | FUN_100b6ff0
+  100b76a0 |     82 | 0.00 | FUN_100b76a0
+  100b7700 |     70 | 0.00 | FUN_100b7700
+  100b7860 |    177 | 0.00 | FUN_100b7860
+  100b7950 |    382 | 0.00 | FUN_100b7950
+  100b7ad0 |    444 | 0.00 | FUN_100b7ad0
+  100b7c90 |    189 | 0.00 | FUN_100b7c90
+  100b7da0 |    127 | 0.00 | monster_rustbit_friendly
+  100b7e30 |     91 | 0.00 | monster_rustbot
+  100b87d0 |    587 | 0.00 | FUN_100b87d0
+  100b8ab0 |    378 | 0.00 | FUN_100b8ab0
+  100b8e10 |     62 | 0.00 | FUN_100b8e10
+  100b9370 |    121 | 0.00 | FUN_100b9370
+  100b9450 |    234 | 0.00 | FUN_100b9450
+  100b9600 |    539 | 0.00 | FUN_100b9600
+  100b9820 |    255 | 0.00 | FUN_100b9820
+  100b9aa0 |    401 | 0.00 | FUN_100b9aa0
+  100b9c40 |    226 | 0.00 | FUN_100b9c40
+  100b9d30 |    127 | 0.00 | monster_rustbot_friendly
+  100b9dc0 |     79 | 0.00 | anime_rocket
+  100bb0a0 |     79 | 0.00 | animebackpack_rocket
+  100bc1c0 |    101 | 0.00 | monster_gunner
+  100bc320 |    101 | 0.00 | monster_rustgunr
+  100bc390 |    101 | 0.00 | monster_rustgnr
+  100bce40 |     13 | 0.00 | FUN_100bce40
+  100bce50 |     11 | 0.00 | FUN_100bce50
+  100bce60 |    134 | 0.00 | FUN_100bce60
+  100bcef0 |    103 | 0.00 | FUN_100bcef0
+  100bcf60 |     52 | 0.00 | FUN_100bcf60
+  100bcfa0 |     64 | 0.00 | FUN_100bcfa0
+  100bda00 |    977 | 0.00 | FUN_100bda00
+  100bec50 |     48 | 0.00 | ToggleTakedamage
+  100beeb0 |     76 | 0.00 | FUN_100beeb0
+  100bef00 |     81 | 0.00 | FUN_100bef00
+  100bef60 |    137 | 0.00 | monster_gunner_friendly
+  100c0450 |     79 | 0.00 | FUN_100c0450
+  100c04a0 |     79 | 0.00 | monster_beak
+  100c09c0 |    449 | 0.00 | FUN_100c09c0
+  100c18d0 |    251 | 0.00 | FUN_100c18d0
+  100c1c60 |     79 | 0.00 | beakbirther_gib
+  100c1d80 |     79 | 0.00 | monster_beakbirther
+  100c2330 |     79 | 0.00 | critter_gib
+  100c2450 |     79 | 0.00 | monster_critter
+  100c36a0 |    262 | 0.00 | FUN_100c36a0
+  100c37b0 |     83 | 0.00 | FUN_100c37b0
+  100c38b0 |     79 | 0.00 | maggot_gib
+  100c39d0 |     79 | 0.00 | monster_maggot
+  100c4920 |     64 | 0.00 | SquashTouch
+  100c4ac0 |     38 | 0.00 | FUN_100c4ac0
+  100c4e30 |     61 | 0.00 | FUN_100c4e30
+  100c4e90 |     79 | 0.00 | monster_tube
+  100c5040 |     53 | 0.00 | FUN_100c5040
+  100c5080 |     75 | 0.00 | FUN_100c5080
+  100c54e0 |    550 | 0.00 | FUN_100c54e0
+  100c5710 |     99 | 0.00 | FUN_100c5710
+  100c58e0 |     57 | 0.00 | FUN_100c58e0
+  100c5920 |    105 | 0.00 | FUN_100c5920
+  100c5990 |    171 | 0.00 | FUN_100c5990
+  100c6250 |    267 | 0.00 | FUN_100c6250
+  100c6360 |    116 | 0.00 | FUN_100c6360
+  100c6430 |     79 | 0.00 | tubequeen_mortar
+  100c6770 |     85 | 0.00 | MortarThink
+  100c6e10 |     90 | 0.00 | FUN_100c6e10
+  100c6fb0 |     79 | 0.00 | monster_tubequeen
+  100c8390 |     79 | 0.00 | tuberocket
+  100c86f0 |    408 | 0.00 | StartTrack
+  100c8890 |    653 | 0.00 | FUN_100c8890
+  100c9280 |    101 | 0.00 | TrackTouch
+  100c94d0 |     76 | 0.00 | xenomeshot
+  100c95d0 |    215 | 0.00 | FUN_100c95d0
+  100c96b0 |     18 | 0.00 | XenomeShotThink
+  100c9920 |     79 | 0.00 | monster_xenome
+  100c9cb0 |    340 | 0.00 | LeapTouch
+  100c9e10 |    503 | 0.00 | FUN_100c9e10
+  100ca010 |    320 | 0.00 | FUN_100ca010
+  100caa30 |    157 | 0.00 | FUN_100caa30
+  100caad0 |    341 | 0.00 | FUN_100caad0
+  100cac30 |    174 | 0.00 | FUN_100cac30
+  100caf80 |    374 | 0.00 | FUN_100caf80
+  100cb100 |     79 | 0.00 | decore_camflare
+  100cb240 |     79 | 0.00 | decore_cam
+  100cb910 |     80 | 0.00 | ToggleToOn
+  100cb960 |    190 | 0.00 | FUN_100cb960
+  100cba20 |     32 | 0.00 | DecoreTouch
+  100cbb00 |     79 | 0.00 | decore_baboon
+  100cbcd0 |     79 | 0.00 | decore_pipes
+  100cbe20 |     79 | 0.00 | decore_mushroom
+  100cc0d0 |     79 | 0.00 | decore_mushroom2
+  100cc370 |     79 | 0.00 | decore_cactus
+  100cc5d0 |     79 | 0.00 | decore_prickle
+  100cc750 |     28 | 0.00 | GutSmell
+  100cc770 |     91 | 0.00 | decore_gutspile
+  100cc990 |     91 | 0.00 | decore_bodygib
+  100cca20 |     91 | 0.00 | decore_hatgib
+  100ccab0 |     79 | 0.00 | decore_icebeak
+  100ccb90 |    182 | 0.00 | SpawnIceBeak
+  100ccc50 |    129 | 0.00 | Melt
+  100ccce0 |     79 | 0.00 | decore_ice
+  100ccfb0 |     79 | 0.00 | decore_swampplants
+  100cd070 |     24 | 0.00 | MonkeyUse
+  100cd090 |     79 | 0.00 | decore_goldskull
+  100cd210 |     71 | 0.00 | BigFootUse
+  100cd260 |     40 | 0.00 | CheckAnimEnd
+  100cd290 |     79 | 0.00 | decore_foot
+  100cd430 |     36 | 0.00 | XenomeEmbryoGibUse
+  100cd460 |    169 | 0.00 | IdleSoundThink
+  100cd510 |     79 | 0.00 | monster_xenome_embryo
+  100cd720 |     79 | 0.00 | decore_sittingtubemortar
+  100cdef0 |     79 | 0.00 | decore_sack
+  100ce010 |    318 | 0.00 | SpawnSack
+  100ce150 |     56 | 0.00 | ShockAnim
+  100ce190 |     79 | 0.00 | monster_tube_embryo
+  100ce2c0 |     43 | 0.00 | FUN_100ce2c0
+  100ce3e0 |     79 | 0.00 | decore_labstuff
+  100ce4c0 |    204 | 0.00 | FUN_100ce4c0
+  100ce590 |     79 | 0.00 | decore_asteroid
+  100ce820 |     79 | 0.00 | decore_spacedebris
+  100cede0 |    170 | 0.00 | DebrisRemoveThink
+  100cee90 |     93 | 0.00 | DebrisTouch
+  100ceef0 |     79 | 0.00 | monster_trainingbot
+  100cf390 |   1026 | 0.00 | FloatThink
+  100cf960 |   2403 | 0.00 | BotSparkThink
+  100d02d0 |    174 | 0.00 | SmokeFallThink
+  100d0380 |     66 | 0.00 | BotExplodeTouch
+  100d0550 |   1231 | 0.00 | FUN_100d0550
+  100d0a20 |     59 | 0.00 | FUN_100d0a20
+  100d0a60 |    109 | 0.00 | FUN_100d0a60
+  100d0ad0 |     79 | 0.00 | entity_digit
+  100d0bf0 |     79 | 0.00 | entity_digitgod
+  100d0f60 |     23 | 0.00 | OutputThink
+  100d0f80 |    296 | 0.00 | FUN_100d0f80
+  100d10b0 |     79 | 0.00 | hologram_beak
+  100d1390 |    389 | 0.00 | SpawnThink
+  100d1ed0 |     79 | 0.00 | hologram_damage
+  100d2350 |     76 | 0.00 | decore_torchflame
+  100d2520 |     76 | 0.00 | Animate
+  100d2600 |     76 | 0.00 | decore_torch
+  100d2780 |     73 | 0.00 | FUN_100d2780
+  100d27f0 |     79 | 0.00 | endboss_kataball
+  100d3310 |     79 | 0.00 | endboss_rocket
+  100d38d0 |    361 | 0.00 | IgniteThink
+  100d3a40 |   1164 | 0.00 | AccelerateThink
+  100d44d0 |     79 | 0.00 | antirocketflare
+  100d4600 |     66 | 0.00 | FlopAnim
+  100d4650 |     79 | 0.00 | endboss_gib
+  100d4780 |     79 | 0.00 | monster_endboss
+  100d5bd0 |    246 | 0.00 | FUN_100d5bd0
+  100d5f30 |     71 | 0.00 | FUN_100d5f30
+  100d6730 |    243 | 0.00 | monster_scientist
+  100d6b10 |    107 | 0.00 | ToggleUse
+  100d79e0 |    289 | 0.00 | FUN_100d79e0
+  100d7b20 |    506 | 0.00 | FUN_100d7b20
+  100d87d0 |     45 | 0.00 | FUN_100d87d0
+  100d8900 |    114 | 0.00 | FUN_100d8900
+  100d8980 |     79 | 0.00 | monster_scientist_dead
+  100d8ab0 |    255 | 0.00 | monster_sitting_scientist
+  100d8e20 |    751 | 0.00 | SittingThink
+  100d9150 |    426 | 0.00 | FUN_100d9150
+  100d9316 |     23 | 0.00 | FUN_100d9316
+  100d932e |     56 | 0.00 | FUN_100d932e
+  100d9378 |     39 | 0.00 | __ftol
+  100d939f |     87 | 0.00 | FUN_100d939f
+  100d93f6 |    139 | 0.00 | FUN_100d93f6
+  100d9481 |     11 | 0.00 | FUN_100d9481
+  100d9546 |     82 | 0.00 | FUN_100d9546
+  100d9598 |     46 | 0.00 | FUN_100d9598
+  100d9616 |     40 | 0.00 | FUN_100d9616
+  100d966b |     40 | 0.00 | FUN_100d966b
+  100d96bb |     46 | 0.00 | FUN_100d96bb
+  100d96e9 |     46 | 0.00 | FUN_100d96e9
+  100d9800 |    128 | 0.00 | _strstr
+  100d988a |     10 | 0.00 | FUN_100d988a
+  100d98c0 |     56 | 0.00 | _strncmp
+  100d98f8 |     14 | 0.00 | operator_new
+  100d9906 |     52 | 0.00 | FUN_100d9906
+  100d9940 |     25 | 0.00 | FUN_100d9940
+  100d9b35 |     40 | 0.00 | FUN_100d9b35
+  100d9b5d |     11 | 0.00 | FUN_100d9b5d
+  100d9b70 |    254 | 0.00 | _strncpy
+  100d9c6e |     72 | 0.00 | FUN_100d9c6e
+  100d9cb6 |    141 | 0.00 | FUN_100d9cb6
+  100d9d43 |     60 | 0.00 | FUN_100d9d43
+  100d9d7f |     49 | 0.00 | FUN_100d9d7f
+  100d9db0 |     76 | 0.00 | __fclose_lk
+  100d9dfc |     49 | 0.00 | FUN_100d9dfc
+  100d9e2d |     19 | 0.00 | FUN_100d9e2d
+  100d9e40 |     65 | 0.00 | FUN_100d9e40
+  100d9e81 |     47 | 0.00 | FUN_100d9e81
+  100d9eb0 |    266 | 0.00 | FUN_100d9eb0
+  100d9fc0 |    257 | 0.00 | FUN_100d9fc0
+  100da0c9 |    111 | 0.00 | FUN_100da0c9
+  100da138 |    204 | 0.00 | FUN_100da138
+  100da204 |    117 | 0.00 | FUN_100da204
+  100da279 |    164 | 0.00 | FUN_100da279
+  100da320 |     47 | 0.00 | FUN_100da320
+  100da34f |     81 | 0.00 | FUN_100da34f
+  100da3ad |     34 | 0.00 | _rand
+  100da3cf |    217 | 0.00 | FUN_100da3cf
+  100da4a8 |    157 | 0.00 | entry
+  100da545 |     48 | 0.00 | __amsg_exit
+  100da578 |     18 | 0.00 | FUN_100da578
+  100da58a |     62 | 0.00 | FUN_100da58a
+  100da5c8 |     41 | 0.00 | FUN_100da5c8
+  100da5f1 |     90 | 0.00 | FUN_100da5f1
+  100da6b1 |     62 | 0.00 | __fassign
+  100da6ef |     97 | 0.00 | FUN_100da6ef
+  100da750 |    194 | 0.00 | FUN_100da750
+  100da812 |     85 | 0.00 | FUN_100da812
+  100da867 |    167 | 0.00 | FUN_100da867
+  100da90e |    147 | 0.00 | FUN_100da90e
+  100da9a1 |     81 | 0.00 | __cfltcvt
+  100da9f2 |     37 | 0.00 | FUN_100da9f2
+  100daa17 |    127 | 0.00 | FUN_100daa17
+  100daaa0 |    123 | 0.00 | _strlen
+  100dab20 |     52 | 0.00 | __allmul
+  100dab54 |    280 | 0.00 | FUN_100dab54
+  100dac6c |   1825 | 0.00 | FUN_100dac6c
+  100db3ad |     53 | 0.00 | FUN_100db3ad
+  100db3e2 |     49 | 0.00 | FUN_100db3e2
+  100db413 |     56 | 0.00 | FUN_100db413
+  100db44b |     13 | 0.00 | FUN_100db44b
+  100db458 |     16 | 0.00 | FUN_100db458
+  100db468 |     14 | 0.00 | FUN_100db468
+  100db490 |      6 | 0.00 | FUN_100db490
+  100db496 |    187 | 0.00 | FUN_100db496
+  100db550 |     62 | 0.00 | __cintrindisp2
+  100db58e |     61 | 0.00 | __cintrindisp1
+  100db5cb |     72 | 0.00 | __ctrandisp2
+  100db613 |      7 | 0.00 | FUN_100db613
+  100db61a |    305 | 0.00 | FUN_100db61a
+  100db74b |     51 | 0.00 | __ctrandisp1
+  100db77e |     60 | 0.00 | __fload
+  100db7c0 |    103 | 0.00 | __trandisp1
+  100db827 |    140 | 0.00 | __trandisp2
+  100dc196 |    518 | 0.00 | FUN_100dc196
+  100dc39c |    178 | 0.00 | FUN_100dc39c
+  100dc71b |     18 | 0.00 | _malloc
+  100dc72d |     44 | 0.00 | __nh_malloc
+  100dc759 |     78 | 0.00 | FUN_100dc759
+  100dc7a7 |   2597 | 0.00 | FUN_100dc7a7
+  100dd1cc |     55 | 0.00 | FUN_100dd1cc
+  100dd203 |     26 | 0.00 | FUN_100dd203
+  100dd21d |     23 | 0.00 | FUN_100dd21d
+  100dd234 |     36 | 0.00 | FUN_100dd234
+  100dd470 |     23 | 0.00 | FUN_100dd470
+  100dd487 |     60 | 0.00 | __startOneArgErrorHandling
+  100dd4d0 |     21 | 0.00 | FUN_100dd4d0
+  100dd4e5 |     23 | 0.00 | FUN_100dd4e5
+  100dd515 |     67 | 0.00 | __fload_withFB
+  100dd56e |     13 | 0.00 | FUN_100dd56e
+  100dd5b9 |    163 | 0.00 | FUN_100dd5b9
+  100dd65c |    304 | 0.00 | FUN_100dd65c
+  100dd78c |    101 | 0.00 | FUN_100dd78c
+  100dd7f1 |     60 | 0.00 | FUN_100dd7f1
+  100dd82d |    117 | 0.00 | FUN_100dd82d
+  100dd8a2 |     41 | 0.00 | FUN_100dd8a2
+  100dd8cb |    108 | 0.00 | FUN_100dd8cb
+  100dd937 |     97 | 0.00 | FUN_100dd937
+  100dd998 |     21 | 0.00 | FUN_100dd998
+  100dd9e2 |     62 | 0.00 | FUN_100dd9e2
+  100dda20 |     43 | 0.00 | FUN_100dda20
+  100dda4b |    811 | 0.00 | FUN_100dda4b
+  100ddd76 |    777 | 0.00 | FUN_100ddd76
+  100de07f |    177 | 0.00 | FUN_100de07f
+  100de130 |    251 | 0.00 | FUN_100de130
+  100de22b |    758 | 0.00 | FUN_100de22b
+  100de5f2 |    815 | 0.00 | FUN_100de5f2
+  100de930 |     88 | 0.00 | _memset
+  100de9b2 |     27 | 0.00 | FUN_100de9b2
+  100dea89 |     47 | 0.00 | FUN_100dea89
+  100deab8 |     35 | 0.00 | FUN_100deab8
+  100deadb |     47 | 0.00 | FUN_100deadb
+  100deb0a |     35 | 0.00 | FUN_100deb0a
+  100deb2d |    141 | 0.00 | FUN_100deb2d
+  100debba |     42 | 0.00 | FUN_100debba
+  100debe4 |     93 | 0.00 | FUN_100debe4
+  100dec41 |    131 | 0.00 | FUN_100dec41
+  100decc4 |     43 | 0.00 | __freebuf
+  100decef |     47 | 0.00 | FUN_100decef
+  100ded1e |     46 | 0.00 | FUN_100ded1e
+  100ded4c |     92 | 0.00 | FUN_100ded4c
+  100dedb1 |    164 | 0.00 | FUN_100dedb1
+  100dee55 |    368 | 0.00 | FUN_100dee55
+  100defc5 |    200 | 0.00 | FUN_100defc5
+  100df08d |    101 | 0.00 | FUN_100df08d
+  100df0f2 |    395 | 0.00 | FUN_100df0f2
+  100df280 |    664 | 0.00 | FUN_100df280
+  100df7fb |    283 | 0.00 | FUN_100df7fb
+  100df916 |    185 | 0.00 | FUN_100df916
+  100df9cf |    280 | 0.00 | FUN_100df9cf
+  100dfaea |     37 | 0.00 | FUN_100dfaea
+  100dfb0f |    204 | 0.00 | FUN_100dfb0f
+  100dfbdb |     83 | 0.00 | FUN_100dfbdb
+  100dfc36 |    111 | 0.00 | FUN_100dfc36
+  100dfca5 |    203 | 0.00 | FUN_100dfca5
+  100dfd70 |    511 | 0.00 | FUN_100dfd70
+  100dff94 |     43 | 0.00 | FUN_100dff94
+  100dffbf |    318 | 0.00 | FUN_100dffbf
+  100e0108 |     84 | 0.00 | FUN_100e0108
+  100e015c |     30 | 0.00 | FUN_100e015c
+  100e017a |     19 | 0.00 | FUN_100e017a
+  100e018d |    103 | 0.00 | FUN_100e018d
+  100e01f4 |    160 | 0.00 | FUN_100e01f4
+  100e02a0 |     45 | 0.00 | FUN_100e02a0
+  100e02de |     17 | 0.00 | __exit
+  100e02ef |     15 | 0.00 | FUN_100e02ef
+  100e030d |    163 | 0.00 | FUN_100e030d
+  100e03b2 |      9 | 0.00 | FUN_100e03b2
+  100e03bb |      9 | 0.00 | FUN_100e03bb
+  100e03c4 |     26 | 0.00 | FUN_100e03c4
+  100e03de |    444 | 0.00 | FUN_100e03de
+  100e059a |     84 | 0.00 | FUN_100e059a
+  100e05ee |    185 | 0.00 | FUN_100e05ee
+  100e06a7 |    153 | 0.00 | FUN_100e06a7
+  100e0740 |    436 | 0.00 | FUN_100e0740
+  100e08f4 |    306 | 0.00 | FUN_100e08f4
+  100e0a26 |     57 | 0.00 | FUN_100e0a26
+  100e0a5f |    339 | 0.00 | FUN_100e0a5f
+  100e0be3 |     19 | 0.00 | FUN_100e0be3
+  100e0bf6 |     20 | 0.00 | FUN_100e0bf6
+  100e0c0a |     53 | 0.00 | FUN_100e0c0a
+  100e0c3f |     22 | 0.00 | FUN_100e0c3f
+  100e0c80 |    146 | 0.00 | FUN_100e0c80
+  100e0d12 |    137 | 0.00 | FUN_100e0d12
+  100e0d9b |     53 | 0.00 | FUN_100e0d9b
+  100e0dd0 |     73 | 0.00 | FUN_100e0dd0
+  100e0e19 |     86 | 0.00 | FUN_100e0e19
+  100e0e6f |    140 | 0.00 | FUN_100e0e6f
+  100e0efb |     27 | 0.00 | FUN_100e0efb
+  100e0f16 |     12 | 0.00 | FUN_100e0f16
+  100e0f22 |     27 | 0.00 | FUN_100e0f22
+  100e0f3d |    141 | 0.00 | FUN_100e0f3d
+  100e0fca |    364 | 0.00 | FUN_100e0fca
+  100e1136 |     22 | 0.00 | FUN_100e1136
+  100e114c |     22 | 0.00 | FUN_100e114c
+  100e1162 |    122 | 0.00 | FUN_100e1162
+  100e11dc |     45 | 0.00 | FUN_100e11dc
+  100e1209 |     46 | 0.00 | FUN_100e1209
+  100e1237 |     45 | 0.00 | FUN_100e1237
+  100e1264 |    119 | 0.00 | FUN_100e1264
+  100e12db |     92 | 0.00 | FUN_100e12db
+  100e1337 |    182 | 0.00 | FUN_100e1337
+  100e13f0 |      7 | 0.00 | FUN_100e13f0
+  100e1400 |    224 | 0.00 | FUN_100e1400
+  100e14e0 |    664 | 0.00 | FUN_100e14e0
+  100e1815 |      9 | 0.00 | __fptrap
+  100e181e |   1185 | 0.00 | FUN_100e181e
+  100e1cef |     60 | 0.00 | FUN_100e1cef
+  100e1d2b |    101 | 0.00 | FUN_100e1d2b
+  100e1d90 |    115 | 0.00 | FUN_100e1d90
+  100e1e03 |     68 | 0.00 | FUN_100e1e03
+  100e1e47 |     41 | 0.00 | FUN_100e1e47
+  100e1e70 |     89 | 0.00 | FUN_100e1e70
+  100e1ec9 |    105 | 0.00 | FUN_100e1ec9
+  100e1f40 |    104 | 0.00 | __aulldiv
+  100e1fb0 |    117 | 0.00 | __aullrem
+  100e2025 |    208 | 0.00 | FUN_100e2025
+  100e20f5 |     93 | 0.00 | FUN_100e20f5
+  100e2152 |    201 | 0.00 | FUN_100e2152
+  100e2220 |     31 | 0.00 | __allshl
+  100e223f |    220 | 0.00 | FUN_100e223f
+  100e2344 |    110 | 0.00 | FUN_100e2344
+  100e23b2 |     41 | 0.00 | FUN_100e23b2
+  100e241b |     36 | 0.00 | FUN_100e241b
+  100e243f |     90 | 0.00 | FUN_100e243f
+  100e2499 |    193 | 0.00 | FUN_100e2499
+  100e255a |     18 | 0.00 | __frnd
+  100e256c |     33 | 0.00 | __copysign
+  100e258d |     37 | 0.00 | FUN_100e258d
+  100e25c8 |    231 | 0.00 | FUN_100e25c8
+  100e26af |    661 | 0.00 | FUN_100e26af
+  100e2986 |    146 | 0.00 | FUN_100e2986
+  100e2a99 |    115 | 0.00 | FUN_100e2a99
+  100e2b0c |      9 | 0.00 | FUN_100e2b0c
+  100e2b15 |      9 | 0.00 | FUN_100e2b15
+  100e2b1e |    291 | 0.00 | FUN_100e2b1e
+  100e2c41 |    124 | 0.00 | FUN_100e2c41
+  100e2cbd |    127 | 0.00 | FUN_100e2cbd
+  100e2d3c |     66 | 0.00 | FUN_100e2d3c
+  100e2d7e |    167 | 0.00 | FUN_100e2d7e
+  100e2e25 |     95 | 0.00 | FUN_100e2e25
+  100e2e84 |     34 | 0.00 | FUN_100e2e84
+  100e2ea6 |    147 | 0.00 | FUN_100e2ea6
+  100e2f50 |    719 | 0.00 | FUN_100e2f50
+  100e32b0 |    846 | 0.00 | FUN_100e32b0
+  100e35fe |    400 | 0.00 | FUN_100e35fe
+  100e3963 |     55 | 0.00 | FUN_100e3963
+  100e3a65 |    290 | 0.00 | FUN_100e3a65
+  100e3b87 |     55 | 0.00 | FUN_100e3b87
+  100e3bbe |     78 | 0.00 | FUN_100e3bbe
+  100e3c0c |    581 | 0.00 | FUN_100e3c0c
+  100e3e60 |    129 | 0.00 | _strcmp
+  100e3ef0 |     62 | 0.00 | FUN_100e3ef0
+  100e3f30 |     58 | 0.00 | FUN_100e3f30
+  100e3f6a |    381 | 0.00 | FUN_100e3f6a
+  100e40e7 |     88 | 0.00 | FUN_100e40e7
+  100e413f |    135 | 0.00 | FUN_100e413f
+  100e41c6 |    516 | 0.00 | FUN_100e41c6
+  100e43ca |     86 | 0.00 | FUN_100e43ca
+  100e4420 |    189 | 0.00 | FUN_100e4420
+  100e44dd |     55 | 0.00 | FUN_100e44dd
+  100e4514 |    134 | 0.00 | FUN_100e4514
+  100e459a |     26 | 0.00 | FUN_100e459a
+  100e45b4 |    102 | 0.00 | FUN_100e45b4
+  100e461a |     31 | 0.00 | FUN_100e461a
+  100e4639 |     98 | 0.00 | FUN_100e4639
+  100e469b |     54 | 0.00 | FUN_100e469b
+  100e46d1 |    230 | 0.00 | FUN_100e46d1
+  100e47b7 |     57 | 0.00 | FUN_100e47b7
+  100e47f0 |     33 | 0.00 | FUN_100e47f0
+  100e4814 |     32 | 0.00 | __global_unwind2
+  100e4856 |    104 | 0.00 | __local_unwind2
+  100e48ea |     24 | 0.00 | FUN_100e48ea
+  100e49c9 |     27 | 0.00 | FUN_100e49c9
+  100e49e4 |    318 | 0.00 | FUN_100e49e4
+  100e4b22 |     58 | 0.00 | FUN_100e4b22
+  100e4b5c |    429 | 0.00 | FUN_100e4b5c
+  100e4d09 |     74 | 0.00 | FUN_100e4d09
+  100e4d53 |     51 | 0.00 | FUN_100e4d53
+  100e4d86 |     41 | 0.00 | FUN_100e4d86
+  100e4daf |    389 | 0.00 | FUN_100e4daf
+  100e4f44 |     28 | 0.00 | FUN_100e4f44
+  100e4f60 |    137 | 0.00 | FUN_100e4f60
+  100e4fe9 |    386 | 0.00 | FUN_100e4fe9
+  100e51cd |    386 | 0.00 | FUN_100e51cd
+  100e534f |     61 | 0.00 | FUN_100e534f
+  100e539e |     33 | 0.00 | FUN_100e539e
+  100e53bf |     94 | 0.00 | ___add_12
+  100e541d |     46 | 0.00 | FUN_100e541d
+  100e544b |     45 | 0.00 | FUN_100e544b
+  100e5478 |    199 | 0.00 | FUN_100e5478
+  100e553f |    659 | 0.00 | FUN_100e553f
+  100e57d2 |    544 | 0.00 | FUN_100e57d2
+  100e5a6e |     84 | 0.00 | FUN_100e5a6e
+  100e5ac2 |     96 | 0.00 | FUN_100e5ac2
+  100e5b22 |    152 | 0.00 | FUN_100e5b22
+  100e5bba |    165 | 0.00 | FUN_100e5bba
+  100e5c5f |    691 | 0.00 | FUN_100e5c5f
+  100e5f12 |    535 | 0.00 | FUN_100e5f12
+  100e6129 |    136 | 0.00 | FUN_100e6129
+  100e61b1 |     40 | 0.00 | FUN_100e61b1
+  100e61d9 |     37 | 0.00 | FUN_100e61d9
+  100e61fe |     45 | 0.00 | FUN_100e61fe
+  100e622b |      3 | 0.00 | FUN_100e622b
+  100e622e |     14 | 0.00 | FUN_100e622e
+  100e623c |     15 | 0.00 | FUN_100e623c
+  100e624b |     35 | 0.00 | FUN_100e624b
+  100e626e |     86 | 0.00 | FUN_100e626e
+  100e62c4 |    101 | 0.00 | FUN_100e62c4
+  100e6329 |    473 | 0.00 | FUN_100e6329
+  100e6502 |    486 | 0.00 | FUN_100e6502
+  100e66e8 |     89 | 0.00 | FUN_100e66e8
+  100e6741 |    293 | 0.00 | FUN_100e6741
+  100e6866 |    143 | 0.00 | FUN_100e6866
+  100e68f5 |    149 | 0.00 | FUN_100e68f5
+  100e698a |    562 | 0.00 | FUN_100e698a
+  100e6bd7 |    250 | 0.00 | FUN_100e6bd7
+  100e6cd1 |   1007 | 0.00 | FUN_100e6cd1
+  100e70c0 |     39 | 0.00 | FUN_100e70c0
+  100e70e7 |    111 | 0.00 | FUN_100e70e7
+  100e7156 |     73 | 0.00 | FUN_100e7156
+  100e719f |    719 | 0.00 | FUN_100e719f
+  100e746e |    312 | 0.00 | FUN_100e746e
+  100e75ac |    423 | 0.00 | FUN_100e75ac
+  100e7771 |     45 | 0.00 | FUN_100e7771
+  100e779e |     92 | 0.00 | FUN_100e779e
+  100e77fa |     42 | 0.00 | FUN_100e77fa
+  100e783f |     49 | 0.00 | FUN_100e783f
+  100e7870 |    134 | 0.00 | FUN_100e7870
+  100e78f6 |     27 | 0.00 | FUN_100e78f6
+  100e7920 |    208 | 0.00 | FUN_100e7920
+  100e79f0 |     89 | 0.00 | FUN_100e79f0
+  100e7a49 |     97 | 0.00 | FUN_100e7a49
+  100e7aaa |     46 | 0.00 | FUN_100e7aaa
+  100e7aee |    647 | 0.00 | FUN_100e7aee
+  100e7d96 |    428 | 0.00 | FUN_100e7d96
+  100e7f42 |    320 | 0.00 | FUN_100e7f42
+  100e8082 |    264 | 0.00 | FUN_100e8082
+  100e8195 |    275 | 0.00 | FUN_100e8195
+  100e82d4 |    125 | 0.00 | FUN_100e82d4
+  100e8351 |     63 | 0.00 | __mbsnbicoll
+  100e8390 |    110 | 0.00 | FUN_100e8390
+  100e83fe |    597 | 0.00 | FUN_100e83fe
+  100e867b |     43 | 0.00 | FUN_100e867b
+  100e86a6 |    391 | 0.00 | FUN_100e86a6
+  100e882d |     88 | 0.00 | FUN_100e882d
+  100e8885 |    103 | 0.00 | FUN_100e8885
+  100e88ec |    312 | 0.00 | FUN_100e88ec
+  100e8a24 |    151 | 0.00 | FUN_100e8a24
+  100e8abb |     43 | 0.00 | FUN_100e8abb
+  100e8c52 |      6 | 0.00 | RtlUnwind
