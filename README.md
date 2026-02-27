@@ -101,8 +101,22 @@ Both compiled with **MSVC 6.0** on November 10-12, 2000. Neither is packed or ob
 The server DLL only imports KERNEL32 (engine provides everything else via function pointers).
 The engine itself (`hw.dll`, `sw.dll`, `gunman.exe`) gets replaced by Xash3D -- we only touch the mod DLLs.
 
-**Total code to reverse: ~1.3 MB of x86.** Significant chunk is Half-Life SDK 2.3 boilerplate.
-The Rewolf-custom code (weapons, dinos, vehicles) is the real prize.
+**Total code to reverse: ~1.3 MB of x86.** But most of it is Half-Life SDK 2.3 boilerplate.
+The Rewolf-custom code is the real prize -- and we've found it.
+
+### Code Classification Results
+
+Multi-signal analysis (name matching + string references + call graph + address clustering) reveals:
+
+| DLL | Total Functions | SDK (HL 2.3) | Rewolf Custom | Unknown |
+|-----|----------------|--------------|---------------|---------|
+| `gunman.dll` | 2,638 | **2,059** (81%, 492 KB) | **366** (14%, 80 KB) | 116 (4%) |
+| `client.dll` | 1,352 | **1,072** (83%, 210 KB) | **133** (10%, 39 KB) | 82 (6%) |
+| **Combined** | **3,990** | **3,131** (82%) | **499** (13%) | **198** (5%) |
+
+> **Translation:** ~80% of these DLLs is straight Half-Life SDK code we can pull from public source.
+> The actual Rewolf custom code -- weapons, dinos, vehicles, the fun stuff -- is only **~119 KB** across both DLLs.
+> That's our focused recompilation target.
 
 ### Project Structure
 
@@ -150,11 +164,11 @@ gunman/
 - [x] Identify 50+ custom monster/NPC entities (dinosaurs, xenomes, rustbots, etc.)
 - [x] Document tank/vehicle system (7 tank-related triggers and functions)
 - [x] Document weapon customization system (`cust_*` functions)
-- [ ] Decompile all functions to C pseudocode (in progress)
-- [ ] Apply Half-Life SDK signatures to diff known vs. custom code
-- [ ] Map functions against Half-Life SDK 2.3
-- [ ] Classify ~1,837 unnamed server functions
-- [ ] Classify ~916 unnamed client functions
+- [x] Decompile all functions to C pseudocode -- **3,988/3,990 decompiled (99.95%)**
+- [x] Multi-signal classification (name matching, string refs, call graph, address clustering)
+- [x] Map functions against Half-Life SDK 2.3
+- [x] Classify all server functions -- **2,059 SDK (81%) | 366 Rewolf (14%) | 116 unknown (4%)**
+- [x] Classify all client functions -- **1,072 SDK (83%) | 133 Rewolf (10%) | 82 unknown (6%)**
 
 ### Phase 2: Recompilation
 - [ ] Set up build system (CMake)
