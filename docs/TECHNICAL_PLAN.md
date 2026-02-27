@@ -5,13 +5,19 @@
 Gunman Chronicles is a GoldSrc mod. The game-specific logic lives in two DLLs inside the
 `rewolf/` mod directory:
 
-| Binary | Path | Purpose |
-|--------|------|---------|
-| `client.dll` | `rewolf/cl_dlls/client.dll` | Client-side game logic (HUD, weapons, effects, prediction) |
-| `hl.dll` | `rewolf/dlls/hl.dll` | Server-side game logic (entities, AI, weapons, maps) |
+| Binary | Path | Size | Code Size | Purpose |
+|--------|------|------|-----------|---------|
+| `client.dll` | `rewolf/cl_dlls/client.dll` | 552 KB | 360 KB | Client-side game logic (HUD, weapons, effects, prediction) |
+| `gunman.dll` | `rewolf/dlls/gunman.dll` | 1.32 MB | 950 KB | Server-side game logic (entities, AI, weapons, maps) |
 
-The engine itself (`hl.exe` / `hw.dll`) is standard GoldSrc and can be replaced by Xash3D FWGS.
-We only need to recompile the **mod DLLs**.
+**Note:** The server DLL is `gunman.dll`, not `hl.dll` as in standard Half-Life mods.
+The `liblist.gam` config specifies: `gamedll "dlls\gunman.dll"`
+
+Both were compiled with **MSVC 6.0** (linker version 6.0) on November 10-12, 2000.
+Neither is packed or obfuscated. The server DLL only imports KERNEL32.dll.
+
+The engine itself (`gunman.exe` / `hw.dll` / `sw.dll`) is standard GoldSrc and can be
+replaced by Xash3D FWGS. We only need to recompile the **mod DLLs**.
 
 ## Why This Works
 
@@ -25,14 +31,15 @@ Gunman Chronicles was built by **modifying the Half-Life SDK**. This means:
 
 ## Recompilation Strategy
 
-### Step 1: Extract and Catalog
-- Mount/extract the disc image
-- Identify all files in the `rewolf/` directory
-- Catalog DLL sizes, timestamps, and PE headers
-- Check for any additional game-specific executables
+### Step 1: Extract and Catalog -- DONE
+- [x] Extracted disc image (MDF 2448-byte sectors -> ISO -> Wise installer)
+- [x] Full PE analysis of 15 binaries (see docs/BINARY_ANALYSIS.md)
+- [x] Identified all game assets: 72 maps, 304 models, 2285 sounds, 260 sprites
+- [x] Hashed all targets (MD5/SHA1)
+- [x] Confirmed MSVC 6.0 compilation, no packing/obfuscation
 
 ### Step 2: Disassemble
-- Load `client.dll` and `hl.dll` into Ghidra/IDA
+- Load `client.dll` and `gunman.dll` into Ghidra/IDA
 - Apply known Half-Life SDK signatures (FLIRT/Ghidra signatures)
 - This should auto-identify 50-80% of functions immediately
 
@@ -72,9 +79,14 @@ Gunman Chronicles was built by **modifying the Half-Life SDK**. This means:
 
 ## Estimated Effort
 
-This is a substantial project. The good news is that GoldSrc mod DLLs are relatively small
-(typically 200KB-800KB) and a huge chunk is known SDK code. The Rewolf-specific code is the
-real challenge, but it's bounded in scope.
+This is a substantial project. The server DLL is larger than typical GoldSrc mods at 1.32 MB
+(950 KB of code), but a huge chunk is known SDK code. The Rewolf-specific code (weapons,
+vehicles, dinosaur AI) is the real challenge, but it's bounded in scope.
+
+Notable exports from `gunman.dll` reveal custom classes:
+- `CAnimeRocket`, `CBackpackAnimeRocket`, `CDemomanRocket` (projectile types)
+- String constants referencing `ourano` (dinosaurs), `xenome` (aliens)
+- Weapon event scripts: gauss, chemical, shotgun, sniper, minigun, rocket
 
 Rough estimate:
 - **Phase 1 (Extract/Catalog):** Days

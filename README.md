@@ -83,12 +83,26 @@ This is a **static recompilation project** for **Gunman Chronicles** (2000) -- V
 
 Instead of running the original binary through compatibility layers or reimplementing from scratch, we:
 
-1. **Disassemble** the original game DLLs (`client.dll`, `hl.dll` from the `rewolf/` mod directory)
+1. **Disassemble** the original game DLLs (`client.dll` + `gunman.dll` from the `rewolf/` mod directory)
 2. **Analyze** the x86 machine code and reconstruct equivalent C/C++ source
 3. **Recompile** with a modern compiler targeting x86_64/modern Windows
 4. **Link** against modern system libraries instead of ancient Win32/GoldSrc APIs where needed
 
 This gives us a binary that is **functionally identical** to the original but runs natively on modern systems.
+
+### The Targets (Now Identified!)
+
+| Binary | Size | Code | Purpose |
+|--------|------|------|---------|
+| `rewolf/dlls/gunman.dll` | **1.32 MB** | 950 KB | Server game logic -- entities, AI, weapons, vehicles, everything |
+| `rewolf/cl_dlls/client.dll` | **552 KB** | 360 KB | Client game logic -- HUD, weapon prediction, effects, VGUI menus |
+
+Both compiled with **MSVC 6.0** on November 10-12, 2000. Neither is packed or obfuscated.
+The server DLL only imports KERNEL32 (engine provides everything else via function pointers).
+The engine itself (`hw.dll`, `sw.dll`, `gunman.exe`) gets replaced by Xash3D -- we only touch the mod DLLs.
+
+**Total code to reverse: ~1.3 MB of x86.** Significant chunk is Half-Life SDK 2.3 boilerplate.
+The Rewolf-custom code (weapons, dinos, vehicles) is the real prize.
 
 ### Project Structure
 
@@ -121,18 +135,23 @@ gunman/
 - [x] Research game history and context
 - [x] Identify existing revival efforts
 - [x] Set up repository
-- [ ] Extract and catalog game files from disc image
-- [ ] Identify all binary components (DLLs, executables)
-- [ ] Set up disassembly environment
+- [x] Extract game files from disc image (MDF/MDS -> ISO -> install)
+- [x] Catalog all binary components (15 DLLs/EXEs analyzed)
+- [x] PE analysis: sections, imports, exports, timestamps, hashes
+- [x] Identify primary targets: `gunman.dll` (server) + `client.dll` (client)
+- [x] Inventory game assets: 72 maps, 304 models, 2285 sounds, 260 sprites, 46 events
+- [ ] Set up disassembly environment (Ghidra project)
+- [ ] Download Half-Life SDK 2.3 for reference diffing
 
 ### Phase 1: Disassembly & Analysis
-- [ ] Disassemble `rewolf/cl_dlls/client.dll` (client game logic)
-- [ ] Disassemble `rewolf/dlls/hl.dll` (server game logic)
+- [ ] Disassemble `rewolf/cl_dlls/client.dll` (552 KB, client game logic)
+- [ ] Disassemble `rewolf/dlls/gunman.dll` (1.32 MB, server game logic)
+- [ ] Apply Half-Life SDK FLIRT/Ghidra signatures to auto-identify known functions
 - [ ] Map functions against Half-Life SDK 2.3 (many will match)
 - [ ] Identify Rewolf-specific custom code
-- [ ] Document custom weapon system
-- [ ] Document vehicle system
-- [ ] Document AI modifications
+- [ ] Document custom weapon system (gauss, chemical gun, shotgun, sniper, minigun, etc.)
+- [ ] Document vehicle system (tank sections)
+- [ ] Document AI modifications (ourano/dinosaurs, xenome/aliens)
 
 ### Phase 2: Recompilation
 - [ ] Set up build system (CMake)

@@ -1,0 +1,601 @@
+D:\recomp\pc\gunman\tools\catalog_dlls.py:37: DeprecationWarning: datetime.datetime.utcfromtimestamp() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.fromtimestamp(timestamp, datetime.UTC).
+  info['timestamp_str'] = datetime.datetime.utcfromtimestamp(timestamp).strftime('%Y-%m-%d %H:%M:%S UTC')
+================================================================================
+GUNMAN CHRONICLES - BINARY CATALOG
+================================================================================
+
+================================================================================
+  ENGINE
+================================================================================
+
+  [gunman.exe]
+  Size: 1,239,171 bytes
+  MD5:  817d2b187a5866b1b46b02971c8e7aff
+  SHA1: a3c46d2879b22d193fab64d9616f882b5652e3f1
+  Type: PE32 EXE (x86 (i386))
+  Linker: 6.0
+  Subsystem: Windows GUI
+  Timestamp: 2000-11-10 19:47:13 UTC
+  Packed (UPX): False
+  Overlay: 51,331 bytes
+  Sections (7):
+    .text     VA=0x00001000  Raw=0x00001000  Size=0xA7000  [CODE|EXEC|READ]
+    .rdata    VA=0x000A8000  Raw=0x000A8000  Size=0x20000  [IDATA|READ]
+    .data     VA=0x000C8000  Raw=0x000C8000  Size=0xD000  [IDATA|READ|WRITE]
+    .cms_t    VA=0x00108000  Raw=0x000D5000  Size=0x14000  [CODE|EXEC|READ]
+    .cms_d    VA=0x0011C000  Raw=0x000E9000  Size=0x28000  [IDATA|READ|WRITE]
+    .idata    VA=0x00144000  Raw=0x00111000  Size=0x5000  [IDATA|READ]
+    .rsrc     VA=0x00149000  Raw=0x00116000  Size=0xC000  [IDATA|READ]
+  Imports (16 DLLs):
+    - wonauth.dll
+    - woncrypt.dll
+    - vgui.dll
+    - ddraw.dll
+    - winmm.dll
+    - binkw32.dll
+    - kernel32.dll
+    - user32.dll
+    - gdi32.dll
+    - comdlg32.dll
+    - winspool.drv
+    - advapi32.dll
+    - shell32.dll
+    - comctl32.dll
+    - wsock32.dll
+    - wininet.dll
+  Exports (50):
+    - ??0?$Dar@D@vgui@@QAE@H@Z
+    - ??0?$Dar@D@vgui@@QAE@XZ
+    - ??0?$Dar@H@vgui@@QAE@H@Z
+    - ??0?$Dar@H@vgui@@QAE@XZ
+    - ??0?$Dar@PAD@vgui@@QAE@H@Z
+    - ??0?$Dar@PAD@vgui@@QAE@XZ
+    - ??0?$Dar@PAV?$Dar@D@vgui@@@vgui@@QAE@H@Z
+    - ??0?$Dar@PAV?$Dar@D@vgui@@@vgui@@QAE@XZ
+    - ??0?$Dar@PAVActionSignal@vgui@@@vgui@@QAE@H@Z
+    - ??0?$Dar@PAVActionSignal@vgui@@@vgui@@QAE@XZ
+    - ??0?$Dar@PAVButton@vgui@@@vgui@@QAE@H@Z
+    - ??0?$Dar@PAVButton@vgui@@@vgui@@QAE@XZ
+    - ??0?$Dar@PAVChangeSignal@vgui@@@vgui@@QAE@H@Z
+    - ??0?$Dar@PAVChangeSignal@vgui@@@vgui@@QAE@XZ
+    - ??0?$Dar@PAVDesktopIcon@vgui@@@vgui@@QAE@H@Z
+    - ??0?$Dar@PAVDesktopIcon@vgui@@@vgui@@QAE@XZ
+    - ??0?$Dar@PAVFocusChangeSignal@vgui@@@vgui@@QAE@H@Z
+    - ??0?$Dar@PAVFocusChangeSignal@vgui@@@vgui@@QAE@XZ
+    - ??0?$Dar@PAVFrame@vgui@@@vgui@@QAE@H@Z
+    - ??0?$Dar@PAVFrame@vgui@@@vgui@@QAE@XZ
+    ... and 30 more
+
+  [hlds.exe]
+  Size: 61,440 bytes
+  MD5:  d320c0db453c9d1b862ac2cd610f62d0
+  SHA1: 498a3e668b387880d3e7b5314308ebac4463b588
+  Type: PE32 EXE (x86 (i386))
+  Linker: 6.0
+  Subsystem: Windows GUI
+  Timestamp: 2000-06-16 19:11:51 UTC
+  Packed (UPX): False
+  Sections (4):
+    .text     VA=0x00001000  Raw=0x00001000  Size=0xA000  [CODE|EXEC|READ]
+    .rdata    VA=0x0000B000  Raw=0x0000B000  Size=0x1000  [IDATA|READ]
+    .data     VA=0x0000C000  Raw=0x0000C000  Size=0x2000  [IDATA|READ|WRITE]
+    .rsrc     VA=0x0000F000  Raw=0x0000E000  Size=0x1000  [IDATA|READ]
+  Imports (3 DLLs):
+    - KERNEL32.dll
+    - USER32.dll
+    - WINMM.dll
+
+  [hw.dll]
+  Size: 1,110,016 bytes
+  MD5:  0ab5618d9f9dd28549fe5dfa0360370c
+  SHA1: 8022ec031467792904669b24e993a766249d8c4e
+  Type: PE32 DLL (x86 (i386))
+  Linker: 6.0
+  Subsystem: Windows GUI
+  Timestamp: 2000-11-13 01:14:04 UTC
+  Packed (UPX): False
+  Sections (5):
+    .text     VA=0x00001000  Raw=0x00001000  Size=0xBB000  [CODE|EXEC|READ]
+    .rdata    VA=0x000BC000  Raw=0x000BC000  Size=0x11000  [IDATA|READ]
+    .data     VA=0x000CD000  Raw=0x000CD000  Size=0x23000  [IDATA|READ|WRITE]
+    .rsrc     VA=0x00E92000  Raw=0x000F0000  Size=0x4000  [IDATA|READ]
+    .reloc    VA=0x00E96000  Raw=0x000F4000  Size=0x1B000  [IDATA|READ]
+  Imports (12 DLLs):
+    - DDRAW.dll
+    - WINMM.dll
+    - WSOCK32.dll
+    - KERNEL32.dll
+    - USER32.dll
+    - GDI32.dll
+    - ADVAPI32.dll
+    - ole32.dll
+    - VERSION.dll
+    - vgui.dll
+    - WONAuth.dll
+    - WONCrypt.dll
+  Exports (50):
+    - ??0?$Dar@D@vgui@@QAE@H@Z
+    - ??0?$Dar@D@vgui@@QAE@XZ
+    - ??0?$Dar@H@vgui@@QAE@H@Z
+    - ??0?$Dar@H@vgui@@QAE@XZ
+    - ??0?$Dar@PAD@vgui@@QAE@H@Z
+    - ??0?$Dar@PAD@vgui@@QAE@XZ
+    - ??0?$Dar@PAV?$Dar@D@vgui@@@vgui@@QAE@H@Z
+    - ??0?$Dar@PAV?$Dar@D@vgui@@@vgui@@QAE@XZ
+    - ??0?$Dar@PAVActionSignal@vgui@@@vgui@@QAE@H@Z
+    - ??0?$Dar@PAVActionSignal@vgui@@@vgui@@QAE@XZ
+    - ??0?$Dar@PAVButton@vgui@@@vgui@@QAE@H@Z
+    - ??0?$Dar@PAVButton@vgui@@@vgui@@QAE@XZ
+    - ??0?$Dar@PAVChangeSignal@vgui@@@vgui@@QAE@H@Z
+    - ??0?$Dar@PAVChangeSignal@vgui@@@vgui@@QAE@XZ
+    - ??0?$Dar@PAVDesktopIcon@vgui@@@vgui@@QAE@H@Z
+    - ??0?$Dar@PAVDesktopIcon@vgui@@@vgui@@QAE@XZ
+    - ??0?$Dar@PAVFocusChangeSignal@vgui@@@vgui@@QAE@H@Z
+    - ??0?$Dar@PAVFocusChangeSignal@vgui@@@vgui@@QAE@XZ
+    - ??0?$Dar@PAVFrame@vgui@@@vgui@@QAE@H@Z
+    - ??0?$Dar@PAVFrame@vgui@@@vgui@@QAE@XZ
+    ... and 30 more
+
+  [sw.dll]
+  Size: 995,328 bytes
+  MD5:  df120dcb2a5782b3ae02b3b1bff249b0
+  SHA1: d5ddb0d1d6fa4945c2f287ef8148b6e915006a5a
+  Type: PE32 DLL (x86 (i386))
+  Linker: 6.0
+  Subsystem: Windows GUI
+  Timestamp: 2000-11-13 01:12:19 UTC
+  Packed (UPX): False
+  Sections (5):
+    .text     VA=0x00001000  Raw=0x00001000  Size=0xAE000  [CODE|EXEC|READ]
+    .rdata    VA=0x000AF000  Raw=0x000AF000  Size=0xE000  [IDATA|READ]
+    .data     VA=0x000BD000  Raw=0x000BD000  Size=0x1E000  [IDATA|READ|WRITE]
+    .rsrc     VA=0x0070B000  Raw=0x000DB000  Size=0x4000  [IDATA|READ]
+    .reloc    VA=0x0070F000  Raw=0x000DF000  Size=0x14000  [IDATA|READ]
+  Imports (10 DLLs):
+    - WINMM.dll
+    - WSOCK32.dll
+    - KERNEL32.dll
+    - USER32.dll
+    - ADVAPI32.dll
+    - VERSION.dll
+    - vgui.dll
+    - WONAuth.dll
+    - WONCrypt.dll
+    - ole32.dll
+  Exports (50):
+    - ??0?$Dar@D@vgui@@QAE@H@Z
+    - ??0?$Dar@D@vgui@@QAE@XZ
+    - ??0?$Dar@H@vgui@@QAE@H@Z
+    - ??0?$Dar@H@vgui@@QAE@XZ
+    - ??0?$Dar@PAD@vgui@@QAE@H@Z
+    - ??0?$Dar@PAD@vgui@@QAE@XZ
+    - ??0?$Dar@PAV?$Dar@D@vgui@@@vgui@@QAE@H@Z
+    - ??0?$Dar@PAV?$Dar@D@vgui@@@vgui@@QAE@XZ
+    - ??0?$Dar@PAVActionSignal@vgui@@@vgui@@QAE@H@Z
+    - ??0?$Dar@PAVActionSignal@vgui@@@vgui@@QAE@XZ
+    - ??0?$Dar@PAVButton@vgui@@@vgui@@QAE@H@Z
+    - ??0?$Dar@PAVButton@vgui@@@vgui@@QAE@XZ
+    - ??0?$Dar@PAVChangeSignal@vgui@@@vgui@@QAE@H@Z
+    - ??0?$Dar@PAVChangeSignal@vgui@@@vgui@@QAE@XZ
+    - ??0?$Dar@PAVDesktopIcon@vgui@@@vgui@@QAE@H@Z
+    - ??0?$Dar@PAVDesktopIcon@vgui@@@vgui@@QAE@XZ
+    - ??0?$Dar@PAVFocusChangeSignal@vgui@@@vgui@@QAE@H@Z
+    - ??0?$Dar@PAVFocusChangeSignal@vgui@@@vgui@@QAE@XZ
+    - ??0?$Dar@PAVFrame@vgui@@@vgui@@QAE@H@Z
+    - ??0?$Dar@PAVFrame@vgui@@@vgui@@QAE@XZ
+    ... and 30 more
+
+================================================================================
+  MOD_CLIENT
+================================================================================
+
+  [rewolf/cl_dlls/client.dll]
+  Size: 565,248 bytes
+  MD5:  dad536e8764f6925cdffacad35923e31
+  SHA1: 8e3b84f1c8c6f20dfd0e875a43c840b94cb4675f
+  Type: PE32 DLL (x86 (i386))
+  Linker: 6.0
+  Subsystem: Windows GUI
+  Timestamp: 2000-11-12 19:45:26 UTC
+  Packed (UPX): False
+  Sections (4):
+    .text     VA=0x00001000  Raw=0x00001000  Size=0x5A000  [CODE|EXEC|READ]
+    .rdata    VA=0x0005B000  Raw=0x0005B000  Size=0x1B000  [IDATA|READ]
+    .data     VA=0x00076000  Raw=0x00076000  Size=0x7000  [IDATA|READ|WRITE]
+    .reloc    VA=0x00098000  Raw=0x0007D000  Size=0xD000  [IDATA|READ]
+  Imports (5 DLLs):
+    - WINMM.dll
+    - vgui.dll
+    - WSOCK32.dll
+    - USER32.dll
+    - KERNEL32.dll
+  Exports (50):
+    - ??0?$Dar@D@vgui@@QAE@H@Z
+    - ??0?$Dar@D@vgui@@QAE@XZ
+    - ??0?$Dar@H@vgui@@QAE@H@Z
+    - ??0?$Dar@H@vgui@@QAE@XZ
+    - ??0?$Dar@PAD@vgui@@QAE@H@Z
+    - ??0?$Dar@PAD@vgui@@QAE@XZ
+    - ??0?$Dar@PAV?$Dar@D@vgui@@@vgui@@QAE@H@Z
+    - ??0?$Dar@PAV?$Dar@D@vgui@@@vgui@@QAE@XZ
+    - ??0?$Dar@PAVActionSignal@vgui@@@vgui@@QAE@H@Z
+    - ??0?$Dar@PAVActionSignal@vgui@@@vgui@@QAE@XZ
+    - ??0?$Dar@PAVButton@vgui@@@vgui@@QAE@H@Z
+    - ??0?$Dar@PAVButton@vgui@@@vgui@@QAE@XZ
+    - ??0?$Dar@PAVChangeSignal@vgui@@@vgui@@QAE@H@Z
+    - ??0?$Dar@PAVChangeSignal@vgui@@@vgui@@QAE@XZ
+    - ??0?$Dar@PAVDesktopIcon@vgui@@@vgui@@QAE@H@Z
+    - ??0?$Dar@PAVDesktopIcon@vgui@@@vgui@@QAE@XZ
+    - ??0?$Dar@PAVFocusChangeSignal@vgui@@@vgui@@QAE@H@Z
+    - ??0?$Dar@PAVFocusChangeSignal@vgui@@@vgui@@QAE@XZ
+    - ??0?$Dar@PAVFrame@vgui@@@vgui@@QAE@H@Z
+    - ??0?$Dar@PAVFrame@vgui@@@vgui@@QAE@XZ
+    ... and 30 more
+
+================================================================================
+  MOD_SERVER
+================================================================================
+
+  [rewolf/dlls/gunman.dll]
+  Size: 1,388,603 bytes
+  MD5:  61f6ba33d133d16c800aedeb9fd01802
+  SHA1: fa69e046b1eb69c66491a637d9b436bdf47d7e16
+  Type: PE32 DLL (x86 (i386))
+  Linker: 6.0
+  Subsystem: Windows GUI
+  Timestamp: 2000-11-10 22:46:15 UTC
+  Packed (UPX): False
+  Overlay: 59 bytes
+  Sections (4):
+    .text     VA=0x00001000  Raw=0x00001000  Size=0xE8000  [CODE|EXEC|READ]
+    .rdata    VA=0x000E9000  Raw=0x000E9000  Size=0x2A000  [IDATA|READ]
+    .data     VA=0x00113000  Raw=0x00113000  Size=0x20000  [IDATA|READ|WRITE]
+    .reloc    VA=0x00145000  Raw=0x00133000  Size=0x20000  [IDATA|READ]
+  Imports (1 DLLs):
+    - KERNEL32.dll
+  Exports (50):
+    - ??_C@_05EFKH@idle2?$AA@
+    - ??_C@_05LKBO@idle1?$AA@
+    - ??_C@_05MKBB@shock?$AA@
+    - ??_C@_07HACG@opening?$AA@
+    - ??_C@_08CJPH@clawleft?$AA@
+    - ??_C@_09DMBM@clawright?$AA@
+    - ??_C@_09IGNB@footcrush?$AA@
+    - ??_C@_0BH@EAPJ@ourano?1eggs_crack2?4wav?$AA@
+    - ??_C@_0BH@EJAK@models?1ceilinggibs?4mdl?$AA@
+    - ??_C@_0BH@KAJG@ourano?1eggs_crack1?4wav?$AA@
+    - ??_C@_0BH@LBPO@no?5sack?5for?5shocking?$CB?6?$AA@
+    - ??_C@_0BI@CGBG@xenome?1xmbryo_idle3?4wav?$AA@
+    - ??_C@_0BI@GGFM@xenome?1xmbryo_idle1?4wav?$AA@
+    - ??_C@_0BI@IGDD@xenome?1xmbryo_idle2?4wav?$AA@
+    - ??_C@_0L@JLBL@clawcenter?$AA@
+    - ??_C@_0N@OGLJ@bodygib?$CDidle?$AA@
+    - ??_C@_0O@NMCF@Using?5Embryo?6?$AA@
+    - ?AccelerateThink@CAnimeRocket@@QAEXXZ
+    - ?AccelerateThink@CBackpackAnimeRocket@@QAEXXZ
+    - ?AccelerateThink@CDemomanRocket@@QAEXXZ
+    ... and 30 more
+
+================================================================================
+  SUPPORT
+================================================================================
+
+  [WONAuth.dll]
+  Size: 640,512 bytes
+  MD5:  f62ad97394368bcbdfb6eed6ea152288
+  SHA1: 4d762663bb1bff1f87706821bd2be7e80b8f9eea
+  Type: PE32 DLL (x86 (i386))
+  Linker: 5.10
+  Subsystem: Windows GUI
+  Timestamp: 1999-11-17 17:57:46 UTC
+  Packed (UPX): False
+  Sections (5):
+    .text     VA=0x00001000  Raw=0x00000400  Size=0x78600  [CODE|EXEC|READ]
+    .rdata    VA=0x0007A000  Raw=0x00078A00  Size=0xFE00  [IDATA|READ]
+    .data     VA=0x0008A000  Raw=0x00088800  Size=0xC400  [IDATA|READ|WRITE]
+    .idata    VA=0x00099000  Raw=0x00094C00  Size=0xC00  [IDATA|READ|WRITE]
+    .reloc    VA=0x0009A000  Raw=0x00095800  Size=0x6E00  [IDATA|READ]
+  Imports (1 DLLs):
+    - KERNEL32.dll
+  Exports (50):
+    - ??0WON_AuthCertificate1@@AAE@ABV0@@Z
+    - ??0WON_AuthCertificate1@@AAE@KKG@Z
+    - ??0WON_AuthCertificate1@@AAE@PBEG@Z
+    - ??0WON_AuthFamilyBuffer@@IAE@ABV0@@Z
+    - ??0WON_AuthFamilyBuffer@@IAE@XZ
+    - ??0WON_AuthPublicKeyBlock1@@AAE@ABV0@@Z
+    - ??0WON_AuthPublicKeyBlock1@@AAE@PBEG@Z
+    - ??0WON_AuthPublicKeyBlock1@@AAE@XZ
+    - ??1WON_AuthCertificate1@@EAE@XZ
+    - ??1WON_AuthFamilyBuffer@@MAE@XZ
+    - ??1WON_AuthPublicKeyBlock1@@EAE@XZ
+    - ??4WON_AuthCertificate1@@QAEAAV0@ABV0@@Z
+    - ??4WON_AuthFactory@@QAEAAV0@ABV0@@Z
+    - ??4WON_AuthFamilyBuffer@@IAEAAV0@ABV0@@Z
+    - ??4WON_AuthPublicKeyBlock1@@QAEAAV0@ABV0@@Z
+    - ??8WON_AuthFamilyBuffer@@QBEHABV0@@Z
+    - ??9WON_AuthFamilyBuffer@@QBEHABV0@@Z
+    - ??MWON_AuthFamilyBuffer@@QBEHABV0@@Z
+    - ??NWON_AuthFamilyBuffer@@QBEHABV0@@Z
+    - ??OWON_AuthFamilyBuffer@@QBEHABV0@@Z
+    ... and 30 more
+
+  [WONCrypt.dll]
+  Size: 640,000 bytes
+  MD5:  0e9bd53a19bda5aa7af747282933b7a6
+  SHA1: e32a53f17e2b032d3c3dae58c519c7904bd262c7
+  Type: PE32 DLL (x86 (i386))
+  Linker: 5.10
+  Subsystem: Windows GUI
+  Timestamp: 1999-11-17 18:06:27 UTC
+  Packed (UPX): False
+  Sections (5):
+    .text     VA=0x00001000  Raw=0x00000400  Size=0x76600  [CODE|EXEC|READ]
+    .rdata    VA=0x00078000  Raw=0x00076A00  Size=0x11A00  [IDATA|READ]
+    .data     VA=0x0008A000  Raw=0x00088400  Size=0xC400  [IDATA|READ|WRITE]
+    .idata    VA=0x00099000  Raw=0x00094800  Size=0xC00  [IDATA|READ|WRITE]
+    .reloc    VA=0x0009A000  Raw=0x00095400  Size=0x7000  [IDATA|READ]
+  Imports (1 DLLs):
+    - KERNEL32.dll
+  Exports (50):
+    - ??0CryptReturn@WON_CryptKeyBase@@QAE@ABV01@@Z
+    - ??0CryptReturn@WON_CryptKeyBase@@QAE@PAEK@Z
+    - ??0WON_BFSymmetricKey@@AAE@ABV0@@Z
+    - ??0WON_BFSymmetricKey@@AAE@GPBE@Z
+    - ??0WON_CryptKeyBase@@IAE@ABV0@@Z
+    - ??0WON_CryptKeyBase@@IAE@XZ
+    - ??0WON_EGPrivateKey@@AAE@ABV0@@Z
+    - ??0WON_EGPrivateKey@@AAE@GPBE@Z
+    - ??0WON_EGPublicKey@@AAE@ABV0@@Z
+    - ??0WON_EGPublicKey@@AAE@ABVWON_EGPrivateKey@@@Z
+    - ??0WON_EGPublicKey@@AAE@GPBE@Z
+    - ??1CryptReturn@WON_CryptKeyBase@@QAE@XZ
+    - ??1WON_BFSymmetricKey@@EAE@XZ
+    - ??1WON_CryptKeyBase@@MAE@XZ
+    - ??1WON_EGPrivateKey@@EAE@XZ
+    - ??1WON_EGPublicKey@@EAE@XZ
+    - ??4CryptReturn@WON_CryptKeyBase@@QAEAAV01@ABV01@@Z
+    - ??4WON_BFSymmetricKey@@QAEAAV0@ABV0@@Z
+    - ??4WON_CryptFactory@@QAEAAV0@ABV0@@Z
+    - ??4WON_CryptKeyBase@@QAEAAV0@ABV0@@Z
+    ... and 30 more
+
+  [a3dapi.dll]
+  Size: 211,456 bytes
+  MD5:  0b3f04a2757f5e43140ac81db1afdc42
+  SHA1: 57c666aebb0fb59ac86deae9e6849e3268a05703
+  Type: PE32 DLL (x86 (i386))
+  Linker: 5.10
+  Subsystem: Windows GUI
+  Timestamp: 1998-11-18 03:02:23 UTC
+  Packed (UPX): False
+  Sections (5):
+    .text     VA=0x00001000  Raw=0x00000400  Size=0x28200  [CODE|EXEC|READ]
+    .rdata    VA=0x0002A000  Raw=0x00028600  Size=0x3C00  [IDATA|READ]
+    .data     VA=0x0002E000  Raw=0x0002C200  Size=0x4C00  [IDATA|READ|WRITE]
+    .rsrc     VA=0x00037000  Raw=0x00030E00  Size=0x400  [IDATA|READ]
+    .reloc    VA=0x00038000  Raw=0x00031200  Size=0x2800  [IDATA|READ]
+  Imports (5 DLLs):
+    - VERSION.dll
+    - WINMM.dll
+    - KERNEL32.dll
+    - USER32.dll
+    - ole32.dll
+  Exports (2):
+    - DllCanUnloadNow
+    - DllGetClassObject
+
+  [binkw32.dll]
+  Size: 291,328 bytes
+  MD5:  f973105a6ffff23ee999303e0f6d8e6f
+  SHA1: 9fe14145aa61a77d766ae024d631e78c36e69224
+  Type: PE32 DLL (x86 (i386))
+  Linker: 6.0
+  Subsystem: Windows GUI
+  Timestamp: 2000-10-03 20:39:33 UTC
+  Packed (UPX): False
+  Sections (5):
+    .text     VA=0x00001000  Raw=0x00000400  Size=0x31600  [CODE|EXEC|READ]
+    .rdata    VA=0x00033000  Raw=0x00031A00  Size=0x6C00  [IDATA|READ]
+    .data     VA=0x0003A000  Raw=0x00038600  Size=0x7600  [IDATA|READ|WRITE]
+    .rsrc     VA=0x00050000  Raw=0x0003FC00  Size=0x2200  [IDATA|READ]
+    .reloc    VA=0x00053000  Raw=0x00041E00  Size=0x5400  [IDATA|READ]
+  Imports (4 DLLs):
+    - USER32.dll
+    - GDI32.dll
+    - KERNEL32.dll
+    - WINMM.dll
+  Exports (50):
+    - _BinkBufferBlit@12
+    - _BinkBufferCheckWinPos@12
+    - _BinkBufferClear@8
+    - _BinkBufferClose@4
+    - _BinkBufferGetDescription@4
+    - _BinkBufferGetError@0
+    - _BinkBufferLock@4
+    - _BinkBufferOpen@16
+    - _BinkBufferSetDirectDraw@8
+    - _BinkBufferSetHWND@8
+    - _BinkBufferSetOffset@12
+    - _BinkBufferSetResolution@12
+    - _BinkBufferSetScale@12
+    - _BinkBufferUnlock@4
+    - _BinkCheckCursor@20
+    - _BinkClose@4
+    - _BinkCloseTrack@4
+    - _BinkCopyToBuffer@28
+    - _BinkDDSurfaceType@4
+    - _BinkDoFrame@4
+    ... and 30 more
+
+  [gldrv/3dfxgl.dll]
+  Size: 137,728 bytes
+  MD5:  d3d7c67f2004431488d03b801804c601
+  SHA1: 744218780466b086a1bf2b6a415224e931ffa437
+  Type: PE32 DLL (x86 (i386))
+  Linker: 4.20
+  Subsystem: Windows Console
+  Timestamp: 1998-10-29 19:28:51 UTC
+  Packed (UPX): False
+  Sections (6):
+    .text     VA=0x00001000  Raw=0x00000400  Size=0x17800  [CODE|EXEC|READ]
+    .rdata    VA=0x00019000  Raw=0x00017C00  Size=0x2A00  [IDATA|READ]
+    .data     VA=0x0001C000  Raw=0x0001A600  Size=0x4200  [IDATA|READ|WRITE]
+    .idata    VA=0x00027000  Raw=0x0001E800  Size=0xE00  [IDATA|READ|WRITE]
+    .rsrc     VA=0x00028000  Raw=0x0001F600  Size=0x800  [IDATA|READ]
+    .reloc    VA=0x00029000  Raw=0x0001FE00  Size=0x1C00  [IDATA|READ]
+  Imports (3 DLLs):
+    - glide2x.dll
+    - KERNEL32.dll
+    - USER32.dll
+  Exports (50):
+    - DllInitialize
+    - GlmfBeginGlsBlock
+    - GlmfCloseMetaFile
+    - GlmfEndGlsBlock
+    - GlmfEndPlayback
+    - GlmfInitPlayback
+    - GlmfPlayGlsRecord
+    - glAccum
+    - glAlphaFunc
+    - glAreTexturesResident
+    - glArrayElement
+    - glBegin
+    - glBindTexture
+    - glBitmap
+    - glBlendFunc
+    - glCallList
+    - glCallLists
+    - glClear
+    - glClearAccum
+    - glClearColor
+    ... and 30 more
+
+  [hl_res.dll]
+  Size: 49,152 bytes
+  MD5:  a61d11488e888d487551a91918147774
+  SHA1: b9cb2302de9e486ffb1c4ca45cc619b643c2e95a
+  Type: PE32 DLL (x86 (i386))
+  Linker: 6.0
+  Subsystem: Windows GUI
+  Timestamp: 2000-10-14 20:14:32 UTC
+  Packed (UPX): False
+  Sections (2):
+    .rsrc     VA=0x00001000  Raw=0x00001000  Size=0xA000  [IDATA|READ]
+    .reloc    VA=0x0000B000  Raw=0x0000B000  Size=0x1000  [IDATA|READ]
+
+  [rewolf/media/rewolf.exe]
+  Size: 113,669,632 bytes
+  MD5:  78d9744ed250160a7b300ca7e8685c45
+  SHA1: 98cce936935ba130fc84259100cbae101123f8fe
+  Type: PE32 EXE (x86 (i386))
+  Linker: 6.0
+  Subsystem: Windows GUI
+  Timestamp: 2000-10-03 20:39:03 UTC
+  Packed (UPX): True
+  Overlay: 113,548,800 bytes
+  Sections (3):
+    UPX0      VA=0x00001000  Raw=0x00000400  Size=0x0  [UDATA|EXEC|READ|WRITE]
+    UPX1      VA=0x0003D000  Raw=0x00000400  Size=0x1AA00  [IDATA|EXEC|READ|WRITE]
+    .rsrc     VA=0x00058000  Raw=0x0001AE00  Size=0x2A00  [IDATA|READ|WRITE]
+  Imports (5 DLLs):
+    - KERNEL32.DLL
+    - GDI32.dll
+    - SHELL32.dll
+    - USER32.dll
+    - WINMM.dll
+
+  [vgui.dll]
+  Size: 344,064 bytes
+  MD5:  8bb510e31154714bbd4526dfc063104d
+  SHA1: 1d40812c14b77321df1827c13fca962a68fa85ab
+  Type: PE32 DLL (x86 (i386))
+  Linker: 6.0
+  Subsystem: Windows GUI
+  Timestamp: 2000-06-26 20:56:38 UTC
+  Packed (UPX): False
+  Sections (4):
+    .text     VA=0x00001000  Raw=0x00001000  Size=0x2E000  [CODE|EXEC|READ]
+    .rdata    VA=0x0002F000  Raw=0x0002F000  Size=0x1B000  [IDATA|READ]
+    .data     VA=0x0004A000  Raw=0x0004A000  Size=0x4000  [IDATA|READ|WRITE]
+    .reloc    VA=0x00050000  Raw=0x0004E000  Size=0x6000  [IDATA|READ]
+  Imports (4 DLLs):
+    - KERNEL32.dll
+    - USER32.dll
+    - GDI32.dll
+    - ADVAPI32.dll
+  Exports (50):
+    - ??0?$Dar@D@vgui@@QAE@H@Z
+    - ??0?$Dar@D@vgui@@QAE@XZ
+    - ??0?$Dar@H@vgui@@QAE@H@Z
+    - ??0?$Dar@H@vgui@@QAE@XZ
+    - ??0?$Dar@PAD@vgui@@QAE@H@Z
+    - ??0?$Dar@PAD@vgui@@QAE@XZ
+    - ??0?$Dar@PAV?$Dar@D@vgui@@@vgui@@QAE@H@Z
+    - ??0?$Dar@PAV?$Dar@D@vgui@@@vgui@@QAE@XZ
+    - ??0?$Dar@PAVActionSignal@vgui@@@vgui@@QAE@H@Z
+    - ??0?$Dar@PAVActionSignal@vgui@@@vgui@@QAE@XZ
+    - ??0?$Dar@PAVButton@vgui@@@vgui@@QAE@H@Z
+    - ??0?$Dar@PAVButton@vgui@@@vgui@@QAE@XZ
+    - ??0?$Dar@PAVChangeSignal@vgui@@@vgui@@QAE@H@Z
+    - ??0?$Dar@PAVChangeSignal@vgui@@@vgui@@QAE@XZ
+    - ??0?$Dar@PAVDesktopIcon@vgui@@@vgui@@QAE@H@Z
+    - ??0?$Dar@PAVDesktopIcon@vgui@@@vgui@@QAE@XZ
+    - ??0?$Dar@PAVFocusChangeSignal@vgui@@@vgui@@QAE@H@Z
+    - ??0?$Dar@PAVFocusChangeSignal@vgui@@@vgui@@QAE@XZ
+    - ??0?$Dar@PAVFrame@vgui@@@vgui@@QAE@H@Z
+    - ??0?$Dar@PAVFrame@vgui@@@vgui@@QAE@XZ
+    ... and 30 more
+
+================================================================================
+  INSTALLER
+================================================================================
+
+  [UNWISE.EXE]
+  Size: 149,504 bytes
+  MD5:  443e13846997c537e8f5ed61130ab705
+  SHA1: 6b10d458a5f1e3dbf8dfa96b118cf232d3a66f5f
+  Type: PE32 EXE (x86 (i386))
+  Linker: 6.0
+  Subsystem: Windows GUI
+  Timestamp: 1999-06-25 14:55:29 UTC
+  Packed (UPX): False
+  Sections (4):
+    .text     VA=0x00001000  Raw=0x00000400  Size=0xEA00  [CODE|EXEC|READ]
+    .rdata    VA=0x00010000  Raw=0x0000EE00  Size=0x1E00  [IDATA|READ]
+    .data     VA=0x00012000  Raw=0x00010C00  Size=0x1600  [IDATA|READ|WRITE]
+    .rsrc     VA=0x00014000  Raw=0x00012200  Size=0x12600  [IDATA|READ]
+  Imports (6 DLLs):
+    - KERNEL32.dll
+    - USER32.dll
+    - GDI32.dll
+    - comdlg32.dll
+    - ADVAPI32.dll
+    - ole32.dll
+  Exports (4):
+    - _ItemDlg@16
+    - _MainWndProc@16
+    - _PromptDlg@16
+    - _SharedDlg@16
+
+  [upd.exe]
+  Size: 122,880 bytes
+  MD5:  7bca05e6fd73e3c5b95467706e9000f8
+  SHA1: 9127feb83a3abb31b20ce4e01bccd51665386a24
+  Type: PE32 EXE (x86 (i386))
+  Linker: 6.0
+  Subsystem: Windows GUI
+  Timestamp: 2000-11-09 21:25:59 UTC
+  Packed (UPX): False
+  Sections (4):
+    .text     VA=0x00001000  Raw=0x00001000  Size=0x12000  [CODE|EXEC|READ]
+    .rdata    VA=0x00013000  Raw=0x00013000  Size=0x5000  [IDATA|READ]
+    .data     VA=0x00018000  Raw=0x00018000  Size=0x2000  [IDATA|READ|WRITE]
+    .rsrc     VA=0x0001E000  Raw=0x0001A000  Size=0x4000  [IDATA|READ]
+  Imports (6 DLLs):
+    - KERNEL32.dll
+    - USER32.dll
+    - GDI32.dll
+    - WINSPOOL.DRV
+    - ADVAPI32.dll
+    - COMCTL32.dll
