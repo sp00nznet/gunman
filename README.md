@@ -121,11 +121,11 @@ gunman/
 
 ### Tech Stack
 
-- **Disassembler:** IDA Pro / Ghidra / Binary Ninja
-- **Decompiler:** Hex-Rays / Ghidra decompiler
+- **Disassembler:** Ghidra 12.0.3 (NSA's finest, headless mode)
+- **Decompiler:** Ghidra built-in decompiler
 - **Compiler:** MSVC 2022 / Clang
-- **Reference:** Half-Life SDK 2.3 (the game DLLs are based on this)
-- **Engine:** Xash3D FWGS (open-source GoldSrc-compatible engine for testing)
+- **Reference:** [Half-Life SDK 2.3](https://github.com/ValveSoftware/halflife) (the game DLLs are based on this)
+- **Engine:** [Xash3D FWGS](https://github.com/FWGS/xash3d-fwgs) (open-source GoldSrc-compatible engine for testing)
 
 ---
 
@@ -140,18 +140,21 @@ gunman/
 - [x] PE analysis: sections, imports, exports, timestamps, hashes
 - [x] Identify primary targets: `gunman.dll` (server) + `client.dll` (client)
 - [x] Inventory game assets: 72 maps, 304 models, 2285 sounds, 260 sprites, 46 events
-- [ ] Set up disassembly environment (Ghidra project)
-- [ ] Download Half-Life SDK 2.3 for reference diffing
+- [x] Set up disassembly environment (Ghidra 12.0.3)
+- [x] Download Half-Life SDK 2.3 for reference diffing
 
 ### Phase 1: Disassembly & Analysis
-- [ ] Disassemble `rewolf/cl_dlls/client.dll` (552 KB, client game logic)
-- [ ] Disassemble `rewolf/dlls/gunman.dll` (1.32 MB, server game logic)
-- [ ] Apply Half-Life SDK FLIRT/Ghidra signatures to auto-identify known functions
-- [ ] Map functions against Half-Life SDK 2.3 (many will match)
-- [ ] Identify Rewolf-specific custom code
-- [ ] Document custom weapon system (gauss, chemical gun, shotgun, sniper, minigun, etc.)
-- [ ] Document vehicle system (tank sections)
-- [ ] Document AI modifications (ourano/dinosaurs, xenome/aliens)
+- [x] Disassemble `rewolf/dlls/gunman.dll` -- **2,638 functions found** (801 named, 1,837 auto)
+- [x] Disassemble `rewolf/cl_dlls/client.dll` -- **1,352 functions found** (436 named, 916 auto)
+- [x] Identify all 14 Gunman-specific weapons
+- [x] Identify 50+ custom monster/NPC entities (dinosaurs, xenomes, rustbots, etc.)
+- [x] Document tank/vehicle system (7 tank-related triggers and functions)
+- [x] Document weapon customization system (`cust_*` functions)
+- [ ] Decompile all functions to C pseudocode (in progress)
+- [ ] Apply Half-Life SDK signatures to diff known vs. custom code
+- [ ] Map functions against Half-Life SDK 2.3
+- [ ] Classify ~1,837 unnamed server functions
+- [ ] Classify ~916 unnamed client functions
 
 ### Phase 2: Recompilation
 - [ ] Set up build system (CMake)
