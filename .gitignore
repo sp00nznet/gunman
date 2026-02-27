@@ -1,0 +1,41 @@
+# Game ISOs and disc images
+*.mdf
+*.mds
+*.iso
+*.bin
+*.cue
+*.img
+*.nrg
+*.zip
+*.7z
+*.rar
+
+# Original game assets (too large for git)
+*.pak
+*.wad
+
+# Build artifacts
+build/
+obj/
+*.o
+*.obj
+*.exe
+*.dll
+*.pdb
+*.ilk
+*.lib
+*.exp
+
+# IDE files
+.vs/
+*.suo
+*.user
+*.sln.docstates
+.idea/
+*.swp
+*~
+
+# OS junk
+Thumbs.db
+desktop.ini
+.DS_Store
