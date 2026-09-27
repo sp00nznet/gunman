@@ -19,53 +19,47 @@ The game's history, and the other revival efforts, are in
 [docs/HISTORY.md](docs/HISTORY.md) and
 [docs/EXISTING_EFFORTS.md](docs/EXISTING_EFFORTS.md).
 
-## Status: **alpha, and playable.**
+## Status: **alpha, and playable, fully recompiled.**
 
 The recompiled launcher runs the game's own boot from the PE entry point: CRT
 and MFC init, registry, the CD-key check, the RAM check, the Sierra and Rewolf
-intro movies, the main menu. *New game* loads the engine and the game DLLs,
-and the game plays. Our first playthrough ran for 81 minutes, through the
-opening on the ship, shutting down the rogue AI, the fall to the planetoid, the
-first dinosaur mission and the second, into the third: mouse look, weapons,
-AI, level transitions, scripted sequences and save/load, at 1280×960.
+intro movies, the main menu. *New game* or *Load game* starts the engine and
+the game DLLs, and the game plays: mouse look, weapons, AI, scripted
+sequences, level transitions, save/load.
 
-That playthrough ran every Rewolf module recompiled and the engine as its
-original code:
+Every module runs as recompiled C:
 
-| Module | Role | Functions | Lift errors | Played as |
-|---|---|---:|---:|---|
-| `gunman.exe` | launcher, intro movies, menus, video, input | 7,650 | 0 | **recompiled** |
-| `vgui.dll` | GUI toolkit | 1,668 | 0 | **recompiled** |
-| `client.dll` | HUD, weapons, prediction, effects, mouse look | 2,897 | 0 | **recompiled** |
-| `gunman.dll` | all game logic: AI, scripting, weapons, the general, the dinosaurs | 5,121 | 0 | **recompiled** |
-| `sw.dll` | engine, software renderer | 4,654 | 0 | original (`--native sw.dll`); see below |
+| Module | Role | Functions | Lift errors |
+|---|---|---:|---:|
+| `gunman.exe` | launcher, intro movies, menus, video, input | 7,650 | 0 |
+| `vgui.dll` | GUI toolkit | 1,668 | 0 |
+| `sw.dll` | engine, software renderer | 4,654 | 0 |
+| `client.dll` | HUD, weapons, prediction, effects, mouse look | 2,897 | 0 |
+| `gunman.dll` | all game logic: AI, scripting, weapons, the general, the dinosaurs | 5,121 | 0 |
 
-So 17,336 of 21,990 functions, all the game's own code, ran as recompiled C.
-All five modules lift with **0 errors** (3.39M lines of generated C). Bink,
-WON, DirectDraw and Windows are always called natively (see
-[docs/architecture.md](docs/architecture.md)).
+21,990 functions, 3.05M lines of generated C. Bink, WON, DirectDraw and Windows
+are called natively (see [docs/architecture.md](docs/architecture.md)).
 
-**Since then, the engine too:** the fully recompiled build, all 21,990
-functions, renders the opening textured, and a side-by-side screenshot
-matches the original. Getting there took eight lifter fixes, from a `sin` that read its
-caller's flags to a span stepper that lost its carry: the table is in
-[docs/ingame.md](docs/ingame.md). It hasn't had a long playthrough yet, so
-`--native sw.dll` stays documented as the fallback. Scripted runs need an
-unlocked, connected desktop: on a locked session DirectDraw can't lock
-surfaces and the intro hangs in Bink, the retail game included.
+On top of the original game:
 
-**Known issues** from the playthrough:
+- **Widescreen**: 1024x576, 1280x720 and 1280x800 modes with a Hor+ view.
+- **Our own presenter** on Direct3D 11: a resizable window, borderless
+  fullscreen (F11), sharp-bilinear, smooth, CRT, nearest and integer scaling
+  (F12), a vivid colour look (F9).
+- **Filtered textures** (F8): a bilinear span drawer in place of the engine's
+  assembly one, and faster than it.
+- It runs at the game's 72 fps cap at 640x480 and at 40-60 fps at 1280x720.
 
-- A gate in the general's scene vanishes when you stand close to it, and
-  reappears when you back away. The general stands in front of where it should
-  be.
-- The general's speech starts partway through the line, and he then waits about
-  30 seconds before carrying on with his scene.
+**Known issues**
+
+- The engine's tables stop at 1280 pixels wide. Wider modes render past the
+  first crash but scramble some textures; 1080p and up need more work.
 - The game window has no taskbar button.
+- In the general's scene, a gate can vanish when you stand close to it, and
+  his speech can start partway through the line.
 
-The engine drew and mixed everything in that session as original code, so the
-first two are in the recompiled game DLLs, or are the original game's own
-behaviour. They still need comparing against the retail game in the same spot.
+How the engine got there, with the eight lifter fixes it took, is in
+[docs/ingame.md](docs/ingame.md).
 
 ## Screenshots
 
@@ -77,15 +71,6 @@ textures, sharp-bilinear scaling to a maximized window:
 | ![The octagonal tunnel](docs/screenshots/wide-tunnel.jpg) | ![The laser hall](docs/screenshots/wide-laser-hall.jpg) |
 | ![A corridor fight](docs/screenshots/wide-corridor.jpg) | ![The canyon base](docs/screenshots/wide-canyon-base.jpg) |
 | ![Out into space](docs/screenshots/wide-space-vista.jpg) | ![The lava pit](docs/screenshots/wide-lava-pit.jpg) |
-
-From the 81-minute playthrough (1280×960, game DLLs recompiled, the engine
-as original code):
-
-| | |
-|---|---|
-| ![The view out of the ship](docs/screenshots/play-ship-window.jpg) | ![Troops in the desert](docs/screenshots/play-desert-troops.jpg) |
-| ![The canyon pyramid](docs/screenshots/play-canyon-pyramid.jpg) | ![The general](docs/screenshots/play-the-general.jpg) |
-| ![The laser platform](docs/screenshots/play-laser-platform.jpg) | ![A firefight](docs/screenshots/play-firefight.jpg) |
 
 **Widescreen**: 1280×720 with the Hor+ view, every module recompiled:
 
@@ -152,7 +137,7 @@ v43/1.0.1.4) and its CD key. Nothing from the game is in this repository.
    ```
    py -3 run_lift.py
    ```
-   Expected: `lifted 21990 functions, 0 errors, 55 files, 3,385,758 lines`.
+   Expected: `lifted 21990 functions, 0 errors, 55 files, 3,050,830 lines`.
 5. Build (3.4M lines through MSVC; allow a while):
    ```
    build.cmd
@@ -162,8 +147,6 @@ v43/1.0.1.4) and its CD key. Nothing from the game is in this repository.
    ```
    build\gunman.exe game
    ```
-   (`--native sw.dll` runs the engine as its original code instead: that's the
-   configuration of the 81-minute playthrough.)
    Expected on stderr:
    ```
    [link] gunman.exe  481 native    59 guest   15 shimmed

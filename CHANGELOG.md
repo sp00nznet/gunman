@@ -141,6 +141,8 @@ Needs pcrecomp#4 (branch `fix/lift32-accuracy-and-codegen`) until it merges.
   and `LIT_MIN` lowers the "lit" bar for a frame that draws but smears.
 
 ### Removed
+- The README's 81-minute playthrough section and its screenshots: the status
+  and screenshots now show the fully recompiled build.
 - Decompiler output and per-function symbol lists (`disasm/`) from the tree.
   They are derived from the retail binaries.
 - Local copies of the classifiers and Ghidra scripts, now in pcrecomp.
