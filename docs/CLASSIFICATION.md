@@ -2,7 +2,7 @@
 
 ## Overview
 
-Using a multi-signal classifier (`tools/combined_classify.py`), we analyzed all 3,990 functions
+Using a multi-signal classifier (now pcrecomp's `tools/classify/combined_classify.py`), we analyzed all 3,990 functions
 across both game DLLs to separate Half-Life SDK 2.3 boilerplate from Rewolf's custom Gunman
 Chronicles code.
 
@@ -96,11 +96,7 @@ The 499 Rewolf-custom functions (~119 KB) include:
 
 ## Files
 
-- `disasm/gunman_combined_classification.txt` - Full server DLL classification (function-by-function)
-- `disasm/client_combined_classification.txt` - Full client DLL classification (function-by-function)
-- `disasm/gunman_deep_classification.txt` - String-only analysis results
-- `disasm/client_deep_classification.txt` - String-only analysis results
-- `disasm/classification.txt` - Initial name-only classification
-- `tools/combined_classify.py` - Multi-signal classifier
-- `tools/deep_classify.py` - String reference classifier
-- `tools/classify_functions.py` - Name-based classifier
+The classifiers now live in pcrecomp under `tools/classify/`
+(`classify_functions.py`, `deep_classify.py`, `combined_classify.py`). Their
+per-function output was derived from the retail DLLs, so it is regenerated
+locally and no longer committed.

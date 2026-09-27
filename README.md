@@ -1,4 +1,6 @@
-# GUNMAN CHRONICLES: RECOMPILATION PROJECT
+# Gunman Chronicles: Static Recompilation
+
+![Gunman Chronicles, fully recompiled: a firefight in 1280x720 widescreen with filtered textures](docs/screenshots/hero.gif)
 
 ```
    ______                                     ________                      _      __
@@ -6,220 +8,218 @@
  / / __/ / / / __ \/ __ `__ \/ __ `/ __ \   / /   / __ \/ ___/ __ \/ __ \/ / ___/ / _ \/ ___/
 / /_/ / /_/ / / / / / / / / / /_/ / / / /  / /___/ / / / /  / /_/ / / / / / /__/ /  __(__  )
 \____/\__,_/_/ /_/_/ /_/ /_/\__,_/_/ /_/   \____/_/ /_/_/   \____/_/ /_/_/\___/_/\___/____/
-
-              ____  ________________  __  _______  ______    ___  __________________  _   __
-             / __ \/ ____/ ____/ __ \/  |/  / __ \/  _/ /   /   |/_  __/  _/ __ \/ | / /
-            / /_/ / __/ / /   / / / / /|_/ / /_/ // // /   / /| | / /  / // / / /  |/ /
-           / _, _/ /___/ /___/ /_/ / /  / / ____// // /___/ ___ |/ / _/ // /_/ / /|  /
-          /_/ |_/_____/\____/\____/_/  /_/_/   /___/_____/_/  |_/_/ /___/\____/_/ |_/
 ```
 
-> *"The year is 2037. You are Major Archer, commander of the Gunman militia..."*
->
-> ...and the year is 2026. This game has been dead for 25 years. We're digging it up.
+Static recompilation of **Gunman Chronicles** (Rewolf Software / Sierra, 2000),
+the GoldSrc sci-fi western, from its shipping Win32 binaries to native C.
 
----
+Built on the [pcrecomp](https://github.com/sp00nznet/pcrecomp) toolchain, and
+follows the shared house style of the pcrecomp family of recompilation repos.
+The game's history, and the other revival efforts, are in
+[docs/HISTORY.md](docs/HISTORY.md) and
+[docs/EXISTING_EFFORTS.md](docs/EXISTING_EFFORTS.md).
 
-## WTF IS THIS?
+## Status: **alpha, and playable.**
 
-This is a **static recompilation project** for **Gunman Chronicles** (2000) -- Valve's forgotten stepchild, the sci-fi western FPS that time forgot, rights disputes buried, and Windows 11 doesn't want to run.
+The recompiled launcher runs the game's own boot from the PE entry point: CRT
+and MFC init, registry, the CD-key check, the RAM check, the Sierra and Rewolf
+intro movies, the main menu. *New game* loads the engine and the game DLLs,
+and the game plays. Our first playthrough ran for 81 minutes, through the
+opening on the ship, shutting down the rogue AI, the fall to the planetoid, the
+first dinosaur mission and the second, into the third: mouse look, weapons,
+AI, level transitions, scripted sequences and save/load, at 1280×960.
 
-**The goal:** Make this masterpiece of weird run on modern hardware without emulation hacks, compatibility shims, or blood sacrifices to the GoldSrc gods.
+That playthrough ran every Rewolf module recompiled and the engine as its
+original code:
 
----
+| Module | Role | Functions | Lift errors | Played as |
+|---|---|---:|---:|---|
+| `gunman.exe` | launcher, intro movies, menus, video, input | 7,650 | 0 | **recompiled** |
+| `vgui.dll` | GUI toolkit | 1,668 | 0 | **recompiled** |
+| `client.dll` | HUD, weapons, prediction, effects, mouse look | 2,897 | 0 | **recompiled** |
+| `gunman.dll` | all game logic: AI, scripting, weapons, the general, the dinosaurs | 5,121 | 0 | **recompiled** |
+| `sw.dll` | engine, software renderer | 4,654 | 0 | original (`--native sw.dll`); see below |
 
-## THE SAD HISTORY OF GUNMAN CHRONICLES
+So 17,336 of 21,990 functions, all the game's own code, ran as recompiled C.
+All five modules lift with **0 errors** (3.39M lines of generated C). Bink,
+WON, DirectDraw and Windows are always called natively (see
+[docs/architecture.md](docs/architecture.md)).
 
-### The Rise (1996-2000)
+**Since then, the engine too:** the fully recompiled build, all 21,990
+functions, renders the opening textured, and a side-by-side screenshot
+matches the original. Getting there took eight lifter fixes, from a `sin` that read its
+caller's flags to a span stepper that lost its carry: the table is in
+[docs/ingame.md](docs/ingame.md). It hasn't had a long playthrough yet, so
+`--native sw.dll` stays documented as the fallback. Scripted runs need an
+unlocked, connected desktop: on a locked session DirectDraw can't lock
+surfaces and the intro hangs in Bink, the retail game included.
 
-| Year | Event |
-|------|-------|
-| **1996** | Herb Flower (yes, real name) founds **Rewolf Software** in Utah. "Rewolf" is "Flower" backwards. Already peak game dev energy. |
-| **~1997** | Team starts building **"Gunmanship 101"** -- a Quake deathmatch mod about space cowboys. |
-| **1998** | Port to Quake II engine. Then they see Half-Life and think "yeah, that one." Port begins to GoldSrc. |
-| **1999** | Gunman steals the show at the **Half-Life Mod Expo**. Sierra says "shut up and take our money." |
-| **1999-2000** | Valve gives Rewolf office space, funding, and mapper Jeff Lane. Gabe was involved. It was... complicated. |
-| **Nov 21, 2000** | **Gunman Chronicles ships.** First non-Half-Life standalone game on GoldSrc. Reviews are mixed. Sales are decent. Herb "didn't get rich." |
+**Known issues** from the playthrough:
 
-### The Features That Were Ahead of Their Time
-- **Customizable weapons** -- you could tune your guns like guitar amps
-- **Drivable vehicles** -- a full tank section through canyons (in 2000!)
-- **Sci-fi western aesthetic** -- dinosaurs + robots + cowboys. What's not to love?
-- **Planned GameCube port** -- never happened, obviously
+- A gate in the general's scene vanishes when you stand close to it, and
+  reappears when you back away. The general stands in front of where it should
+  be.
+- The general's speech starts partway through the line, and he then waits about
+  30 seconds before carrying on with his scene.
+- The game window has no taskbar button.
 
-### The Fall (2001-forever)
+The engine drew and mixed everything in that session as original code, so the
+first two are in the recompiled game DLLs, or are the original game's own
+behaviour. They still need comparing against the retail game in the same spot.
 
-| Year | Event |
-|------|-------|
-| **2001** | Rewolf Software **dissolves**. Team scatters to the winds. Core devs move to Netherlands, found Streamline Studios. |
-| **2002** | Game shown in Steam preview at GDC. Never actually released on Steam. |
-| **2008** | Sierra merges into Activision Blizzard. Rights become a legal dumpster fire between Valve and Vivendi/Activision. |
-| **2020s** | Game literally **cannot be purchased anywhere legally**. Not on Steam. Not on GOG. Nowhere. |
-| **2025** | Herb Flower now runs **"Goatogrammetry"** -- a photogrammetry business where actual goats carry his equipment through the Utah desert. You can't make this up. |
+## Screenshots
 
-> *"My relationship with Gabe didn't really go that great"* -- Herb Flower, PC Gamer interview
+Fully recompiled, the engine included: 1280×720 widescreen (Hor+), filtered
+textures, sharp-bilinear scaling to a maximized window:
 
----
+| | |
+|---|---|
+| ![The octagonal tunnel](docs/screenshots/wide-tunnel.jpg) | ![The laser hall](docs/screenshots/wide-laser-hall.jpg) |
+| ![A corridor fight](docs/screenshots/wide-corridor.jpg) | ![The canyon base](docs/screenshots/wide-canyon-base.jpg) |
+| ![Out into space](docs/screenshots/wide-space-vista.jpg) | ![The lava pit](docs/screenshots/wide-lava-pit.jpg) |
 
-## EXISTING REVIVAL EFFORTS (We're Not the First Crazies)
+From the 81-minute playthrough (1280×960, game DLLs recompiled, the engine
+as original code):
 
-| Project | Approach | Status |
-|---------|----------|--------|
-| [FreeGunman](https://github.com/eukara/freegunman) | Clean-room reimplementation in QuakeC | ~68 commits, low activity, unclear completeness |
-| [HLSourceHub Archive](https://github.com/HLSourceHub/goldsrc-gunman_chronicles) | Game files preservation | 2 commits, basically a file dump |
-| [Xash3D Engine](https://www.moddb.com/engines/xash3d-engine) | Custom GoldSrc replacement engine | Works-ish. Requires `-game rewolf` flag. Menu issues in fullscreen. |
-| [Steam Conversion Patch](https://steamcommunity.com/sharedfiles/filedetails/?id=368600073) | Run retail as Half-Life mod on Steam | Workaround, not a real fix |
-| [reGoldSrc](https://github.com/hzqst/GameEngine-reGoldSrc) | Reverse-engineered GoldSrc engine | WIP, Windows only, no Gunman testing |
-| [reGS_WON](https://github.com/ScriptedSnark/reGS_WON) | RE of GoldSrc build 738 | Very WIP |
-| [Collection Chamber](https://collectionchamber.blogspot.com/p/gunman-chronicles.html) | Pre-packaged installer for modern Windows | Convenience package, not a recomp |
+| | |
+|---|---|
+| ![The view out of the ship](docs/screenshots/play-ship-window.jpg) | ![Troops in the desert](docs/screenshots/play-desert-troops.jpg) |
+| ![The canyon pyramid](docs/screenshots/play-canyon-pyramid.jpg) | ![The general](docs/screenshots/play-the-general.jpg) |
+| ![The laser platform](docs/screenshots/play-laser-platform.jpg) | ![A firefight](docs/screenshots/play-firefight.jpg) |
 
-**None of these are a proper static recompilation.** That's where we come in.
+**Widescreen**: 1280×720 with the Hor+ view, every module recompiled:
 
----
+![Widescreen, fully recompiled](docs/screenshots/widescreen-720p.jpg)
 
-## OUR APPROACH: STATIC RECOMPILATION
+**Filtered textures** (F8): the original texels on the left, our bilinear
+span drawer on the right:
 
-### What is Static Recompilation?
+![Texture filtering off and on](docs/screenshots/texture-filtering.jpg)
 
-Instead of running the original binary through compatibility layers or reimplementing from scratch, we:
+**The CRT look** (F12 to `crt`), scanlines and an aperture grille, at 3×:
 
-1. **Disassemble** the original game DLLs (`client.dll` + `gunman.dll` from the `rewolf/` mod directory)
-2. **Analyze** the x86 machine code and reconstruct equivalent C/C++ source
-3. **Recompile** with a modern compiler targeting x86_64/modern Windows
-4. **Link** against modern system libraries instead of ancient Win32/GoldSrc APIs where needed
+![CRT presenter](docs/screenshots/present-crt.jpg)
 
-This gives us a binary that is **functionally identical** to the original but runs natively on modern systems.
+The main menu, drawn by the recompiled launcher after its own boot and intro:
 
-### The Targets (Now Identified!)
+![Main menu](docs/screenshots/main-menu.png)
 
-| Binary | Size | Code | Purpose |
-|--------|------|------|---------|
-| `rewolf/dlls/gunman.dll` | **1.32 MB** | 950 KB | Server game logic -- entities, AI, weapons, vehicles, everything |
-| `rewolf/cl_dlls/client.dll` | **552 KB** | 360 KB | Client game logic -- HUD, weapon prediction, effects, VGUI menus |
+The Sierra intro, mid-boot:
 
-Both compiled with **MSVC 6.0** on November 10-12, 2000. Neither is packed or obfuscated.
-The server DLL only imports KERNEL32 (engine provides everything else via function pointers).
-The engine itself (`hw.dll`, `sw.dll`, `gunman.exe`) gets replaced by Xash3D -- we only touch the mod DLLs.
+![Sierra intro](docs/screenshots/intro-sierra.png)
 
-**Total code to reverse: ~1.3 MB of x86.** But most of it is Half-Life SDK 2.3 boilerplate.
-The Rewolf-custom code is the real prize -- and we've found it.
+## Getting Started
 
-### Code Classification Results
+You need your own Gunman Chronicles CD (the English retail release, launcher
+v43/1.0.1.4) and its CD key. Nothing from the game is in this repository.
 
-Multi-signal analysis (name matching + string references + call graph + address clustering) reveals:
+**Prerequisites** (Windows 10 or 11, x64):
 
-| DLL | Total Functions | SDK (HL 2.3) | Rewolf Custom | Unknown |
-|-----|----------------|--------------|---------------|---------|
-| `gunman.dll` | 2,638 | **2,059** (81%, 492 KB) | **366** (14%, 80 KB) | 116 (4%) |
-| `client.dll` | 1,352 | **1,072** (83%, 210 KB) | **133** (10%, 39 KB) | 82 (6%) |
-| **Combined** | **3,990** | **3,131** (82%) | **499** (13%) | **198** (5%) |
+- Visual Studio 2022, any edition, with *Desktop development with C++*. Its x86
+  compiler, CMake and Ninja are all this needs.
+- Python 3.11 or newer, plus `py -3 -m pip install capstone pefile`
+- [Universal Extractor](https://github.com/Bioruebe/UniExtract2), for its
+  `E_WISE` Wise unpacker. `tools/install.py` looks in
+  `C:\Windows\SysWOW64\UniExtract\bin\`. Set `E_WISE=` if yours is elsewhere.
+- Git
 
-> **Translation:** ~80% of these DLLs is straight Half-Life SDK code we can pull from public source.
-> The actual Rewolf custom code -- weapons, dinos, vehicles, the fun stuff -- is only **~119 KB** across both DLLs.
-> That's our focused recompilation target.
+**Steps:**
 
-### Project Structure
+1. Clone this repo and pcrecomp **side by side**. The build looks for
+   pcrecomp at `../tools`:
+   ```
+   git clone https://github.com/sp00nznet/pcrecomp tools
+   git clone https://github.com/sp00nznet/gunman
+   cd gunman
+   ```
+2. Install the game from your disc into `game/`. Mount the ISO or insert the CD,
+   then run:
+   ```
+   py -3 tools/install.py D:\
+   ```
+   Expected: `installed to ...\gunman\game`.
+3. Rebase, seed and disassemble (about 10 minutes):
+   ```
+   py -3 tools/analyze.py
+   ```
+   Expected, last lines: `Byte coverage: ... (93.4% of code range)` and a
+   written `analysis/vgui.functions.json`.
+4. Lift to C (about 30 seconds):
+   ```
+   py -3 run_lift.py
+   ```
+   Expected: `lifted 21990 functions, 0 errors, 55 files, 3,385,758 lines`.
+5. Build (3.4M lines through MSVC; allow a while):
+   ```
+   build.cmd
+   ```
+   Expected: `Linking C executable gunman.exe`.
+6. Run it, fully recompiled:
+   ```
+   build\gunman.exe game
+   ```
+   (`--native sw.dll` runs the engine as its original code instead: that's the
+   configuration of the 81-minute playthrough.)
+   Expected on stderr:
+   ```
+   [link] gunman.exe  481 native    59 guest   15 shimmed
+   [link] vgui.dll    120 native     0 guest    7 shimmed
+   [boot] vgui.dll DllMain -> 1
+   [boot] gunman.exe entry 0x00480702  cmdline "...\game\gunman.exe"
+   ```
+   On the first run, the game asks for your CD key in its own VGUI prompt,
+   just as the original does. Then it plays the Sierra logo and the Rewolf
+   intro, which runs 3 min 48 s (Esc skips it, as in the original), and shows
+   the main menu. *New game* starts the first map.
+
+## Usage
 
 ```
-gunman/
-+-- README.md              # You are here
-+-- docs/                   # Research notes, reverse engineering docs
-+-- disasm/                 # Disassembly output and analysis
-+-- src/                    # Recompiled C/C++ source code
-|   +-- client/             # Client-side game DLL
-|   +-- server/             # Server-side game DLL
-|   +-- common/             # Shared code
-+-- tools/                  # Helper scripts and utilities
-+-- assets/                 # Asset extraction/conversion tools (no copyrighted content!)
+build\gunman.exe <game dir> [--rebased DIR] [--imports] [-- guest arguments]
 ```
 
-### Tech Stack
+| Flag | |
+|---|---|
+| `<game dir>` | your install, as `tools/install.py` laid it out |
+| `--rebased DIR` | where `tools/rebase.py` wrote the rebased images (default `work/rebased`) |
+| `--imports` | log every call into Windows: name, arguments, any string argument, result |
+| `--press VK@S`, `--click X,Y@S` | scripted input with a virtual cursor; the real mouse and keyboard are never touched |
+| `--scale sharp\|smooth\|crt\|nearest\|integer`, `--look natural\|vivid`, `--filter on\|off`, `--fullscreen`, `--gdi`, `--no-present` | our presenter, on the GPU (Direct3D 11, GDI as fallback): the window resizes and the frame scales to fit. **F11** / Alt+Enter borderless fullscreen, **F12** scaling (sharp-bilinear by default), **F9** colour, **F8** filtered textures |
+| `--modes WxH,...`, `--fov-original` | the video modes the launcher offers (by default 4:3 plus 1024x576, 1280x720, 1280x800; `original` for the game's own) and the engine's own FOV instead of Hor+ widescreen |
+| `--fps`, `--profile N` | frames per second from the engine's own counter; a sampling profile of the lifted functions every N seconds |
+| `--native M`, `--pageheap`, `--watchdog N`, `--import-stats`, `--trace-import NAME@S`, `--callbacks` | the diagnostics that got it in game; see [docs/ingame.md](docs/ingame.md) |
+| `-- ...` | passed to the game as its own command line |
 
-- **Disassembler:** Ghidra 12.0.3 (NSA's finest, headless mode)
-- **Decompiler:** Ghidra built-in decompiler
-- **Compiler:** MSVC 2022 / Clang
-- **Reference:** [Half-Life SDK 2.3](https://github.com/ValveSoftware/halflife) (the game DLLs are based on this)
-- **Engine:** [Xash3D FWGS](https://github.com/FWGS/xash3d-fwgs) (open-source GoldSrc-compatible engine for testing)
+`tools/run.ps1` boots it for a fixed time, then screenshots the game's window
+(only its window) to `work/shot.png`:
 
----
+```
+powershell -File tools/run.ps1 -Seconds 320          # boot, intro, menu
+powershell -File tools/run.ps1 -Seconds 20 -Imports   # with the call trace
+powershell -File tools/run.ps1 -Native                 # the RETAIL exe, same install: ground truth
+powershell -File tools/run.ps1 -Seconds 150 -ShotEvery 15 -Press "0x1B@14 0x1B@24" -Click "110,189@32 85,182@44"
+                                                       # boot, skip the intros, New game, Medium, a lit/black timeline
+```
 
-## PROGRESS TRACKER
+`tools/disat.py 0x00480B80` disassembles any lifted module at a VA.
 
-### Phase 0: Research & Setup
-- [x] Research game history and context
-- [x] Identify existing revival efforts
-- [x] Set up repository
-- [x] Extract game files from disc image (MDF/MDS -> ISO -> install)
-- [x] Catalog all binary components (15 DLLs/EXEs analyzed)
-- [x] PE analysis: sections, imports, exports, timestamps, hashes
-- [x] Identify primary targets: `gunman.dll` (server) + `client.dll` (client)
-- [x] Inventory game assets: 72 maps, 304 models, 2285 sounds, 260 sprites, 46 events
-- [x] Set up disassembly environment (Ghidra 12.0.3)
-- [x] Download Half-Life SDK 2.3 for reference diffing
+## Building from source
 
-### Phase 1: Disassembly & Analysis
-- [x] Disassemble `rewolf/dlls/gunman.dll` -- **2,638 functions found** (801 named, 1,837 auto)
-- [x] Disassemble `rewolf/cl_dlls/client.dll` -- **1,352 functions found** (436 named, 916 auto)
-- [x] Identify all 14 Gunman-specific weapons
-- [x] Identify 50+ custom monster/NPC entities (dinosaurs, xenomes, rustbots, etc.)
-- [x] Document tank/vehicle system (7 tank-related triggers and functions)
-- [x] Document weapon customization system (`cust_*` functions)
-- [x] Decompile all functions to C pseudocode -- **3,988/3,990 decompiled (99.95%)**
-- [x] Multi-signal classification (name matching, string refs, call graph, address clustering)
-- [x] Map functions against Half-Life SDK 2.3
-- [x] Classify all server functions -- **2,059 SDK (81%) | 366 Rewolf (14%) | 116 unknown (4%)**
-- [x] Classify all client functions -- **1,072 SDK (83%) | 133 Rewolf (10%) | 82 unknown (6%)**
+Steps 3 to 5 above are the build. What each stage does, and why the host is
+32-bit, is in [docs/architecture.md](docs/architecture.md). What it took to
+get from the entry point to the menu, with the failures the runtime printed,
+is in [docs/boot.md](docs/boot.md).
 
-### Phase 2: Recompilation
-- [x] Set up build system (CMake + MSVC 2022, Win32 target)
-- [x] Server DLL SDK base compiles and links -- **gunman.dll builds!**
-- [ ] Client DLL SDK base compiles, linking in progress (VGUI + weapon stubs needed)
-- [ ] Reconstruct Rewolf weapon code (~45 KB, 11 weapon systems)
-- [ ] Reconstruct Rewolf monster code (~103 KB, 57 entity types)
-- [ ] Reconstruct Rewolf vehicle/tank code
-- [ ] Build against modern Windows SDK
-- [ ] Testing with Xash3D FWGS
+Generated source is **not distributed**. `src/recomp/gen/`, `work/`,
+`analysis/` and `game/` are gitignored, because all of them are derived from
+the retail binaries. You regenerate them from your own copy.
 
-### Phase 3: Polish & Release
-- [ ] Full playthrough testing
-- [ ] Widescreen support
-- [ ] High-DPI support
-- [ ] Modern input handling
-- [ ] Package for easy installation
+## License
 
----
+The code and documentation here are MIT: see [LICENSE](LICENSE). Its Scope
+section explains that the grant covers our own work only. It doesn't extend to
+Gunman Chronicles, the GoldSrc engine, or anything lifted from them.
 
-## HOW TO HELP
-
-This is a massive undertaking. If you know your way around:
-- **x86 reverse engineering** (IDA/Ghidra)
-- **GoldSrc engine internals**
-- **Half-Life SDK programming**
-- **C/C++ and Win32 API**
-
-...then pull up a chair. Open an issue. Send a PR. Let's bring this beautiful disaster back from the dead.
-
----
-
-## LEGAL STUFF
-
-This project contains **no copyrighted game assets**. You need your own copy of Gunman Chronicles to use any recompiled binaries. The recompilation targets functional equivalence for preservation and compatibility purposes.
-
-The game cannot be legally purchased anywhere as of 2026. It exists in a rights limbo between Valve, the Activision Blizzard estate, and the ghost of Sierra Entertainment. If you're reading this, Valve/Microsoft -- just put it on Steam already.
-
----
-
-## LINKS & RESOURCES
-
-- [Gunman Chronicles on Wikipedia](https://en.wikipedia.org/wiki/Gunman_Chronicles)
-- [PC Gamer: "What happened to the creator of Gunman Chronicles?"](https://www.pcgamer.com/games/fps/what-happened-to-the-creator-of-gunman-chronicles-valves-forgotten-fps-my-relationship-with-gabe-didnt-really-go-that-great/)
-- [Gunman Chronicles on ModDB](https://www.moddb.com/games/gunman-chronicles)
-- [My Abandonware Download](https://www.myabandonware.com/game/gunman-chronicles-bgo)
-- [Valve Developer Community Wiki](https://developer.valvesoftware.com/wiki/Gunman_Chronicles)
-- [Steam Petition Group](https://steamcommunity.com/groups/gunman-steam-petition)
-- [Internet Archive: Gunman Chronicles Prototypes](https://archive.org/details/gunman-chronicles-prototypes)
-- [Half-Life Sources Hub](https://hlsources.github.io/)
-
----
-
-*"In space, no one can hear you yeehaw."* -- Tagline we just made up but should have been real
+Gunman Chronicles © 2000 Rewolf Software / Sierra Studios. This project neither
+contains nor distributes any part of it, and is not affiliated with or endorsed
+by Valve, Activision or any rights holder.

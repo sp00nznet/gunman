@@ -46,10 +46,13 @@ all other APIs via function pointers (standard GoldSrc mod interface).
 Client-side game logic: HUD rendering, weapon prediction, effects,
 VGUI menus, the weapon customization UI, etc. Smaller than the server DLL.
 
-## Engine Binaries (Replaceable with Xash3D)
+## Engine Binaries
 
-These are standard GoldSrc engine components. We do NOT need to recompile these --
-Xash3D FWGS replaces them entirely.
+Standard GoldSrc components, and recompiled here rather than replaced: the
+launcher owns the main menu, so it is the first thing lifted (see
+[architecture.md](architecture.md)). The size and sections below describe the
+patched `gunman.exe` this catalogue was first taken from; the retail disc's
+launcher is 921,600 bytes, v43/1.0.1.4, with plain `.text/.rdata/.data/.rsrc`.
 
 | Binary | Size | Purpose | Notes |
 |--------|------|---------|-------|
@@ -80,12 +83,14 @@ GoldSrc mod architecture where the engine passes function pointers to the DLL ra
 using direct imports. The client DLL additionally imports VGUI and multimedia libraries
 as expected.
 
-## Recompilation Priority
+## Recompilation Order
 
-1. **`rewolf/dlls/gunman.dll`** - Server game DLL (highest priority, all game logic)
-2. **`rewolf/cl_dlls/client.dll`** - Client game DLL (HUD, prediction, effects)
-3. Engine replacement handled by Xash3D FWGS (no recompilation needed)
-4. WON/A3D/3dfx libraries can be stubbed or removed (dead hardware/services)
+The order the boot reaches them, which is the order they get lifted:
+
+1. **`gunman.exe` + `vgui.dll`**: launcher and main menu. Done, boots to menu.
+2. **`sw.dll`**: the software engine, loaded by *New game*.
+3. **`rewolf/cl_dlls/client.dll`**, then **`rewolf/dlls/gunman.dll`**.
+4. WON, A3D and 3dfx libraries are called natively, or fail cleanly, rather than lifted.
 
 ## File Inventory
 

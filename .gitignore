@@ -1,7 +1,12 @@
-# Game ISOs and disc images
+# --- Your copy of the game: NOT redistributed here ---------------------------
+# Gunman Chronicles (c) 2000 Rewolf Software / Sierra. Bring your own disc;
+# tools/install.py unpacks it into game/.
+game/
+game_extract/
+disc_image/
+*.iso
 *.mdf
 *.mds
-*.iso
 *.bin
 *.cue
 *.img
@@ -9,34 +14,47 @@
 *.zip
 *.7z
 *.rar
-
-# Original game assets (too large for git)
-*.pak
-*.wad
-
-# Build artifacts
-build/
-obj/
-*.o
-*.obj
 *.exe
 *.dll
+*.pak
+*.wad
+*.bik
+*.avi
+
+# --- Regenerated from the binaries: never committed (REPO_RULES section 3) ---
+# Lifted C, rebased images, function catalogs, RTTI/vtable/seed maps and
+# decompiler output are all derived from the retail binaries. The tools that
+# make them are here; what they make stays on your machine.
+src/recomp/gen/
+work/
+analysis/
+disasm/
+ghidra_project/
+
+# Half-Life SDK checkout (proprietary licence)
+ref/
+
+# --- Build ------------------------------------------------------------------
+build/
+build-*/
+out/
+*.obj
+*.o
+*.lib
 *.pdb
 *.ilk
-*.lib
 *.exp
 
-# IDE files
+# --- Tooling ----------------------------------------------------------------
+__pycache__/
+*.pyc
 .vs/
+.vscode/
 *.suo
 *.user
-*.sln.docstates
 .idea/
 *.swp
 *~
-
-# OS junk
 Thumbs.db
 desktop.ini
 .DS_Store
-build/
