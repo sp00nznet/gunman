@@ -129,9 +129,13 @@ v43/1.0.1.4) and its CD key. Nothing from the game is in this repository.
    pcrecomp at `../tools`:
    ```
    git clone https://github.com/sp00nznet/pcrecomp tools
+   git -C tools checkout fix/lift32-accuracy-and-codegen
    git clone https://github.com/sp00nznet/gunman
    cd gunman
    ```
+   The checkout is needed until
+   [pcrecomp#4](https://github.com/sp00nznet/pcrecomp/pull/4) merges: its lifter
+   fixes are what make the engine render.
 2. Install the game from your disc into `game/`. Mount the ISO or insert the CD,
    then run:
    ```

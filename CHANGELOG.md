@@ -5,6 +5,8 @@ versions follow [SemVer](https://semver.org/).
 
 ## [Unreleased]
 
+Needs pcrecomp#4 (branch `fix/lift32-accuracy-and-codegen`) until it merges.
+
 ### Added
 - Relift on the current pcrecomp toolchain: `gunman.exe` and `vgui.dll` lifted
   whole, 9,318 functions, 0 lift errors (`run_lift.py`).
