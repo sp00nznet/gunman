@@ -45,6 +45,10 @@ out/
 *.ilk
 *.exp
 
+# --- Setup.cmd's own output ---
+setup.log
+*.lnk
+
 # --- Tooling ----------------------------------------------------------------
 __pycache__/
 *.pyc

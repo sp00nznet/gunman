@@ -8,6 +8,14 @@ versions follow [SemVer](https://semver.org/).
 Needs pcrecomp#4 (branch `fix/lift32-accuracy-and-codegen`) until it merges.
 
 ### Added
+- **One-click setup**: double-click `Setup.cmd` (`tools/setup.ps1`). It
+  checks for Python, pefile/capstone, pcrecomp and the C++ build tools and
+  asks before installing any of them, finds the disc or mounts an ISO, runs
+  install, analyze, lift and build (skipping finished steps, logging to
+  `setup.log`), and leaves a *Gunman Chronicles* shortcut in the folder. The
+  README's Getting Started now has this Quick start and the Step by step.
+- `tools/unwise.py`: the Wise installer unpacked in pure Python; `install.py`
+  no longer needs Universal Extractor's E_WISE.
 - Relift on the current pcrecomp toolchain: `gunman.exe` and `vgui.dll` lifted
   whole, 9,318 functions, 0 lift errors (`run_lift.py`).
 - 32-bit host runtime (`src/runtime/`): a native bridge that measures the
@@ -108,6 +116,9 @@ Needs pcrecomp#4 (branch `fix/lift32-accuracy-and-codegen`) until it merges.
   fallback.
 
 ### Fixed
+- The install lacked three files the package lists twice (E_WISE renamed the
+  second copies): `rewolf.ico`, the general's `gen_mayan4_1.wav` and
+  `finaldoor_gs.wav`.
 - pcrecomp `lift32`: `cmp; inc; jae` -- after `inc`/`dec` the carry is the
   preserved one (`_cf`), not derived from the `inc`. Corrupted MSVC 6's
   small-block heap in every module linking the CRT.
@@ -141,6 +152,8 @@ Needs pcrecomp#4 (branch `fix/lift32-accuracy-and-codegen`) until it merges.
   and `LIT_MIN` lowers the "lit" bar for a frame that draws but smears.
 
 ### Removed
+- `tools/extract_wise.py` and `tools/analyze_wise.py`, early experiments that
+  `unwise.py` replaces.
 - The README's 81-minute playthrough section and its screenshots: the status
   and screenshots now show the fully recompiled build.
 - Decompiler output and per-function symbol lists (`disasm/`) from the tree.

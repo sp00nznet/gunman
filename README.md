@@ -95,18 +95,45 @@ The Sierra intro, mid-boot:
 
 ## Getting Started
 
-You need your own Gunman Chronicles CD (the English retail release, launcher
-v43/1.0.1.4) and its CD key. Nothing from the game is in this repository.
+You need your own Gunman Chronicles CD, or an ISO of it (the English retail
+release, launcher v43/1.0.1.4), and its CD key. Nothing from the game is in
+this repository. Windows 10 or 11, and about 10 GB of free space.
 
-**Prerequisites** (Windows 10 or 11, x64):
+There are two routes to the same result: the quick start does everything for
+you; the step-by-step is the same thing by hand.
 
-- Visual Studio 2022, any edition, with *Desktop development with C++*. Its x86
-  compiler, CMake and Ninja are all this needs.
-- Python 3.11 or newer, plus `py -3 -m pip install capstone pefile`
-- [Universal Extractor](https://github.com/Bioruebe/UniExtract2), for its
-  `E_WISE` Wise unpacker. `tools/install.py` looks in
-  `C:\Windows\SysWOW64\UniExtract\bin\`. Set `E_WISE=` if yours is elsewhere.
-- Git
+### Quick start
+
+1. On this page, click **Code**, then **Download ZIP**, and extract it
+   anywhere (or `git clone` it, if you use git).
+2. Double-click **`Setup.cmd`** in the extracted folder.
+3. Answer its questions. It checks for Python, the Python packages it needs,
+   the [pcrecomp](https://github.com/sp00nznet/pcrecomp) toolkit and Visual
+   Studio's C++ build tools, and **asks** before installing anything that is
+   missing. It finds your disc by itself, or asks for its drive letter or the
+   path of your `.iso`.
+4. Wait. The first run takes 20-40 minutes, most of it the one-time analysis
+   and build. If a step fails, it says what to do and keeps the details in
+   `setup.log`; run it again and finished steps are skipped.
+5. Double-click the **Gunman Chronicles** shortcut it leaves in the folder.
+
+The game asks for your CD key on its first run, as the original does, then
+plays the Sierra and Rewolf intros (Esc skips them) and shows the main menu.
+
+### Step by step
+
+**Prerequisites:**
+
+- Visual Studio 2022, any edition (the free *Build Tools* are enough), with
+  *Desktop development with C++*: its x86 compiler, CMake and Ninja are all
+  this needs.
+- Python 3.8 or newer, plus `py -3 -m pip install capstone pefile`.
+- Git, to clone (or download both repos as ZIPs).
+
+About the `python` command: on Windows the launcher is `py -3`. If `py` isn't
+found, use `python` in its place. If `python` opens the Microsoft Store, that is
+Windows' placeholder, not Python: install Python from python.org or the Store,
+then open a **new** terminal so the PATH change is picked up.
 
 **Steps:**
 
@@ -114,36 +141,33 @@ v43/1.0.1.4) and its CD key. Nothing from the game is in this repository.
    pcrecomp at `../tools`:
    ```
    git clone https://github.com/sp00nznet/pcrecomp tools
-   git -C tools checkout fix/lift32-accuracy-and-codegen
    git clone https://github.com/sp00nznet/gunman
    cd gunman
    ```
-   The checkout is needed until
-   [pcrecomp#4](https://github.com/sp00nznet/pcrecomp/pull/4) merges: its lifter
-   fixes are what make the engine render.
-2. Install the game from your disc into `game/`. Mount the ISO or insert the CD,
-   then run:
+2. Install the game from your disc into `game/`. Insert the CD, or mount the ISO
+   (double-click it in Explorer), then run with its drive letter:
    ```
-   py -3 tools/install.py D:\
+   py -3 tools/install.py E:\
    ```
-   Expected: `installed to ...\gunman\game`.
+   Expected: `installed 3644 files to ...\gunman\game`. The installer is
+   unpacked by `tools/unwise.py`; no Setup, no other tools.
 3. Rebase, seed and disassemble (about 10 minutes):
    ```
    py -3 tools/analyze.py
    ```
-   Expected, last lines: `Byte coverage: ... (93.4% of code range)` and a
-   written `analysis/vgui.functions.json`.
-4. Lift to C (about 30 seconds):
+   Expected: a `Byte coverage` line per module, the last (`gunman.dll`)
+   `Byte coverage: 877,023 / 950,272 (92.3% of code range)`.
+4. Lift to C (a few minutes):
    ```
    py -3 run_lift.py
    ```
    Expected: `lifted 21990 functions, 0 errors, 55 files, 3,050,830 lines`.
-5. Build (3.4M lines through MSVC; allow a while):
+5. Build (3M lines through MSVC; 10-20 minutes the first time):
    ```
    build.cmd
    ```
    Expected: `Linking C executable gunman.exe`.
-6. Run it, fully recompiled:
+6. Run it:
    ```
    build\gunman.exe game
    ```
@@ -154,10 +178,7 @@ v43/1.0.1.4) and its CD key. Nothing from the game is in this repository.
    [boot] vgui.dll DllMain -> 1
    [boot] gunman.exe entry 0x00480702  cmdline "...\game\gunman.exe"
    ```
-   On the first run, the game asks for your CD key in its own VGUI prompt,
-   just as the original does. Then it plays the Sierra logo and the Rewolf
-   intro, which runs 3 min 48 s (Esc skips it, as in the original), and shows
-   the main menu. *New game* starts the first map.
+   Then the CD-key prompt, the intros and the main menu, as above.
 
 ## Usage
 

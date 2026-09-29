@@ -132,8 +132,24 @@ Could not open MCI file for playback: 275: Cannot find the specified file.
 ```
 
 `SIERRA.AVI` and `REWOLF.BIK` sit next to `INSTALL.EXE` on the disc, and Setup
-copies them into `rewolf\media`. E_WISE only sees what's inside the package.
+copies them into `rewolf\media`. The Wise package itself doesn't contain them.
 `tools/install.py` copies them.
+
+### Unpacking the installer
+
+`tools/unwise.py` opens the Wise package with Python's standard library. Every
+file is a raw deflate stream followed by its CRC32, and the install script
+(stream 2) gives each one a destination, matched to its stream by size and
+CRC. Two details took finding:
+
+- The CRC doesn't always follow the last compressed byte: for stream 139 it
+  sits one byte later, so the decoder searches the next few bytes for it.
+- Three files are listed twice: `rewolf.ico`, `sound/general/gen_mayan4_1.wav`
+  and `sound/mainframe/finaldoor_gs.wav`, identical both times. E_WISE, which
+  `install.py` used before, gave the second copy a numbered suffix, so those
+  three were never installed under their real names.
+
+Checked against E_WISE: all 3,667 streams byte-identical.
 
 ## Diagnostics worth keeping
 
