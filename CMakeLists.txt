@@ -41,6 +41,7 @@ add_executable(gunman
   src/runtime/present_d3d.c
   src/runtime/spans.c
   src/runtime/fixes.c
+  src/runtime/pad.c
   ${PCRECOMP}/runtime/recomp32/image_loader.c
   ${GEN_SOURCES}
 )
@@ -78,6 +79,6 @@ set(GEN_OPT "/O2" CACHE STRING "optimisation for the generated C")
 set_source_files_properties(${GEN_SOURCES} PROPERTIES COMPILE_OPTIONS "/w;${GEN_OPT}")
 set_source_files_properties(src/runtime/runtime.c src/runtime/modules.c src/runtime/shims.c
   src/runtime/pageheap.c src/runtime/framegrab.c src/runtime/present.c
-  src/runtime/present_d3d.c src/runtime/spans.c src/runtime/fixes.c
+  src/runtime/present_d3d.c src/runtime/spans.c src/runtime/fixes.c src/runtime/pad.c
   PROPERTIES COMPILE_OPTIONS "/W3;/wd4996")
 target_link_libraries(gunman PRIVATE user32 gdi32 kernel32 dbghelp dxguid winmm d3d11 dxgi)

@@ -120,14 +120,17 @@ void start_click_script(void) {
     if (g_click_count) CreateThread(NULL, 0, click_script, NULL, 0, NULL);
 }
 
+void pad_look(POINT* p);            /* pad.c: right-stick motion */
+
 static void s_GetCursorPos(void) {
+    POINT* p = (POINT*)(uintptr_t)ARG(0);
     if (g_vcur_valid) {
-        POINT* p = (POINT*)(uintptr_t)ARG(0);
         *p = g_vcur;
         STDRET(1, 1);
         return;
     }
     call_native(native_proc("user32.dll", "GetCursorPos"));
+    pad_look(p);
 }
 
 /* Mouse-look reads the cursor, applies the offset from the window centre, then

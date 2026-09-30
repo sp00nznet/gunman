@@ -194,9 +194,27 @@ build\gunman.exe <game dir> [--rebased DIR] [--imports] [-- guest arguments]
 | `--press VK@S`, `--click X,Y@S` | scripted input with a virtual cursor; the real mouse and keyboard are never touched |
 | `--scale sharp\|smooth\|crt\|nearest\|integer`, `--look natural\|vivid`, `--filter on\|off`, `--fullscreen`, `--gdi`, `--no-present` | our presenter, on the GPU (Direct3D 11, GDI as fallback): the window resizes and the frame scales to fit. **F11** / Alt+Enter borderless fullscreen, **F12** scaling (sharp-bilinear by default), **F9** colour, **F8** filtered textures |
 | `--modes WxH,...`, `--fov-original` | the video modes the launcher offers (by default 4:3 plus 1024x576, 1280x720, 1280x800; `original` for the game's own) and the engine's own FOV instead of Hor+ widescreen |
+| `--no-pad` | no Xbox controller (see below) |
 | `--fps`, `--profile N` | frames per second from the engine's own counter; a sampling profile of the lifted functions every N seconds |
 | `--native M`, `--pageheap`, `--watchdog N`, `--import-stats`, `--trace-import NAME@S`, `--callbacks` | the diagnostics that got it in game; see [docs/ingame.md](docs/ingame.md) |
 | `-- ...` | passed to the game as its own command line |
+
+**Xbox controller.** Plug one in and play: every pad input presses a key the
+game already binds, so it follows your Configuration > Controls. The mapping
+lives in `controller.ini` in the repo folder, written with these defaults on
+the first run (edit it; delete it to get them back; `--no-pad` turns it off):
+
+| Pad | Key | Does |
+|---|---|---|
+| Left stick | W A S D | move |
+| Right stick | mouse | look (`look_speed`, `invert_y`) |
+| RT / LT | MOUSE1 / MOUSE2 | fire / weapon customization |
+| A / B | SPACE / CTRL | jump / duck |
+| X / Y | R / Q | reload / last weapon |
+| LB / RB | wheel down / up | previous / next weapon |
+| Left / right stick click | SHIFT / E | walk / use |
+| D-pad | F, E, [, ] | flashlight, use, weapon back, weapon forward |
+| Back / Start | TAB / ESCAPE | scores / menu |
 
 `tools/run.ps1` boots it for a fixed time, then screenshots the game's window
 (only its window) to `work/shot.png`:

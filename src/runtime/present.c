@@ -53,6 +53,8 @@ int g_present_fullscreen;
 int g_present_corner;               /* --corner: park the window bottom-right (test runs) */
 int g_present_off;                  /* --no-present: the launcher's own row-by-row copy */
 extern int g_filter_textures;       /* spans.c */
+void pad_start(HWND hwnd);          /* pad.c */
+WPARAM pad_mouse_flags(WPARAM wp);
 
 int present_scale_from_name(const char* m) {
     for (int i = 0; i < SCALE_COUNT; i++)
@@ -122,6 +124,8 @@ static LRESULT CALLBACK present_proc(HWND h, UINT msg, WPARAM wp, LPARAM lp) {
         SetRectEmpty(&s_last_dst);
         break;
     }
+    if (msg >= WM_MOUSEFIRST && msg <= WM_MBUTTONDBLCLK)
+        wp = pad_mouse_flags(wp);                   /* the pad's MOUSE1..3 */
     return CallWindowProcA(s_game_proc, h, msg, wp, lp);
 }
 
@@ -144,6 +148,7 @@ static void adopt_window(HWND h) {
                      mi.rcWork.bottom - (wr.bottom - wr.top), 0, 0, SWP_NOSIZE | SWP_NOACTIVATE);
     }
     if (g_present_fullscreen) set_fullscreen(1);
+    pad_start(h);
 }
 
 /* The frame's rectangle inside a cw x ch client area. */

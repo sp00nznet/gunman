@@ -8,6 +8,10 @@ versions follow [SemVer](https://semver.org/).
 Needs pcrecomp#4 (branch `fix/lift32-accuracy-and-codegen`) until it merges.
 
 ### Added
+- **Xbox controller support** (`src/runtime/pad.c`, XInput): the pad presses
+  the keys and mouse buttons the game already binds, the right stick feeds
+  mouse look, and `controller.ini` (written with defaults on first run) maps
+  it. `--no-pad` turns it off.
 - **One-click setup**: double-click `Setup.cmd` (`tools/setup.ps1`). It
   checks for Python, pefile/capstone, pcrecomp and the C++ build tools and
   asks before installing any of them, finds the disc or mounts an ISO, runs

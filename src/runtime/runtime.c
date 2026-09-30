@@ -547,6 +547,7 @@ static DWORD WINAPI watchdog(LPVOID unused) {
 extern int g_present_scale, g_present_fullscreen, g_present_off, g_present_look, g_present_gdi;
 int present_scale_from_name(const char* m);
 extern int g_filter_textures;       /* spans.c */
+extern int g_pad_off;               /* pad.c */
 extern const char* g_present_modes;
 extern int g_fov_original, g_present_corner;
 void present_apply_modes(void);   /* present.c */
@@ -867,6 +868,7 @@ static void usage(void) {
         "  --look natural|vivid   colour (F9 toggles)\n"
         "  --gdi        present with GDI instead of Direct3D 11\n"
         "  --filter on|off   bilinear-filtered textures (F8 toggles)\n"
+        "  --no-pad     no Xbox controller support (controller.ini maps the pad)\n"
         "  --fullscreen start in borderless fullscreen (F11 / Alt+Enter toggles)\n"
         "  --no-present the launcher's own presenter (no scaling, no hotkeys)\n"
         "  --profile N  every N seconds, the lifted functions that took the most time\n"
@@ -927,6 +929,7 @@ int main(int argc, char** argv) {
         else if (!strcmp(argv[i], "--scale") && i + 1 < argc) g_present_scale = present_scale_from_name(argv[++i]);
         else if (!strcmp(argv[i], "--look") && i + 1 < argc) g_present_look = !strcmp(argv[++i], "vivid");
         else if (!strcmp(argv[i], "--gdi")) g_present_gdi = 1;
+        else if (!strcmp(argv[i], "--no-pad")) g_pad_off = 1;
         else if (!strcmp(argv[i], "--filter") && i + 1 < argc) g_filter_textures = strcmp(argv[++i], "off") != 0;
         else if (!strcmp(argv[i], "--profile") && i + 1 < argc) g_profile = atoi(argv[++i]);
         else if (!strcmp(argv[i], "--native") && i + 1 < argc) {

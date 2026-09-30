@@ -47,6 +47,7 @@ out/
 
 # --- Setup.cmd's own output ---
 setup.log
+controller.ini
 *.lnk
 
 # --- Tooling ----------------------------------------------------------------
