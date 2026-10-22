@@ -5,9 +5,20 @@ versions follow [SemVer](https://semver.org/).
 
 ## [Unreleased]
 
-Needs pcrecomp#4 (branch `fix/lift32-accuracy-and-codegen`) until it merges.
+## [0.1.0-alpha.1] - 2026-10-22
+
+The first release.
 
 ### Added
+- **An installer** (`Gunman-Recomp-Installer-windows-x64.exe` on each
+  release): recomp-launcher 0.3.0 with `launcher/launcher.json`. Point it at
+  your disc, a folder holding its `.iso`, or an installed copy; it downloads
+  this repo and pcrecomp, runs the setup, and leaves a Play button and
+  desktop shortcut. It shows its version and says when a newer release is out.
+- `Setup.cmd` runs unattended for it: `-Yes` installs what is missing without
+  asking, `-Game`/`-GameDir` takes the disc, an `.iso` (or a folder holding
+  one) or an installed copy, and `RECOMP_LAUNCHER=1` skips the final pause.
+  pcrecomp is found at `../tools`, else `../pcrecomp`, or `$PCRECOMP`.
 - **Xbox controller support** (`src/runtime/pad.c`, XInput): the pad presses
   the keys and mouse buttons the game already binds, the right stick feeds
   mouse look, and `controller.ini` (written with defaults on first run) maps
@@ -113,6 +124,10 @@ Needs pcrecomp#4 (branch `fix/lift32-accuracy-and-codegen`) until it merges.
   fixes the frame (a native function takes its whole call tree with it).
 
 ### Changed
+- Setup lifts every time, so an update's lift rules reach the C; the analysis
+  is still done once.
+- `build.cmd` finds the free Build Tools (`vswhere -products *`) and only a
+  Visual Studio with the C++ tools.
 - The root CMake project is now the recompilation host. The old Half-Life SDK
   rebuild of the game DLLs is no longer built from here.
 - README rewritten to the house layout.

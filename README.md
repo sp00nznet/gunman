@@ -99,8 +99,20 @@ You need your own Gunman Chronicles CD, or an ISO of it (the English retail
 release, launcher v43/1.0.1.4), and its CD key. Nothing from the game is in
 this repository. Windows 10 or 11, and about 10 GB of free space.
 
-There are two routes to the same result: the quick start does everything for
-you; the step-by-step is the same thing by hand.
+The easiest route is the installer. The quick start and the step-by-step are
+the same thing from the repo, by script or by hand.
+
+### Installer
+
+1. Download `Gunman-Recomp-Installer-windows-x64.exe` from the
+   [latest release](https://github.com/sp00nznet/gunman/releases). It isn't
+   signed: if Windows SmartScreen asks, click **More info**, **Run anyway**.
+2. Choose your Gunman Chronicles disc (its drive), a folder holding its
+   `.iso`, or an installed copy, then **Build**. It downloads this repo and
+   pcrecomp and installs Python and the Visual Studio Build Tools if they are
+   missing (Windows asks for permission once). The first build takes 30-60
+   minutes.
+3. Click **Play**, or use the desktop shortcut it can make.
 
 ### Quick start
 
@@ -138,7 +150,7 @@ then open a **new** terminal so the PATH change is picked up.
 **Steps:**
 
 1. Clone this repo and pcrecomp **side by side**. The build looks for
-   pcrecomp at `../tools`:
+   pcrecomp at `../tools`, then `../pcrecomp` (or `$PCRECOMP`):
    ```
    git clone https://github.com/sp00nznet/pcrecomp tools
    git clone https://github.com/sp00nznet/gunman
