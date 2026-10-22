@@ -6,13 +6,26 @@
 # pcrecomp toolkit beside this repo, Visual Studio's C++ build tools) and asks
 # before installing anything. Then: install from your disc or ISO, analyze,
 # lift, build, and a "Gunman Chronicles" shortcut in this folder. Each step is
-# skipped when its output already exists (-Force redoes them). Everything it
-# does goes to setup.log.
-param([switch]$Force, [string]$Disc = "")
+# skipped when its output already exists (-Force redoes them); the lift and
+# the build always run, so an update never plays old code. Everything it does
+# goes to setup.log.
+#
+# For recomp-launcher (and anyone scripting it): -Yes installs what is missing
+# without asking, -Game (or -GameDir) is the disc, a folder holding its .iso,
+# the .iso itself or an installed copy, and RECOMP_LAUNCHER=1 skips "Press
+# Enter to close".
+param([switch]$Force, [switch]$Yes, [Alias('GameDir', 'Disc')][string]$Game = "")
 
 $ErrorActionPreference = 'Stop'
 $Root = Split-Path -Parent $PSScriptRoot
-$Toolkit = Join-Path (Split-Path -Parent $Root) 'tools'
+# pcrecomp: $env:PCRECOMP, else a checkout at ../tools, else ../pcrecomp (where
+# the launcher puts it). analyze.py, run_lift.py and CMake read it too.
+$Toolkit = $env:PCRECOMP
+if (-not $Toolkit) {
+  $Toolkit = Join-Path (Split-Path -Parent $Root) 'tools'
+  if (-not (Test-Path (Join-Path $Toolkit 'tools\lift\lift32.py'))) { $Toolkit = Join-Path (Split-Path -Parent $Root) 'pcrecomp' }
+}
+$env:PCRECOMP = $Toolkit
 $Log = Join-Path $Root 'setup.log'
 Set-Location $Root
 function Log($t) { Add-Content -Path $Log -Value $t -Encoding UTF8 }
@@ -23,9 +36,13 @@ function Step($n, $t) { Write-Host ""; Say "[$n/6] $t" 'Cyan' }
 function Fail($t) {
   Say "" ; Say "Setup stopped: $t" 'Red'
   Say "The details are in $Log. Fix that and run Setup.cmd again; finished steps are skipped." 'Yellow'
-  Read-Host "Press Enter to close" | Out-Null; exit 1
+  Done; exit 1
 }
-function Ask($q) { $a = Read-Host "$q [Y/n]"; return -not ($a -match '^[nN]') }   # Enter = yes
+function Done { if (-not $env:RECOMP_LAUNCHER) { Read-Host "Press Enter to close" | Out-Null } }
+function Ask($q) {   # Enter = yes; -Yes answers it
+  if ($Yes) { Say "$q yes (-Yes)"; return $true }
+  $a = Read-Host "$q [Y/n]"; return -not ($a -match '^[nN]')
+}
 function Refresh-Path {
   $env:Path = [Environment]::GetEnvironmentVariable('Path', 'Machine') + ';' + [Environment]::GetEnvironmentVariable('Path', 'User')
 }
@@ -52,7 +69,7 @@ function Winget($id, $extra) {
   Refresh-Path
 }
 
-Clear-Host
+if (-not $env:RECOMP_LAUNCHER) { Clear-Host }
 Say "Gunman Chronicles: static recompilation setup" 'White'
 Say "You need your Gunman Chronicles CD (or an ISO of it) and about 10 GB free."
 Say "This takes 20-40 minutes, most of it the one-time analysis and build."
@@ -127,6 +144,10 @@ $script:mounted = $null
 function Resolve-Disc([string]$d) {
   $d = $d.Trim('"', ' ')
   if (-not $d) { return "" }
+  if ((Test-Path $d -PathType Container) -and -not (Test-Path (Join-Path $d 'REWOLF\INSTALL.EXE'))) {
+    $iso = Get-ChildItem $d -Filter *.iso -File -ErrorAction SilentlyContinue | Select-Object -First 1
+    if ($iso) { $d = $iso.FullName }
+  }
   if ($d -match '\.iso$') {
     if (-not (Test-Path $d)) { Say "  No file at $d" 'Yellow'; return "" }
     try {
@@ -150,13 +171,24 @@ function Resolve-Disc([string]$d) {
 
 if ((Test-Path 'game\gunman.exe') -and (Test-Path 'game\rewolf\media\sierra.avi') -and -not $Force) {
   Say "  Already installed in game\ (skipping)."
+} elseif ($Game -and (Test-Path (Join-Path $Game 'gunman.exe')) -and (Test-Path (Join-Path $Game 'rewolf'))) {
+  # an installed copy: the game's files are already unpacked
+  $src = (Resolve-Path $Game).Path.TrimEnd('\')
+  $dst = Join-Path $Root 'game'
+  if ($src -ne $dst) {
+    Say "  Copying the installed game from $src"
+    New-Item -ItemType Directory -Force $dst | Out-Null
+    Copy-Item (Join-Path $src '*') $dst -Recurse -Force
+  }
+  if (-not (Test-Path 'game\rewolf\media\sierra.avi')) { Fail "$src has no rewolf\media\sierra.avi: install from the disc instead." }
 } else {
-  $Disc = Resolve-Disc $Disc
+  $Disc = Resolve-Disc $Game
   if (-not $Disc) {
     $found = Get-Volume -ErrorAction SilentlyContinue | Where-Object { $_.DriveType -eq 'CD-ROM' -and $_.DriveLetter } |
              Where-Object { Test-Path "$($_.DriveLetter):\REWOLF\INSTALL.EXE" } | Select-Object -First 1
     if ($found) { $Disc = "$($found.DriveLetter):\"; Say "  Found the disc in $Disc" }
   }
+  if (-not $Disc -and $Yes) { Fail "the Gunman Chronicles disc was not found. Insert it, or choose its drive, a folder with its .iso, or an installed copy." }
   while (-not $Disc) {
     $Disc = Resolve-Disc (Read-Host "  Insert the disc and type its drive letter (e.g. E), or paste the path of an .iso file")
   }
@@ -170,8 +202,7 @@ if ((Test-Path 'analysis\server.functions.json') -and -not $Force) { Say "  Alre
 else { Run "Analyzing" ($pyargs + @('tools\analyze.py')) }
 
 Step 4 "Translating it to C (a few minutes)"
-if ((Test-Path 'src\recomp\gen\recomp_dispatch.c') -and -not $Force) { Say "  Already done (skipping)." }
-else { Run "Lifting" ($pyargs + @('run_lift.py')) }
+Run "Lifting" ($pyargs + @('run_lift.py'))   # every time: an update's lift rules must reach the C
 
 Step 5 "Compiling (10-20 minutes the first time)"
 Run "Building" @('cmd', '/c', (Join-Path $Root 'build.cmd'))
@@ -194,4 +225,4 @@ Write-Host ""
 Say "Done. Double-click 'Gunman Chronicles' in this folder to play." 'Green'
 Say "First run: the game asks for your CD key, then plays the intros (Esc skips)."
 Say "In game: F11 fullscreen, F12 scaling, F9 colour, F8 texture filtering."
-Read-Host "Press Enter to close" | Out-Null
+Done

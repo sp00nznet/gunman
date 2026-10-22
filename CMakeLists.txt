@@ -24,7 +24,15 @@ if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE RelWithDebInfo)
 endif()
 
-set(PCRECOMP "${CMAKE_SOURCE_DIR}/../tools" CACHE PATH "pcrecomp checkout")
+# pcrecomp: $PCRECOMP, else a checkout at ../tools, else ../pcrecomp
+if(DEFINED ENV{PCRECOMP})
+  set(_pc "$ENV{PCRECOMP}")
+elseif(EXISTS "${CMAKE_SOURCE_DIR}/../tools/runtime/recomp32")
+  set(_pc "${CMAKE_SOURCE_DIR}/../tools")
+else()
+  set(_pc "${CMAKE_SOURCE_DIR}/../pcrecomp")
+endif()
+set(PCRECOMP "${_pc}" CACHE PATH "pcrecomp checkout")
 
 file(GLOB GEN_SOURCES CONFIGURE_DEPENDS "${CMAKE_SOURCE_DIR}/src/recomp/gen/*.c")
 if(NOT GEN_SOURCES)

@@ -3,7 +3,7 @@ rem Configure and build the 32-bit host with MSVC x86 + Ninja.
 rem Needs Visual Studio 2022 (any edition) with the C++ x86 tools.
 setlocal
 set "VSWHERE=%ProgramFiles(x86)%\Microsoft Visual Studio\Installer\vswhere.exe"
-for /f "usebackq delims=" %%i in (`"%VSWHERE%" -latest -property installationPath`) do set "VS=%%i"
+for /f "usebackq delims=" %%i in (`"%VSWHERE%" -latest -products * -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 -property installationPath`) do set "VS=%%i"
 if not defined VS (echo Visual Studio 2022 not found & exit /b 1)
 call "%VS%\VC\Auxiliary\Build\vcvarsall.bat" x86 >nul || exit /b 1
 rem BUILD_DIR / BUILD_TYPE pick another tree (a second build while one runs).

@@ -7,14 +7,16 @@ Runs, per module: pcrecomp cpp/rtti.py and cpp/vtable_scan.py (proven method
 entries), tools/seeds.py (those plus exports), then disasm/disasm32.py seeded
 with the lot. About ten minutes, nearly all of it disasm32 on gunman.exe.
 
-pcrecomp is expected beside this repo (../tools), or at $PCRECOMP.
+pcrecomp is expected beside this repo (../tools, or ../pcrecomp), or at $PCRECOMP.
 """
 import os
 import subprocess
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PCRECOMP = os.environ.get('PCRECOMP', os.path.join(ROOT, '..', 'tools'))
+PCRECOMP = os.environ.get('PCRECOMP') or next(   # else ../tools, else ../pcrecomp
+    (d for d in (os.path.join(ROOT, '..', 'tools'), os.path.join(ROOT, '..', 'pcrecomp'))
+     if os.path.isdir(os.path.join(d, 'tools', 'lift'))), os.path.join(ROOT, '..', 'pcrecomp'))
 T = os.path.join(PCRECOMP, 'tools')
 
 # (rebased image, stem) -- the same list as run_lift.py's MODULES.

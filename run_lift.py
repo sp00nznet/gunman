@@ -28,7 +28,11 @@ import sys
 import time
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
-_TOOLS = os.path.join(_HERE, '..', 'tools', 'tools')
+# pcrecomp: $PCRECOMP, else a checkout at ../tools, else ../pcrecomp
+_PC = os.environ.get('PCRECOMP') or next(
+    (d for d in (os.path.join(_HERE, '..', 'tools'), os.path.join(_HERE, '..', 'pcrecomp'))
+     if os.path.isdir(os.path.join(d, 'tools', 'lift'))), os.path.join(_HERE, '..', 'pcrecomp'))
+_TOOLS = os.path.join(_PC, 'tools')
 sys.path.insert(0, os.path.join(_TOOLS, 'lift'))
 sys.path.insert(0, os.path.join(_TOOLS, 'pe'))
 
